@@ -34,7 +34,7 @@ function registrarProducto($nombre, $precio, $imagen, $unidadMedida) {
     }
 
     // "prepare" realizar un nuevo registro y marcadores de posición para MySQL
-    $stmt = $conexion->prepare("INSERT INTO productos (nombre, precio, imagen, unidad_medida, activo) VALUES (?, ?, ?, ?, 1)");
+    $stmt = $conexion->prepare("INSERT INTO productos (nombre, precio, imagen, unidad_medida) VALUES (?, ?, ?, ?)");
     // "bind_param" vincula las variables para pasarlas como marcadores de posición para SQL
     $stmt->bind_param("sdss", $nombre, $precio, $target_file, $unidadMedida);
     // "execute" inserta el nuevo registro
@@ -96,6 +96,16 @@ function deshabilitarProducto($id) {
     $stmt = $conexion->prepare("UPDATE productos SET activo = 0 WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
+    return $stmt->affected_rows > 0;
+}
+
+function eliminarProducto($id) {
+    global $conexion;
+    // Prepara una consultadir para eliminar un producto por su ID
+    $stmt = $conexion->prepare("DELETE FROM productos WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    // Verifica si al menos una fila fue afectada por la eliminación
     return $stmt->affected_rows > 0;
 }
 
