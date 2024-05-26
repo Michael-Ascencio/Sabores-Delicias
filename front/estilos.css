@@ -1,0 +1,949 @@
+.logo{
+    position: relative;
+    left: 525px;
+    width: 300px;
+    height: auto;
+    
+}
+
+
+
+.fondo {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background-image: url('Fotos/image\ \(2\).png');
+   
+}
+
+
+
+.texto{
+    font-family: Arial;
+}
+
+.cuadrado {
+    position: relative;
+    top: 25PX;
+    left: 200px;
+    width: 1000px;
+    height: 320px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+.cuadrado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
+    backdrop-filter: blur(10px); /* Desenfoca el fondo */
+    z-index: 0; /* Asegura que el desenfoque esté detrás del contenido */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1; /* Asegura que el contenido esté sobre el desenfoque */
+}
+
+.box {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    position: relative; /* Añadido para el posicionamiento del fondo */
+}
+
+.background-image {
+    width: 100%;
+    height: 150px; /* Ajusta la altura según tus necesidades */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+h2, p {
+    margin: 0;
+}
+
+button {
+    position: relative;
+    top: 30px;
+    display: inline-block;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.fondo {
+
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+        background-position: center; /* Centra la imagen */
+        width: 100%; /* Ajusta el ancho al 100% del viewport */
+        height: 100%; /* Ajusta la altura al 100% del viewport */
+        
+    }
+    
+ 
+@media screen and (max-width: 768px) {
+    .cuadrado {
+        width: 95%;
+        max-width: none; /* Elimina el máximo */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cuadrado {
+        width: 100%;
+    }
+
+    .box {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------*/
+/*cliente*/
+.body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}  
+
+
+.Titulo_cliente{
+    font-family: Arial;
+    font-size: 30px;
+}
+
+.Faro_fondo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background-image: url('Fotos/image\ \(5\).png');
+    
+}
+.login-container-cliente {
+    position: relative;
+    left:-150px ;
+    top: -100px;
+
+    width: 300px;
+    height: 350px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container-cliente h2 {
+    text-align: center;
+    color: #333;
+}
+
+.login-container-cliente form {
+    margin-top: 20px;
+}
+
+.login-container-cliente input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container-cliente button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container-cliente button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .login-container-cliente {
+        width: 90%; /* Cambiado a porcentaje */
+        max-width: 90%; /* Agregado un máximo */
+        margin: 50px auto; /* Reducido el margen superior */
+        padding: 15px;
+    }
+
+    .login-container-cliente h2 {
+        font-size: 24px; /* Reducido el tamaño del título */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container-cliente {
+        width: 90%; /* Cambiado a porcentaje */
+        max-width: 90%; /* Agregado un máximo */
+        margin: 30px auto; /* Reducido el margen superior */
+        padding: 10px;
+    }
+
+    .login-container-cliente h2 {
+        font-size: 20px; /* Reducido el tamaño del título */
+    }
+}
+
+/*--------------------------------------------*/
+/*     ENtorno de clientes            */
+
+.entorno{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 1900px;
+    padding: 10px 0;
+    background: linear-gradient(to right, rgba(61, 61, 61, 0.8), rgba(0, 0, 0, 0.5));
+    box-shadow: 0 2px 5px rgba(137, 137, 137, 0.2);
+    z-index: 1000; 
+  
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+    
+}
+
+.menu ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ffd700; /* Color de resaltado al pasar el mouse */
+}
+
+.content8 {
+    position: relative;
+    top: 100px;
+    padding: 20px;
+    color: #ccc;
+    z-index: 2;
+}
+
+.Bienvenido{
+    position: absolute;
+    top: -200px;
+    left: -10px;
+    width: 1500px; /* Ancho de 1400px */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-height: 500px; 
+    
+   
+
+
+}
+.sitio {
+    position: relative;
+    top: -150px;
+    text-align: center;
+    font-size: 36px;
+    color: #ffffff;
+    animation: desplazarColor 2s infinite; /* Aplicar animación llamada "desplazarColor" */
+}
+
+.logo2{
+    position: relative;
+    top: -10px;
+    left: 100px;
+    width: 120px;
+    height: auto;
+    z-index:4;
+}
+.caja1{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 470px;
+    width: 500px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
+    backdrop-filter: blur(10px); /* Desenfoca el fondo */
+    z-index: 0; /* Asegura que el desenfoque esté detrás del contenido */
+}
+.texto_de_bienvenida{
+    font-size: 20px;
+    font-family:Arial;
+}
+.caja2{
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 1440px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
+    backdrop-filter: blur(10px); /* Desenfoca el fondo */
+    z-index: 0; /* Asegura que el desenfoque esté detrás del contenido */
+}
+
+.container8 {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+.product {
+    box-sizing: border-box;
+    width: 23%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.product p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+.price {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+.Refrigerios{
+    position: relative;
+    left:40%;
+    top: 100px;
+    font-family: Arial;
+    font-size: 50px;
+}
+
+
+.container9 {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+.Refrigerio {
+    box-sizing: border-box;
+    width: 23%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.Refrigerio img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.Refrigerio h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.Refrigerio p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+.price {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+* {
+    
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer {
+  background-color: #555;
+  color: #bbb;
+  line-height: 1.5;
+}
+footer a {
+  text-decoration: none;
+  color: #eee;
+}
+a:hover {
+  text-decoration: underline;
+}
+.ft-title {
+  color: #fff;
+  font-family: "Merriweather", serif;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+/* Sticks footer to bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+}
+/* Footer main */
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 29.8125rem /* 477px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 77.5rem /* 1240px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+
+/* Footer main | Newsletter form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+input[type="email"] {
+  border: 0;
+  padding: 0.625rem;
+  margin-top: 0.3125rem;
+}
+input[type="submit"] {
+  background-color: #00d188;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 0.3125rem;
+}
+/* Footer social */
+.ft-social {
+  padding: 0 1.875rem 1.25rem;
+}
+.ft-social-list {
+  display: flex;
+  justify-content: center;
+  border-top: 1px #777 solid;
+  padding-top: 1.25rem;
+}
+.ft-social-list li {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+/* Footer legal */
+.ft-legal {
+  padding: 0.9375rem 1.875rem;
+  background-color: #333;
+}
+.ft-legal-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ft-legal-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .product {
+        width: 48%;
+    }
+}
+@media (max-width: 768px) {
+    .product {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    /* Adjustments for small screens */
+    .menu {
+        width: 100%;
+        top: 0;
+    }
+    .menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .content8 {
+        top: 150px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    /* Adjustments for medium screens */
+    .caja2 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for tablets */
+    .menu ul li {
+        margin: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjustments for small devices */
+    .menu ul li {
+        margin: 10px 10px;
+    }
+    .logo2 {
+        left: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------*/
+/*                                  consumo                                    */
+
+
+
+
+table {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    color: #000;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------*/
+/*Administrador*/
+.login-container-admin {
+    position: relative;
+    top:-100px ;
+    left:-200px;
+    width: 300px;
+    height: 350px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container-admin h2 {
+    text-align: center;
+    color: #333;
+}
+
+.login-container-admin form {
+    margin-top: 20px;
+}
+
+.login-container-admin input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container-admin button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container-admin button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------*/
+
+/*  Entorno de administrador*/
+
+.body4{
+    overflow-x: hidden;
+}
+header {
+    position: relative;
+    top: -70px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    
+    position: relative;
+    left: 700px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+ 
+
+.logo5{
+    position: relative;
+    top: -10px;
+    left: 100px;
+    width: 120px;
+    height: auto;
+    z-index:4;
+    
+}
+
+ 
+
+
+
+
+/*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+/*Empleado*/
+
+
+.login-container-empleado {
+    position: relative;
+    left:-150px ;
+    top: -100px;
+    width: 300px;
+    height: 350px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container-empleado h2 {
+    text-align: center;
+    color: #333;
+}
+
+.login-container-empleado form {
+    margin-top: 20px;
+}
+
+.login-container-empleado input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container-empleado button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container-empleado button:hover {
+    background-color: #555;
+}
+
+
+
+
+/*------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------*/
+/*contador*/
+
+
+
+
+
+
+
+
+.login-container-contador {
+    position: relative;
+    left:-150px ;
+    top: -100px;
+    width: 300px;
+    height: 350px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container-contador h2 {
+    text-align: center;
+    color: #333;
+}
+
+.login-container-contador form {
+    margin-top: 20px;
+}
+
+.login-container-contador input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container-contador button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container-contador button:hover {
+    background-color: #555;
+}
+
+/*------------------------------------------------------------------------------*/
