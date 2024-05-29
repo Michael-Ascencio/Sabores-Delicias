@@ -1,18 +1,7 @@
 <?php
 // Conexión a la base de datos
-$server = "localhost";
-$user = "root";
-$pass = "";
-$db = "";
-
-$conn = mysqli_connect($server, $user, $pass, $db);
-
-// Verificar conexión
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
-} else{
-    echo"conectado";
-}
+session_start();
+require_once __DIR__ . '../../Core/Database.php';
 
 // Controlador para agregar un nuevo lote de productos
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

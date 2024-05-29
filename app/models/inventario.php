@@ -1,11 +1,6 @@
 <?php
 class InventoryModel {
-    private $conn;
-
-    // Constructor para establecer la conexión a la base de datos
-    public function __construct($conn) {
-        $this->conn = $conn;
-    }
+    
 
     // Método para validar los datos de entrada
     private function validateInput($cantidad, $lote, $fecha_caducidad, $fk_id_producto) {
@@ -52,7 +47,7 @@ class InventoryModel {
         }
     }
 
-    // Método para quitar productos del inventario
+    // Método para quitar unidad de producto
     public function removeInventory($id_inventario, $cantidad) {
         // Verificar la cantidad actual en el inventario
         $sql = "SELECT cantidad FROM inventario WHERE id_inventario = $id_inventario";
