@@ -13,3 +13,4 @@ $routes->get('/loginempleado', 'Empleado::login');
 $routes->get('/entornoadmin', 'Administrador::index');
 $routes->get('/gestiontienda', 'Administrador::gestionarTienda');
 $routes->get('/consultatienda', 'Administrador::consultarTienda');
+$routes->get('/modificartienda/(:num)', 'Administrador::verTiendaConsultada/$1');
