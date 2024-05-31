@@ -48,4 +48,12 @@ class Administrador extends BaseController
         return view('administrador/entorno_modificar_tienda', $data);
         /*return "Hola $cod_postal";*/
     }
+
+    public function transaccionTienda(){
+        $data = [
+            'cod_postal', 'nombre', 'dirección', 'ubicacion', 'correo', 'teléfono'
+        ];
+        $tiendaModel = new TiendasModel();
+        $insert = $tiendaModel->insert([]);
+    }
 }
