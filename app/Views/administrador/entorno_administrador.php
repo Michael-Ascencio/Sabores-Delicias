@@ -1,3 +1,10 @@
+<?php
+function enlace($url)
+{
+    $enlace = 'http://' . $_SERVER['HTTP_HOST'] . $url;
+    echo $enlace;
+}
+?>
 <!-- Carpeta en la cual se encuentra el layout -->
 <?php echo $this->extend('Plantilla/layout_admin'); ?>
 <!-- Nombre del contenido en el layout -->
@@ -12,7 +19,7 @@
    <h2 class="Gestionar1">Gestionar</h2>
   <div class="gallery-container">
     <div class="gallery-item">
-        <img src="../../../public/images/logos/undraw_Segment_analysis_re_ocsl-removebg-preview.png" alt="Imagen 1" class="Galeria1">
+        <img src="<?php enlace('/Sabores-Delicias/public/images/logos/undraw_Segment_analysis_re_ocsl-removebg-preview.png');?>" alt="Imagen 1" class="Galeria1">
         <div class="gallery-content">
             <h2 class="gallery-title">Gestionar tienda</h2>
             <p class="gallery-text">Descripción </p>
@@ -20,7 +27,7 @@
         </div>
     </div>
     <div class="gallery-item">
-        <img src="../../../public/images/logos/undraw_Updated_resume_re_7r9j-removebg-preview.png" alt="Imagen 2" class="Galeria1">
+        <img src="<?php enlace('/Sabores-Delicias/public/images/logos/undraw_Updated_resume_re_7r9j-removebg-preview.png');?>" alt="Imagen 2" class="Galeria1">
         <div class="gallery-content">
             <h2 class="gallery-title">Gestionar empleado</h2>
             <p class="gallery-text">Descripción </p>
@@ -28,7 +35,7 @@
         </div>
     </div>
     <div class="gallery-item">
-        <img src="../../../public/images/logos/undraw_product_iteration_kjok-removebg-preview.png" alt="Imagen 3">
+        <img src="<?php enlace('/Sabores-Delicias/public/images/logos/undraw_product_iteration_kjok-removebg-preview.png');?>" alt="Imagen 3">
         <div class="gallery-content">
             <h2 class="gallery-title">Gestionar productos</h2>
             <p class="gallery-text">Descripción </p>
@@ -36,7 +43,7 @@
         </div>
     </div>
     <div class="gallery-item">
-        <img src="../../../public/images/logos/undraw_undraw_undraw_undraw_businessman_e7v0_qrld_-1-_hvmv__1__ik9c-removebg-preview.png" alt="Imagen 4">
+        <img src="<?php enlace('/Sabores-Delicias/public/images/logos/undraw_undraw_undraw_undraw_businessman_e7v0_qrld_-1-_hvmv__1__ik9c-removebg-preview.png');?>" alt="Imagen 4">
         <div class="gallery-content">
             <h2 class="gallery-title">Gestionar proveedores</h2>
             <p class="gallery-text">Descripción</p>
@@ -44,7 +51,7 @@
         </div>
     </div>
     <div class="gallery-item">
-        <img src="../../../public/images/logos/undraw_term_sheet_re_ju7s-removebg-preview.png" alt="Imagen 5">
+        <img src="<?php enlace('/Sabores-Delicias/public/images/logos/undraw_term_sheet_re_ju7s-removebg-preview.png');?>" alt="Imagen 5">
         <div class="gallery-content">
             <h2 class="gallery-title">Gestionar inventario</h2>
             <p class="gallery-text">Descripción</p>
@@ -52,7 +59,7 @@
         </div>
     </div>
     <div class="gallery-item">
-        <img src="../../../public/images/logos/undraw_Customer_survey_re_v9cj-removebg-preview.png" alt="Imagen 6">
+        <img src="<?php enlace('/Sabores-Delicias/public/images/logos/undraw_Customer_survey_re_v9cj-removebg-preview.png');?>" alt="Imagen 6">
         <div class="gallery-content">
             <h2 class="gallery-title">Gestionar clientes</h2>
             <p class="gallery-text">Descripción</p>
