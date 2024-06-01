@@ -48,13 +48,16 @@
   </thead>
   <tbody>
     <?php foreach ($tiendas as $tienda) : ?>
+      
       <tr>
+        <div class="Tabla_Productos">
         <td> <?php echo $tienda->cod_postal; ?> </td>
         <td> <?php echo $tienda->nombre; ?> </td>
         <td> <?php echo $tienda->dirección; ?> </td>
         <td> <?php echo $tienda->ubicacion; ?> </td>
         <td> <?php echo $tienda->correo; ?> </td>
         <td> <?php echo $tienda->teléfono; ?> </td>
+        </div>
       </tr>
     <?php endforeach; ?>
   </tbody>
