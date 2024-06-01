@@ -1,3 +1,10 @@
+<?php
+function enlace($url)
+{
+    $enlace = 'http://' . $_SERVER['HTTP_HOST'] . $url;
+    echo $enlace;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
