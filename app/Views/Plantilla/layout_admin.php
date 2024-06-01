@@ -1,16 +1,13 @@
+<?php $enlace_actual = 'http://'.$_SERVER['HTTP_HOST'].'/Sabores-Delicias/public/css/estilos.css'; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="Plantill/estilos.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $enlace_actual; ?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo esc($titulo); ?> </title>
 </head>
-<!-- STYLES -->
 
-<style {csp-style-nonce}>
-
-</style>
 <body class="body4">
     <header>
         <nav class="menu1">
@@ -29,9 +26,7 @@
       <!-- Footer legal -->
     <section class="ft-legal">
         <ul class="ft-legal-list">
-            <li><a href="#">Terminos &amp; Condiciones</a></li>
-            <li><a href="#">Politica de privacidad</a></li>
-            <li>&copy; 2024 Arquitectura de software.</li>
+            <li class ="ejemplo">&copy; 2024 Arquitectura de software.</li>
         </ul>
     </section>
 </footer>
