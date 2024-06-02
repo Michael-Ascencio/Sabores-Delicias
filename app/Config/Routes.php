@@ -16,4 +16,6 @@ $routes->get('/admin/tienda/consulta', 'Administrador::consultarTienda');
 $routes->get('/admin/tienda/modificar/(:num)', 'Administrador::verTiendaConsultada/$1');
 $routes->get('/admin/productos/add', 'Galeria::index');
 $routes->post('/admin/productos/add', 'Galeria::subir');
+$routes->get('/cliente/entorno', 'Cliente::entornoCliente');
+$routes->get('/cliente/consumo', 'Cliente::consumo');
 /* $routes->get('/modificartienda', 'Administrador::transaccionTienda'); */

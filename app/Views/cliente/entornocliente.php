@@ -5,6 +5,10 @@ function enlace($url)
     echo $enlace;
 }
 ?>
+<!-- Carpeta en la cual se encuentra el layout -->
+<?php echo $this->extend('Plantilla/layout_cliente'); ?>
+<!-- Nombre del contenido en el layout -->
+<?php echo $this->section('contenido'); ?>
 <div class="menu">
     <ul>
         <li><a href="#inicio">Productos</a></li>
@@ -196,3 +200,4 @@ function enlace($url)
         <a href="#" class="btn">Solicitar</a>
     </div>
 </div>
+<?php echo $this->endSection(); ?>

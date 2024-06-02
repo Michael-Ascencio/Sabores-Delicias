@@ -1,15 +1,12 @@
-<?php
-function enlace($url)
-{
-    $enlace = 'http://' . $_SERVER['HTTP_HOST'] . $url;
-    echo $enlace;
-}
-?>
+<?php $css = 'http://' . $_SERVER['HTTP_HOST'] . ('/Sabores-Delicias/public/css/estilos.css'); ?>
+<?php $logo = 'http://' . $_SERVER['HTTP_HOST'] . ('/Sabores-Delicias/public/images/logos/36ed206f-c52a-467b-84eb-4f164b3f303a-removebg-preview.png'); ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../../public/css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
