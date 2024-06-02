@@ -8,4 +8,13 @@ class Cliente extends BaseController
     {
         return view('cliente/cliente');
     }
+
+    public function entornoCliente() 
+    {
+        return view('cliente/entornocliente');
+    }
+    public function consumo()
+    {
+        return view('cliente/consumo');
+    }
 }

@@ -9,20 +9,18 @@ function enlace($url)
 <?php echo $this->extend('Plantilla/layout_admin'); ?>
 <!-- Nombre del contenido en el layout -->
 <?php echo $this->section('contenido'); ?>
-<br><br><br><br><br><br><br><br>
-<h2>Subir Archivos</h2>
+<div class="form">
+        <h2 class="form-title">Subir Archivos</h2>
 
-<form action="<?php base_url('admin/productos/add'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php base_url('admin/productos/add'); ?>" method="post" enctype="multipart/form-data">
+            <div class="drop-container">
+                <label for="file-input" class="drop-title">Selecciona un archivo para la imagen (jpg o png)</label>
+                <input type="file" name="archivo" id="file-input" accept="image/jpg, image/jpeg, image/png">
+            </div>
 
-<p>
-    <label for="archivo">Selecciona un archivo para la imagen jpg o png</label>
-    <input type="file" name="archivo" id="archivo" accept="image/jpg, image/jpeg, image/png, ">
-</p>
-
-<p>
-    <button type="submit">Subir Archivo</button>
-</p>
-
-</form>
-
+            <div class="form-paragraph">
+                <button type="submit" class="footer">Subir Archivo</button>
+            </div>
+        </form>
+    </div>
 <?php echo $this->endSection(); ?>

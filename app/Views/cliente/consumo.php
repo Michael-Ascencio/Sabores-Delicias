@@ -61,5 +61,6 @@ function enlace($url)
             </tr>
         </tbody>
     </table>
-    <?php echo $this->endSection(); ?>
+   
 </div>
+<?php echo $this->endSection(); ?>
