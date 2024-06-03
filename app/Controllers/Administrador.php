@@ -56,4 +56,11 @@ class Administrador extends BaseController
         $tiendaModel = new TiendasModel();
         $insert = $tiendaModel->insert([]);
     }
+
+    public function gestionarCliente()
+    {
+        $data = [
+            'titulo' => 'Gestion Cliente'];
+        return  view('administrador/entorno_gestionar_cliente', $data);
+    }
 }

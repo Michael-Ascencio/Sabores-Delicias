@@ -50,3 +50,148 @@ in APPPATH\Views\Plantilla\layout_admin.php on line 17.
 10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:05:39 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/entorno_gestionar_cliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(61): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:05:48 --> ErrorException: Undefined variable $data
+[Method: GET, Route: administrador/entorno_gestionar_cliente]
+in APPPATH\Controllers\Administrador.php on line 61.
+ 1 APPPATH\Controllers\Administrador.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Controllers\\Administrador.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:06:31 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/gestionarCliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(61): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:08:52 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/gestionarCliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(64): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:13:13 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/entorno_gestionar_cliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(63): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->entorno_gestionar_cliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:14:24 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/entorno_gestionar_cliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(63): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:21:43 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/cliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(63): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:22:20 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/cliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(62): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:22:20 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/cliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(62): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-02 21:22:50 --> ErrorException: Undefined variable $titulo
+[Method: GET, Route: administrador/entorno_gestionar_cliente]
+in APPPATH\Views\Plantilla\layout_admin.php on line 11.
+ 1 APPPATH\Views\Plantilla\layout_admin.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\Plantilla\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('Plantilla/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_gestionar_cliente', [], true)
+ 6 APPPATH\Controllers\Administrador.php(62): view('administrador/entorno_gestionar_cliente')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->gestionarCliente()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
