@@ -9,22 +9,43 @@ function enlace($url)
 <?php echo $this->extend('Plantilla/layout_cliente'); ?>
 <!-- Nombre del contenido en el layout -->
 <?php echo $this->section('contenido'); ?>
-<div class="menu">
-    <ul>
-        <li><a href="#inicio">Productos</a></li>
-        <li><a href="consumo.html">Consumo</a></li>
-        <li><a href="#contacto">Configuración</a></li>
-        <li><a href="../index.php">Cerrar sesión</a></li>
-    </ul>
-</div>
+
+<div class="imagen12">
 <img src="<?php enlace('/Sabores-Delicias/public/images/logos/36ed206f-c52a-467b-84eb-4f164b3f303a-removebg-preview.png');?>" alt="" class="logo2">
+</div>
 <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/paisaje-ilustracion-atardecer-en-el-bosque-montanas_3840x2160_xtrafondos.com.jpg');?>" alt="" class="Bienvenido">
 <div class="content8">
     <div class="caja2"></div>
-    <h1 id="inicio" class="sitio">Bienvenido a nuestro sitio</h1>
+    <h1 id="inicio" class="sitio"></h1>
     <div class="caja1">
-        <p class="texto_de_bienvenida">Aquí puedes poner contenido relacionado con la página de inicio.</p>
+        <p class="texto_de_bienvenida">Bienvenido a nuestro sitio</p>
     </div>
+
+
+
+
+
+    <input type="checkbox" id="cart-toggle">
+    <label for="cart-toggle" id="cart-icon">
+        <button class="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="10 39 338 512" class="bell">
+  <image href="https://img.icons8.com/?size=100&id=59997&format=png&color=FFFFFF" width="448" height="512"/>
+</svg>
+        </button>
+        
+    </label>
+
+    <div id="cart">
+        <div class="cart-content">
+            <h2>Carrito de Compras</h2>
+            <p>Aquí va el contenido del carrito.</p>
+            <button class="close-cart">Cerrar</button>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    
+
+
 </div>
 <h2 class="Producto">Nuestros producto</h2>
 <div class="container8">
@@ -200,4 +221,5 @@ function enlace($url)
         <a href="#" class="btn">Solicitar</a>
     </div>
 </div>
+<script src="../../../public/script/script.js"></script>
 <?php echo $this->endSection(); ?>

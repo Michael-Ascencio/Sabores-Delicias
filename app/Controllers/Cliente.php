@@ -17,4 +17,8 @@ class Cliente extends BaseController
     {
         return view('cliente/consumo');
     }
+    public function configuracion()
+    {
+        return view('cliente/entorno_configuracion');
+    }
 }
