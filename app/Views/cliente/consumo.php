@@ -23,35 +23,35 @@ function enlace($url)
         <thead>
             <tr>
 
-                <th>Fecha</th>
-                <th>Total</th>
-                <th>Acciones</th>
+                <th></th>
+                <th></th>
+                <th></th>
                 
             </tr>
         </thead>
         <tbody>
             <tr>
 
-                <td>2024-01-01</td>
-                <td>$100.00</td>
+                <td></td>
+                <td></td>
                 <td><button>Ver</button></td>
             </tr>
             <tr>
 
-                <td>2024-02-15</td>
-                <td>$150.00</td>
+                <td></td>
+                <td></td>
                 <td><button>Ver</button></td>
             </tr>
             <tr>
 
-                <td>2024-03-10</td>
-                <td>$200.00</td>
+                <td></td>
+                <td></td>
                 <td><button>Ver</button></td>
             </tr>
             <tr>
 
-                <td>2024-04-05</td>
-                <td>$250.00</td>
+                <td></td>
+                <td></td>
                 <td><button>Ver</button></td>
             </tr>
         </tbody>
