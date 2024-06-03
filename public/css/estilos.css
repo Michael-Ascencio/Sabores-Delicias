@@ -693,7 +693,7 @@ button:hover {
   }
   
   .bell path {
-    fill: white;
+    fill: rgb(0, 0, 0);
   }
   
   .button:hover {
@@ -741,6 +741,55 @@ button:hover {
     transform: scale(0.8);
   }
   
+  .button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#cart-toggle:checked ~ #cart {
+    display: block;
+    transform: translateX(0);
+}
+
+#cart .cart-content {
+    padding: 20px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#cart-toggle:checked ~ #overlay {
+    display: block;
+}
+
+.close-cart {
+    background: none;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
 
 

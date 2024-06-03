@@ -35,6 +35,14 @@ function enlace($url)
         
     </label>
 
+    <div id="cart">
+        <div class="cart-content">
+            <h2>Carrito de Compras</h2>
+            <p>Aquí va el contenido del carrito.</p>
+            <button class="close-cart">Cerrar</button>
+        </div>
+    </div>
+    <div id="overlay"></div>
     
 
 
@@ -213,4 +221,5 @@ function enlace($url)
         <a href="#" class="btn">Solicitar</a>
     </div>
 </div>
+<script src="../../../public/script/script.js"></script>
 <?php echo $this->endSection(); ?>
