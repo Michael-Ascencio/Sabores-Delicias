@@ -14,6 +14,16 @@
 
 <body class="entorno">
 
+
+<div class="menu">
+    <ul>
+        <li><a href="entorno">Productos</a></li>
+        <li><a href="consumo">Consumo</a></li>
+        <li><a href="configuracion">Configuración</a></li>
+        <li><a href="<?php base_url('/logincliente');?>">Cerrar sesión</a></li>
+    </ul>
+</div>
+
     <?php echo $this->renderSection("contenido"); ?>
 
     <footer>
