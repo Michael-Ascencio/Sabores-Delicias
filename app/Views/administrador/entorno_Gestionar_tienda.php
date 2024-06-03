@@ -14,7 +14,7 @@ function enlace($url)
 <form class="form">
     <p class="title">Registrar tienda</p>
     <p class="message">Ingrese la tienda que desea Registrar  </p>
-    <div class="flex">
+        <div class="flex">
         <label>
             <input class="input" type="text" placeholder="" required="">
             <span>Nombre</span>

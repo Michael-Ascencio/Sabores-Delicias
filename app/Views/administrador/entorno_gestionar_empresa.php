@@ -1,0 +1,42 @@
+<?php
+function enlace($url)
+{
+    $enlace = 'http://' . $_SERVER['HTTP_HOST'] . $url;
+    echo $enlace;
+}
+?>
+<!-- Carpeta en la cual se encuentra el layout -->
+<?php echo $this->extend('Plantilla/layout_admin'); ?>
+<!-- Nombre del contenido en el layout -->
+<?php echo $this->section('contenido'); ?>
+<h2 class="Gestionar2">Gestionar empresa</h2>
+<form class="form">
+    <p class="title">Registrar empresa</p>
+    <p class="message">Ingrese la empresa que desea Registrar  </p>
+    <div class="flex">
+        <label>
+            <input class="input" type="number" required>
+            <span>NIT</span>
+        </label>
+        <label>
+            <input class="input" type="text" required>
+            <span>Nombre</span>
+        </label>
+    </div>
+    <label>
+        <input class="input" type="text" required>
+        <span>Dirección</span>
+    </label>
+    <label>
+        <input class="input" type="number" required>
+        <span>Teléfono</span>
+    </label>
+    <button class="submit">Registrar</button>
+
+</form>
+<h2 class="Gestionar3">Si deseas consultar o modificar la empresa haz clic aquí</h2>
+<button class="shadow__btn1" href="entorno_de_consulta_tienda.php">clic aquí</button>
+
+
+
+<?php echo $this->endSection(); ?>

@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\TiendasModel;
+use App\Models\ClienteModel;
+use App\Models\EmpresaModel;
 
 class Administrador extends BaseController
 {
@@ -51,7 +53,7 @@ class Administrador extends BaseController
 
     public function transaccionTienda(){
         $data = [
-            'cod_postal', 'nombre', 'dirección', 'ubicacion', 'correo', 'teléfono'
+            'cod_postal', 'nombre', 'direccion', 'ubicacion', 'correo', 'telefono'
         ];
         $tiendaModel = new TiendasModel();
         $insert = $tiendaModel->insert([]);
@@ -63,4 +65,28 @@ class Administrador extends BaseController
             'titulo' => 'Gestion Cliente'];
         return  view('administrador/entorno_gestionar_cliente', $data);
     }
+
+    public function transaccionCliente(){
+        $data=[
+            'cedula', 'nombre', 'apellido', 'correo', 'contrasena', 'teléfono'
+        ]; 
+        $clienteModel = new ClienteModel();
+        $insert = $clienteModel->insert([]);
+    }
+
+    public function gestionarEmpresa()
+    {
+        $data = [
+            'titulo' => 'Gestion Empresa'];
+        return  view('administrador/entorno_gestionar_empresa', $data);
+    }
+
+    public function transaccionEmpresa(){
+        $data = [
+            'nit', 'nombre', 'direccion', 'telefono'
+        ];
+        $empresaModel = new EmpresaModel();
+        $insert = $empresaModel->insert([]);
+    }
+
 }

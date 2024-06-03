@@ -1,0 +1,800 @@
+CRITICAL - 2024-06-03 03:49:16 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:49:19 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:50:03 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:50:47 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:50:48 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:50:58 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:51:10 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:51:16 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:51:57 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:51:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:51:59 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:51:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:14 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:15 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:16 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:16 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:17 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:17 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:18 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:22 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:52:28 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:52:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-03 03:53:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'syd', 3306, '', 0)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'syd' in C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Sabores-Delicias\app\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+#7 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+#8 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Sabores-Delicias\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Sabores-Delicias\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-03 03:53:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'syd'
+[Method: GET, Route: admin/tienda/consulta]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tienda`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Administrador.php(38): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:56:02 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:56:50 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:57:47 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:58:38 --> ErrorException: Undefined variable $tiendas
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 57.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiendas', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(40): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:58:39 --> ErrorException: Undefined variable $tiendas
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 57.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiendas', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(40): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 03:58:53 --> ErrorException: Undefined variable $tiendas
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 57.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiendas', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(40): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 04:00:54 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-03 04:02:48 --> ErrorException: Undefined property: stdClass::$dirección
+[Method: GET, Route: admin/tienda/consulta]
+in APPPATH\Views\administrador\entorno_de_consulta_tienda.php on line 63.
+ 1 APPPATH\Views\administrador\entorno_de_consulta_tienda.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dirección', 'C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Sabores-Delicias\\app\\Views\\administrador\\entorno_de_consulta_tienda.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrador/entorno_de_consulta_tienda', [], true)
+ 5 APPPATH\Controllers\Administrador.php(42): view('administrador/entorno_de_consulta_tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrador->consultarTienda()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrador))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

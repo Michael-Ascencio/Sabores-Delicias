@@ -12,8 +12,8 @@ function enlace($url)
 
 <h2 class="Gestionar2">Gestionar cliente</h2>
 <form class="form">
-    <p class="title">Registrar tienda</p>
-    <p class="message">Ingrese la tienda que desea Registrar  </p>
+    <p class="title">Registrar cliente</p>
+    <p class="message">Ingrese el cliente que desea Registrar  </p>
     <div class="flex">
         <label>
             <input class="input" type="text" required>
@@ -47,6 +47,6 @@ function enlace($url)
     <button class="submit">Registrar</button>
 
 </form>
-<h2 class="Gestionar3">Si deseas consultar o modificar la tienda haz clic aqui</h2>
+<h2 class="Gestionar3">Si deseas consultar o modificar el cliente haz clic aqui</h2>
 <button class="shadow__btn1" href="entorno_de_consulta_tienda.php">clic aqui</button>
 <?php echo $this->endSection(); ?>
