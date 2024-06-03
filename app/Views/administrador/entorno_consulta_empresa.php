@@ -45,25 +45,21 @@ function enlace($url)
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Código Postal</th>
+      <th scope="col">NIT</th>
       <th scope="col">Nombre</th>
       <th scope="col">Dirección</th>
-      <th scope="col">Ubicación</th>
-      <th scope="col">Correo</th>
       <th scope="col">Teléfono</th>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($tiendas as $tienda) : ?>
+    <?php foreach ($empresas as $empresa) : ?>
       
       <tr>
         <div class="Tabla_Productos">
-        <td> <?php echo $tienda->cod_postal; ?> </td>
-        <td> <?php echo $tienda->nombre; ?> </td>
-        <td> <?php echo $tienda->direccion; ?> </td>
-        <td> <?php echo $tienda->ubicacion; ?> </td>
-        <td> <?php echo $tienda->correo; ?> </td>
-        <td> <?php echo $tienda->telefono; ?> </td>
+        <td> <?php echo $empresa->nit; ?> </td>
+        <td> <?php echo $empresa->nombre; ?> </td>
+        <td> <?php echo $empresa->direccion; ?> </td>
+        <td> <?php echo $empresa->telefono; ?> </td>
         </div>
       </tr>
     <?php endforeach; ?>

@@ -20,4 +20,8 @@ $routes->get('/cliente/entorno', 'Cliente::entornoCliente');
 $routes->get('/cliente/consumo', 'Cliente::consumo');
 $routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
 $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestionarEmpresa');
+$routes->post('/administrador/entorno_gestionar_empresa', 'Administrador::transaccionEmpresa');
+$routes->get('/administrador/entorno_consulta_empresa', 'Administrador::consultarEmpresa');
+$routes->get('/administrador/entorno_editar_empresa/(:num)', 'Administrador::editarEmpresa/$1');
+
 /* $routes->get('/modificartienda', 'Administrador::transaccionTienda'); */

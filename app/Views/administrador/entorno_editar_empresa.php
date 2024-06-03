@@ -25,33 +25,28 @@ function enlace($url)
 
 
 <form class="form" method="post" action="<?=base_url('/Sabores-Delicias/public/administrador/entorno_gestionar_empresa')?>">
-    <p class="title">Registrar empresa</p>
-    <p class="message">Ingrese la empresa que desea Registrar  </p>
+    <p class="title">Modificar empresa</p>
+    <p class="message">Datos de la empresa <?php echo $tienda->nombre?> </p>
     <div class="flex">
         <label>
-            <input class="input" type="number" required name="nit">
+            <input class="input" type="number" required name="nit" value="<?php echo $tienda->nit?>">
             <span>NIT</span>
         </label>
         <label>
-            <input class="input" type="text" required name="nombre">
+            <input class="input" type="text" required name="nombre" value="<?php echo $tienda->nombre?>">
             <span>Nombre</span>
         </label>
     </div>
     <label>
-        <input class="input" type="text" required name="direccion">
+        <input class="input" type="text" required name="direccion" value="<?php echo $tienda->direccion?>">
         <span>Dirección</span>
     </label>
     <label>
-        <input class="input" type="number" required name="telefono">
+        <input class="input" type="number" required name="telefono" value="<?php echo $tienda->telefono?>">
         <span>Teléfono</span>
     </label>
     <button class="submit" type="submit">Registrar</button>
 
 </form>
-
-<h2 class="Gestionar3">Si deseas consultar o modificar la empresa haz clic aquí</h2>
-<button class="shadow__btn1" href="entorno_de_consulta_tienda.php">clic aquí</button>
-
-
 
 <?php echo $this->endSection(); ?>
