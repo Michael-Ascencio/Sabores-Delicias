@@ -166,4 +166,11 @@ class Administrador extends BaseController
             return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
         }
     }
+
+    public function gestionarInventario(): string
+    {
+        $data = [
+            'titulo' => 'Inventario'];
+        return view('administrador/entorno_inventario', $data);
+    }
 }
