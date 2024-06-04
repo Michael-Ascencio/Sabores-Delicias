@@ -12,10 +12,11 @@ function enlace($url)
 <?php echo $this->section('contenido'); ?>
 
 <div class="searchBox">
-
-  <input class="searchInput" type="text" name="" placeholder="Search something">
-  <button class="searchButton" href="#" method="POST">
-
+  
+  <form method="get" action="<?=base_url('/Sabores-Delicias/public/administrador/entorno_editar_empresa/')?>">
+    <input class="searchInput" type="text" name="nit" placeholder="Search something">
+    <button class="searchButton" href="#" type="submit">
+  </form>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
       <g clip-path="url(#clip0_2_17)">
@@ -45,25 +46,21 @@ function enlace($url)
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Código Postal</th>
+      <th scope="col">NIT</th>
       <th scope="col">Nombre</th>
       <th scope="col">Dirección</th>
-      <th scope="col">Ubicación</th>
-      <th scope="col">Correo</th>
       <th scope="col">Teléfono</th>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($tiendas as $tienda) : ?>
+    <?php foreach ($empresas as $empresa) : ?>
       
       <tr>
         <div class="Tabla_Productos">
-        <td> <?php echo $tienda->cod_postal; ?> </td>
-        <td> <?php echo $tienda->nombre; ?> </td>
-        <td> <?php echo $tienda->direccion; ?> </td>
-        <td> <?php echo $tienda->ubicacion; ?> </td>
-        <td> <?php echo $tienda->correo; ?> </td>
-        <td> <?php echo $tienda->telefono; ?> </td>
+        <td> <?php echo $empresa->nit; ?> </td>
+        <td> <?php echo $empresa->nombre; ?> </td>
+        <td> <?php echo $empresa->direccion; ?> </td>
+        <td> <?php echo $empresa->telefono; ?> </td>
         </div>
       </tr>
     <?php endforeach; ?>

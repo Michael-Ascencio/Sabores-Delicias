@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\TiendasModel;
+use App\Models\ClienteModel;
+use App\Models\EmpresaModel;
 
 class Administrador extends BaseController
 {
@@ -51,16 +53,9 @@ class Administrador extends BaseController
 
     public function transaccionTienda(){
         $data = [
-            'cod_postal', 'nombre', 'dirección', 'ubicacion', 'correo', 'teléfono'
+            'cod_postal', 'nombre', 'direccion', 'ubicacion', 'correo', 'telefono'
         ];
         $tiendaModel = new TiendasModel();
         $insert = $tiendaModel->insert([]);
     }
-
-    public function gestionarInventario(): string
-        {
-            $data = ['titulo' => 'Inventario'];
-            return view('administrador/entorno_inventario', $data);
-    }
-        
 }
