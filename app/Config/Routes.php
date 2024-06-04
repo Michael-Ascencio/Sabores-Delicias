@@ -33,6 +33,7 @@ $routes->get('/loginempleado', 'Empleado::login');
 
 /* Contador */
 $routes->get('/logincontador', 'Contador::login');
+$routes->post('/contador/consultar_informe', 'Contador::consultar_informe');
 
 
 
