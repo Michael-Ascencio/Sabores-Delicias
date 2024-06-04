@@ -942,8 +942,6 @@ th {
 
 
 
-
-
 /*------------------------------------------------------------------------------*/
 
 /*  Entorno de administrador*/
@@ -1208,7 +1206,6 @@ th {
 
 
 
-
 @media (max-width: 768px) {
     .gallery-container {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
@@ -1410,7 +1407,7 @@ th {
 .Gestionar3{
     text-align: center;
     position: relative;
-    top:300px;
+    top:700px;
     font-size: 30px;
 
     
@@ -1418,7 +1415,7 @@ th {
 
 .shadow__btn1 {
     position: relative;
-    top:350px;
+    top:750px;
     left: 45%;
     width: 200px;
     
@@ -1531,7 +1528,7 @@ th {
   
   .form label .input {
     background-color: #333;
-    color: #3f3b3b;
+    color: white;
     width: 100%;
     padding: 20px 05px 05px 10px;
     outline: 0;

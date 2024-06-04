@@ -22,8 +22,8 @@ $routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestion
 $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestionarEmpresa');
 $routes->post('/administrador/entorno_gestionar_empresa', 'Administrador::transaccionEmpresa');
 $routes->get('/administrador/entorno_consulta_empresa', 'Administrador::consultarEmpresa');
-$routes->get('/administrador/entorno_editar_empresa/(:num)', 'Administrador::editarEmpresa/$1');
-$routes->get('/administrador/entorno_editar_empresa', 'Administrador::editarEmpresa'); // Para manejar el GET
+$routes->get('/administrador/entorno_editar_empresa/(:num)', 'Administrador::editarEmpresa/$1'); //Cuando se ingresa un nit existente en la bd
+$routes->get('/administrador/entorno_editar_empresa', 'Administrador::editarEmpresa'); //Cuando se ingresa un nit NO existente en la bd
 
 $routes->post('/administrador/actualizar', 'Administrador::actualizarDatosBD');
 
