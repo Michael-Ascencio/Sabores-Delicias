@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\TiendasModel;
+use App\Models\ClienteModel;
+use App\Models\EmpresaModel;
 
 class Administrador extends BaseController
 {
@@ -51,9 +53,117 @@ class Administrador extends BaseController
 
     public function transaccionTienda(){
         $data = [
-            'cod_postal', 'nombre', 'dirección', 'ubicacion', 'correo', 'teléfono'
+            'cod_postal', 'nombre', 'direccion', 'ubicacion', 'correo', 'telefono'
         ];
         $tiendaModel = new TiendasModel();
         $insert = $tiendaModel->insert([]);
+    }
+
+    public function gestionarCliente()
+    {
+        $data = [
+            'titulo' => 'Gestion Cliente'];
+        return  view('administrador/entorno_gestionar_cliente', $data);
+    }
+
+    public function transaccionCliente(){
+        $data=[
+            'cedula', 'nombre', 'apellido', 'correo', 'contrasena', 'teléfono'
+        ]; 
+        $clienteModel = new ClienteModel();
+        $insert = $clienteModel->insert([]);
+    }
+
+    public function gestionarEmpresa()
+    {
+        $data = [
+            'titulo' => 'Gestion Empresa'];
+        return  view('administrador/entorno_gestionar_empresa', $data);
+    }
+
+    public function transaccionEmpresa(){
+        
+        try{
+            
+            $nit = $this->request->getVar('nit');
+            $nombre = $this->request->getVar('nombre');
+            $direccion = $this->request->getVar('direccion');
+            $telefono = $this->request->getVar('telefono');
+
+            $empresaModel = new EmpresaModel();
+
+            $empresaExistente = $empresaModel->find($nit);
+
+            if($empresaExistente){
+                throw new \Exception("La empresa ya se encuentra registrada en la página.");
+            } elseif(strlen($nit)!==9){
+                throw new \Exception("El nit no es válida. Debe ser un número de 9 cifras.");
+            } elseif(strlen($telefono) !== 7 && strlen($telefono) !== 10){
+                throw new \Exception("El número de teléfono no es válido.");
+            }
+
+            $data = [
+                'nit' => $nit,
+                'nombre' => $nombre,
+                'direccion' => $direccion,
+                'telefono' => $telefono
+            ];
+            
+            $empresaModel->insert($data);
+    
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa creada exitosamente.');    
+        }
+        catch(\Exception $e){
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
+        }
+    }
+    
+    public function consultarEmpresa(){
+        
+        $empresaModel = new EmpresaModel();
+        $resultado = $empresaModel->orderBy('nit','ASC')->findAll();
+        $data = [
+            'titulo' => 'Consultar Empresa',
+            'empresas' => $resultado];
+        
+            return view('administrador/entorno_consulta_empresa', $data);
+    }
+
+    public function editarEmpresa($nit){
+        $empresaModel = new EmpresaModel();
+        $empresa = $empresaModel->find($nit);
+        $data=[
+            'titulo'=> 'Modificar Empresa',
+            'empresa'=>$empresa];
+        return view('administrador/entorno_editar_empresa', $data);
+    }
+
+    public function actualizarDatosBD(){
+
+        try{
+            $nit = $this->request->getVar('nit');
+            $nombre = $this->request->getVar('nombre');
+            $direccion = $this->request->getVar('direccion');
+            $telefono = $this->request->getVar('telefono');
+
+            $empresaModel = new EmpresaModel();
+
+            if(strlen($telefono) !== 7 && strlen($telefono) !== 10){
+                throw new \Exception("El número de teléfono no es válido.");
+            }
+
+            $data = [
+                'nit' => $nit,
+                'nombre' => $nombre,
+                'direccion' => $direccion,
+                'telefono' => $telefono
+            ];
+            $empresaModel->update($nit, $data);
+    
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa creada exitosamente.');    
+        }
+        catch(\Exception $e){
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
+        }
     }
 }
