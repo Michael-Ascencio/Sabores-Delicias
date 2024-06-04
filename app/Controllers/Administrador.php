@@ -129,14 +129,25 @@ class Administrador extends BaseController
             return view('administrador/entorno_consulta_empresa', $data);
     }
 
-    public function editarEmpresa($nit){
+    public function editarEmpresa($nit = null)
+    {
+        if ($nit === null) {
+            $nit = $this->request->getGet('nit');
+        }
+    
         $empresaModel = new EmpresaModel();
         $empresa = $empresaModel->find($nit);
-        $data=[
-            'titulo'=> 'Modificar Empresa',
-            'empresa'=>$empresa];
+    
+        if (!$empresa) {
+            return redirect()->to(base_url('/Sabores-Delicias/public/administrador/entorno_consulta_empresa'))->with('error', 'El NIT no existe en la base de datos.');
+        }
+    
+        $data = [
+            'titulo' => 'Modificar Empresa',
+            'empresa' => $empresa
+        ];
         return view('administrador/entorno_editar_empresa', $data);
-    }
+    }    
 
     public function actualizarDatosBD(){
 
