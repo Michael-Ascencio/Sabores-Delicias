@@ -20,206 +20,140 @@ function enlace($url)
     <div class="caja1">
         <p class="texto_de_bienvenida">Bienvenido a nuestro sitio</p>
     </div>
+    
+    <div id="cart-icon">
+        <img src="<?php enlace('/Sabores-Delicias/public/images/logos/carrito-de-compras.png');?>" alt="" class="carritodecompras">
+    </div>
 
-
-
-
-
-    <input type="checkbox" id="cart-toggle">
-    <label for="cart-toggle" id="cart-icon">
-        <button class="button">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="10 39 338 512" class="bell">
-  <image href="https://img.icons8.com/?size=100&id=59997&format=png&color=FFFFFF" width="448" height="512"/>
-</svg>
-        </button>
-        
-    </label>
-
-    <div id="cart">
-        <div class="cart-content">
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
             <h2>Carrito de Compras</h2>
-            <p>Aquí va el contenido del carrito.</p>
-            <button class="close-cart">Cerrar</button>
+            <div id="cart-items"></div>
+            <button id="checkout">Proceder al pago</button>
         </div>
     </div>
-    <div id="overlay"></div>
-    
+
+    <script>
+              document.addEventListener('DOMContentLoaded', function () {
+            const cartIcon = document.getElementById('cart-icon');
+            const cartModal = document.getElementById('cart-modal');
+            const closeCartButton = cartModal.querySelector('.close');
+            const cartItemsContainer = document.getElementById('cart-items');
+
+            const products = document.querySelectorAll('.add-to-cart');
+
+            products.forEach(product => {
+                product.addEventListener('click', function () {
+                    const productName = this.getAttribute('data-product');
+                    const productImage = this.getAttribute('data-image');
+                    const productDescription = this.getAttribute('data-description');
+                    addToCart(productName, productImage, productDescription);
+                });
+            });
+
+            cartIcon.addEventListener('click', function () {
+                cartModal.style.display = 'block';
+            });
+
+            closeCartButton.addEventListener('click', function () {
+                cartModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target == cartModal) {
+                    cartModal.style.display = 'none';
+                }
+            });
+
+            function addToCart(productName, productImage, productDescription) {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+
+                const img = document.createElement('img');
+                img.src = productImage;
+                cartItem.appendChild(img);
+
+                const info = document.createElement('div');
+                info.classList.add('info');
+
+                const name = document.createElement('h4');
+                name.textContent = productName;
+                info.appendChild(name);
+
+                const description = document.createElement('p');
+                description.textContent = productDescription;
+                info.appendChild(description);
+
+                cartItem.appendChild(info);
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-from-cart');
+                removeButton.addEventListener('click', function () {
+                    cartItem.remove();
+                });
+                cartItem.appendChild(removeButton);
+
+                cartItemsContainer.appendChild(cartItem);
+            }
+        });
+    </script>
+
+<div class="products">
+    <div class="row">
+        <div class="product">
+            <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <button class="add-to-cart" data-product="Producto 1">Agregar al carrito</button>
+        </div>
+        <div class="product">
+            <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <button class="add-to-cart" data-product="Producto 2">Agregar al carrito</button>
+        </div>
+        <div class="product">
+            <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
+            <h3>Producto 3</h3>
+            <button class="add-to-cart" data-product="Producto 3">Agregar al carrito</button>
+        </div>
+        <div class="product">
+        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
+            <h3>Producto 4</h3>
+            <button class="add-to-cart" data-product="Producto 4" data-description="Descripción del Producto 4" data-image="producto4.jpg">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="product">
+        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
+            <h3>Producto 5</h3>
+            <button class="add-to-cart" data-product="Producto 5">Agregar al carrito</button>
+        </div>
+        <div class="product">
+        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
+            <h3>Producto 6</h3>
+            <button class="add-to-cart" data-product="Producto 6">Agregar al carrito</button>
+        </div>
+        <div class="product">
+        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
+            <h3>Producto 7</h3>
+            <button class="add-to-cart" data-product="Producto 7">Agregar al carrito</button>
+        </div>
+        <div class="product">
+        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
+            <h3>Producto 8</h3>
+            <button class="add-to-cart" data-product="Producto 8">Agregar al carrito</button>
+        </div>
+    </div>
+</div>
 
 
-</div>
-<h2 class="Producto">Nuestros producto</h2>
-<div class="container8">
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Descripción del Refrigerioo 1</p>
-        <div class="price">$100</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Descripción del Refrigerioo 2</p>
-        <div class="price">$200</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Descripción del Refrigerioo 3</p>
-        <div class="price">$300</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 4">
-        <h3>Producto 4</h3>
-        <p>Descripción del Refrigerioo 4</p>
-        <div class="price">$400</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Descripción del Refrigerioo 1</p>
-        <div class="price">$100</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Descripción del Refrigerioo 2</p>
-        <div class="price">$200</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Descripción del Refrigerioo 3</p>
-        <div class="price">$300</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 4">
-        <h3>Producto 4</h3>
-        <p>Descripción del Refrigerioo 4</p>
-        <div class="price">$400</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Descripción del Refrigerioo 1</p>
-        <div class="price">$100</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Descripción del Refrigerioo 2</p>
-        <div class="price">$200</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Descripción del Refrigerioo 3</p>
-        <div class="price">$300</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 4">
-        <h3>Producto 4</h3>
-        <p>Descripción del Refrigerioo 4</p>
-        <div class="price">$400</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-</div>
-<h2 class="Refrigerios">Refrigerio</h2>
-<div class="container9">
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Descripción del Refrigerioo 1</p>
-        <div class="price">$100</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Descripción del Refrigerioo 2</p>
-        <div class="price">$200</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Descripción del Refrigerioo 3</p>
-        <div class="price">$300</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 4">
-        <h3>Producto 4</h3>
-        <p>Descripción del Refrigerioo 4</p>
-        <div class="price">$400</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Descripción del Refrigerioo 1</p>
-        <div class="price">$100</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Descripción del Refrigerioo 2</p>
-        <div class="price">$200</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Descripción del Refrigerioo 3</p>
-        <div class="price">$300</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 4">
-        <h3>Producto 4</h3>
-        <p>Descripción del Refrigerioo 4</p>
-        <div class="price">$400</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Descripción del Refrigerioo 1</p>
-        <div class="price">$100</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Descripción del Refrigerioo 2</p>
-        <div class="price">$200</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Descripción del Refrigerioo 3</p>
-        <div class="price">$300</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-    <div class="Refrigerio">
-        <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png');?>" alt="Producto 4">
-        <h3>Producto 4</h3>
-        <p>Descripción del Refrigerioo 4</p>
-        <div class="price">$400</div>
-        <a href="#" class="btn">Solicitar</a>
-    </div>
-</div>
-<script src="../../../public/script/script.js"></script>
+
+
+
+
+
+
+
 <?php echo $this->endSection(); ?>
+
