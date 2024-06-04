@@ -48,7 +48,6 @@ class AñadirProducto extends BaseController
                     'rules' => [
                         'is_image[archivo]',
                         'max_size[archivo, 3000]',
-                        'max_dims[archivo,1024,768]',
                     ]
                 ]
             ];
@@ -113,6 +112,10 @@ class AñadirProducto extends BaseController
                     return redirect()->back()->withInput();
                 }
                 $nombreArchivo = $this->request->getPost('nombre');
+                $cantidadMedida = $this->request->getPost('cantidad_medida');
+                $unidadMedida = $this->request->getPost('unidad_medida');
+                $unidadMedida = $cantidadMedida." ".$unidadMedida;
+
                 $nombreImagen = $nombreArchivo . '.png';
                 $ruta = ROOTPATH . 'public/images/productos';
                 /* True se usa para sobre escribir, si no quieres sobreescribir borralo */
@@ -121,16 +124,18 @@ class AñadirProducto extends BaseController
                 $dataInsert = [
                     'nombre'=>'nombre',
                     'precio'=>'precio',
-                    'cantidad_medida'=>'cantidad_medida',
+                    'imagen'=>$nombreImagen,
+                    'unidad_medida'=>$unidadMedida,
+                    'estado'=> 1,
+                    'created_by' => 'admin',
                     'inventario'=>'inventario',
                     'comentarios'=>'comentarios',
-                    'unidad_medida'=>'unidad_medida',
                 ];
-                /* $this->productoModel->insert([$dataInsert]); */
+                $this->productoModel->insert([$dataInsert]);
 
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'Producto registrado correctamente'
+                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha registrado correctamente'
                 ];
 
                 return view('administrador/proceso_producto', $data);
