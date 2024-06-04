@@ -112,7 +112,11 @@ class AñadirProducto extends BaseController
                     return redirect()->back()->withInput();
                 }
                 $nombreArchivo = $this->request->getPost('nombre');
+                $precio = $this->request->getPost('precio');
+                $inventario = $this->request->getPost('inventario');
+                $comentario = $this->request->getPost('comentarios');
                 $cantidadMedida = $this->request->getPost('cantidad_medida');
+                $unidadMedida = $this->request->getPost('unidad_medida');
                 $unidadMedida = $this->request->getPost('unidad_medida');
                 $unidadMedida = $cantidadMedida." ".$unidadMedida;
 
@@ -121,21 +125,22 @@ class AñadirProducto extends BaseController
                 /* True se usa para sobre escribir, si no quieres sobreescribir borralo */
                 $file->move($ruta, $nombreImagen, true);
                 
-                $dataInsert = [
-                    'nombre'=>'nombre',
-                    'precio'=>'precio',
+                $data = [
+
+                    'nombre'=>$nombreArchivo,
+                    'precio'=>$precio,
                     'imagen'=>$nombreImagen,
                     'unidad_medida'=>$unidadMedida,
                     'estado'=> 1,
-                    'created_by' => 'admin',
-                    'inventario'=>'inventario',
-                    'comentarios'=>'comentarios',
+                    'created_by' => "admin",
+                    'Inventario_id_inventario'=>$inventario,
+                    'comentarios'=>$comentario,
                 ];
-                $this->productoModel->insert([$dataInsert]);
+                $this->productoModel->insert($data);
 
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha registrado correctamente'
+                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '.$inventario
                 ];
 
                 return view('administrador/proceso_producto', $data);
