@@ -161,6 +161,28 @@ class AñadirProducto extends BaseController
         return view('administrador/formulario_productos', $data); */
     }
 
+    public function consultarTienda(): string
+    {
+        /*$db = \Config\Database::connect();
+        $query = $db->query("SELECT cod_postal, nombre, dirección, ubicacion, correo, teléfono FROM Tienda");
+        $resultado = $query->getResult();*/
+
+        $resultado = $this->productoModel->findAll();
+        
+        $data = [
+            'titulo' => 'Consultar Tienda',
+            'tiendas' => $resultado];
+        return view('administrador/entorno_de_consulta_tienda', $data);
+    }
+
+    public function verTiendaConsultada($id){
+        $producto = $this->productoModel->find($id);
+        $data = [
+            'titulo' => 'Modificar Tienda',
+            'tienda' => $producto];
+        return view('administrador/entorno_modificar_tienda', $data);
+    }
+
     public function actualizar()
     {
         $file = $this->request->getFile('archivo');
