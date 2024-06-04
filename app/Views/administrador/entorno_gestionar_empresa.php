@@ -48,10 +48,9 @@ function enlace($url)
     <button class="submit" type="submit">Registrar</button>
 
 </form>
-
-<h2 class="Gestionar3">Si deseas consultar o modificar la empresa haz clic aquí</h2>
-<button class="shadow__btn1" href="entorno_consulta_empresa.php">clic aquí</button>
-
-
+<div class="consultar-modificar">
+    <h2 class="Gestionar3">Si deseas consultar o modificar la empresa haz clic aquí</h2>
+    <button class="shadow__btn1" onclick="window.location.href='<?= base_url('/Sabores-Delicias/public/administrador/entorno_consulta_empresa') ?>'">clic aquí</button>
+</div>
 
 <?php echo $this->endSection(); ?>
