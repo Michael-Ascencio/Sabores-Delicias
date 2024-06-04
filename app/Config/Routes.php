@@ -23,6 +23,8 @@ $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestion
 $routes->post('/administrador/entorno_gestionar_empresa', 'Administrador::transaccionEmpresa');
 $routes->get('/administrador/entorno_consulta_empresa', 'Administrador::consultarEmpresa');
 $routes->get('/administrador/entorno_editar_empresa/(:num)', 'Administrador::editarEmpresa/$1');
+$routes->get('/administrador/entorno_editar_empresa', 'Administrador::editarEmpresa'); // Para manejar el GET
+
 $routes->post('/administrador/actualizar', 'Administrador::actualizarDatosBD');
 
 /* Cliente */
