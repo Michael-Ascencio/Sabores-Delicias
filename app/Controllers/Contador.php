@@ -11,8 +11,8 @@ class Contador extends BaseController
     
     public function consultar_informe($fecha_inicial, $fecha_final)
     {
-        $fecha_inicial=$fecha_inicial
-        $fecha_final=$fecha_final
+        $fecha_inicial=$fecha_inicial;
+        $fecha_final=$fecha_final;
         $coneccion_bd=/Config/Database::conect();
         $query=$coneccion_bd->query("  SELECT 
                     Cliente.nombre, 
@@ -39,11 +39,11 @@ class Contador extends BaseController
                 WHERE 
                     Pedido.fecha BETWEEN '$fecha_inicial' AND '$fecha_final'
                 GROUP BY 
-                    Cliente.nombre, Cliente.apellido";
+                    Cliente.nombre, Cliente.apellido"
         );
         $resultado_query=$coneccion_bd->getResult();
 
-        $data =['titulo'=>'Informe de Ventas', 'ventas'=>$resultado_query]
-        return view('contador/Informe_de_ventas')
+        $data =['titulo'=>'Informe de Ventas', 'ventas'=>$resultado_query];
+        return view('contador/Informe_de_ventas');
     }
 }
