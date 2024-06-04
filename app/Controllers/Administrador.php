@@ -56,4 +56,11 @@ class Administrador extends BaseController
         $tiendaModel = new TiendasModel();
         $insert = $tiendaModel->insert([]);
     }
+
+    public function gestionarInventario(): string
+        {
+            $data = ['titulo' => 'Inventario'];
+            return view('administrador/entorno_inventario', $data);
+    }
+        
 }

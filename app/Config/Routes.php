@@ -19,5 +19,5 @@ $routes->post('/admin/productos/add', 'Galeria::subir');
 $routes->get('/cliente/entorno', 'Cliente::entornoCliente');
 $routes->get('/cliente/consumo', 'Cliente::consumo');
 $routes->get('/cliente/configuracion', 'Cliente::configuracion');
-$routes->get('/Inventario/entorno_inventario', 'Inventario::gestionarInventario');
+$routes->get('/admin/entorno_inventario', 'Administrador::gestionarInventario');
 /* $routes->get('/modificartienda', 'Administrador::transaccionTienda'); */
