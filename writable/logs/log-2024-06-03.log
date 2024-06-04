@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2024-06-03 00:07:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "cliente/entorn_configuracion.php"
 [Method: GET, Route: cliente/configuracion]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
@@ -126,3 +127,5 @@ in SYSTEMPATH\Router\Router.php on line 736.
  5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+=======
+>>>>>>> d3dbd8d03855423bf3e4f3d000b304ca37894790
