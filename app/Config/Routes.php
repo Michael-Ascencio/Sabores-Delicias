@@ -17,6 +17,7 @@ $routes->get('/admin/tienda/consulta', 'Administrador::consultarTienda');
 $routes->get('/admin/tienda/modificar/(:num)', 'Administrador::verTiendaConsultada/$1');
 $routes->get('/admin/productos/add', 'AñadirProducto::index');
 $routes->post('/admin/productos/add', 'AñadirProducto::subir');
+$routes->get('/Inventario/entorno_inventario', 'Inventario::gestionarInventario');
 
 /* Cliente */
 $routes->get('/logincliente', 'Cliente::login');
