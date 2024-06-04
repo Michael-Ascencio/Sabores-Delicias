@@ -22,7 +22,7 @@ function enlace($url)
                 <div class="box">
                     <div class="background-image" style="background-image: url('<?php enlace('/Sabores-Delicias/public/images/logos/5939837.png');?>');"></div>
                     <h2 class="texto">Cliente</h2>
-                    <button type="button" class="btn-regresar" onclick="window.location.href='cliente/Cliente.php';">Ingresar</button>
+                    <button type="button" class="btn-regresar" onclick="window.location.href='logincliente';">Ingresar</button>
                 </div>
                 <div class="box">
                     <div class="background-image" style="background-image: url('<?php enlace('/Sabores-Delicias/public/images/logos/5939837 (3).png');?>');"></div>
