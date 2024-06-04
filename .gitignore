@@ -125,3 +125,4 @@
 #/results/
 #/phpunit*.xml
 #
+writable/logs/*.log

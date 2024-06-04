@@ -12,10 +12,11 @@ function enlace($url)
 <?php echo $this->section('contenido'); ?>
 
 <div class="searchBox">
-
-  <input class="searchInput" type="text" name="" placeholder="Search something">
-  <button class="searchButton" href="#" method="POST">
-
+  
+  <form method="get" action="<?=base_url('/Sabores-Delicias/public/administrador/entorno_editar_empresa/')?>">
+    <input class="searchInput" type="text" name="nit" placeholder="Search something">
+    <button class="searchButton" href="#" type="submit">
+  </form>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
       <g clip-path="url(#clip0_2_17)">

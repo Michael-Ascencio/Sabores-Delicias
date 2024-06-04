@@ -84,8 +84,8 @@ class Administrador extends BaseController
     public function transaccionEmpresa(){
         
         try{
-            $nit = $this->request->getVar('nit');
             
+            $nit = $this->request->getVar('nit');
             $nombre = $this->request->getVar('nombre');
             $direccion = $this->request->getVar('direccion');
             $telefono = $this->request->getVar('telefono');
@@ -138,4 +138,32 @@ class Administrador extends BaseController
         return view('administrador/entorno_editar_empresa', $data);
     }
 
+    public function actualizarDatosBD(){
+
+        try{
+            $nit = $this->request->getVar('nit');
+            $nombre = $this->request->getVar('nombre');
+            $direccion = $this->request->getVar('direccion');
+            $telefono = $this->request->getVar('telefono');
+
+            $empresaModel = new EmpresaModel();
+
+            if(strlen($telefono) !== 7 && strlen($telefono) !== 10){
+                throw new \Exception("El número de teléfono no es válido.");
+            }
+
+            $data = [
+                'nit' => $nit,
+                'nombre' => $nombre,
+                'direccion' => $direccion,
+                'telefono' => $telefono
+            ];
+            $empresaModel->update($nit, $data);
+    
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa creada exitosamente.');    
+        }
+        catch(\Exception $e){
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
+        }
+    }
 }
