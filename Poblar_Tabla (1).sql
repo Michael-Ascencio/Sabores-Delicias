@@ -96,7 +96,7 @@ VALUES
 (2, 4);
 
 -- Poblar la tabla DetallePedido
-INSERT INTO `sYd`.`DetallePedido` (`Estado`, `created_by`, `creaded_at`, `updated_by`, `updated_at`, `Pedido_id_pedido`, `Refrigerio_has_Producto_Refrigerio_idRefrigerio1`, `Refrigerio_has_Producto_Producto_id_producto1`)
+INSERT INTO `sYd`.`DetallePedido` (`Estado`, `created_by`, `creaded_at`, `updated_by`, `updated_at`, `Pedido_id_pedido`, `Refrigerio_has_Producto_Refrigerio_idRefrigerio1`,`cantidad_de_producto` ,`Refrigerio_has_Producto_Producto_id_producto1`)
 VALUES 
-(1, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 1, 1, 1),
-(1, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 2, 2, 2);
+(1, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 1, 1,2, 1),
+(1, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 2, 2, 7, 2);
