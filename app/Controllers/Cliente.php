@@ -32,10 +32,13 @@ class Cliente extends BaseController
         return view('cliente/consumo');
     }
 
-    public function configuracion($cedula = null)
+    public function configuracion()
     {
-        $clientesModel = new ClienteModel;
-        $data['clientes'] = $clientesModel->find(cedula);
+        $clientesModel=new ClienteModel();
+        $resultado = $clientesModel->findAll();
+        $data = ['titulo' => 'cliente',
+                 'clientes' => $resultado];
+
         return view('cliente/entorno_configuracion', $data);
     }
 }

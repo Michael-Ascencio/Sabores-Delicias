@@ -58,6 +58,7 @@ function enlace($url)
             <th scope="col">cantidad</th>
             <th scope="col">lote</th>
             <th scope="col">fecha_caducidad</th>
+            <th scope="col">Editar</th>
             </tr>
         </thead>
         <tbody>
