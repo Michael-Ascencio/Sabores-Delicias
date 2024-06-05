@@ -13,8 +13,12 @@ function enlace($url)
 
 <div class="searchBox">
 
-  <input class="searchInput" type="text" name="" placeholder="Agrega el id del producto a modificar">
-  <button class="searchButton" href="#" method="POST">
+<form action="/Sabores-Delicias/public/admin/productos/consulta" method="get" style="display: inline;">
+    <input type="hidden" name="id_producto" id="productIdInput">
+    <input class="searchInput" type="text" onchange="document.getElementById('productIdInput').value = this.value" placeholder="Agrega el id del producto a modificar">
+    <button type="submit" class="searchButton">Buscar</button>
+</form>
+
 
 
     <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">

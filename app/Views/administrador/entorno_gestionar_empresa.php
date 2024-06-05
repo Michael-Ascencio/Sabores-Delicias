@@ -11,22 +11,22 @@ function enlace($url)
 <?php echo $this->section('contenido'); ?>
 <h2 class="Gestionar2">Gestionar empresa</h2>
 
-<?php if (session()->has('success')): ?>
+<?php if (session()->has('success')) : ?>
     <div class="alert alert-success">
         <?= session('success') ?>
     </div>
 <?php endif; ?>
 
-<?php if (session()->has('error')): ?>
+<?php if (session()->has('error')) : ?>
     <div class="alert alert-success">
         <?= session('error') ?>
     </div>
 <?php endif; ?>
 
 
-<form class="form" method="post" action="<?=base_url('/Sabores-Delicias/public/administrador/entorno_gestionar_empresa')?>">
+<form class="form" method="post" action="<?= base_url('/Sabores-Delicias/public/administrador/entorno_gestionar_empresa') ?>">
     <p class="title">Registrar empresa</p>
-    <p class="message">Ingrese la empresa que desea Registrar  </p>
+    <p class="message">Ingrese la empresa que desea Registrar </p>
     <div class="flex">
         <label>
             <input class="input" type="number" required name="nit">
@@ -47,10 +47,10 @@ function enlace($url)
     </label>
     <button class="submit" type="submit">Registrar</button>
 
+    <div class="consultar-modificar">
+        <h2 class="Gestionar3">Si deseas consultar o modificar la empresa haz clic aquí</h2>
+        <button class="shadow__btn1" onclick="window.location.href='<?= base_url('/Sabores-Delicias/public/administrador/entorno_consulta_empresa') ?>'">clic aquí</button>
+    </div>
 </form>
-<div class="consultar-modificar">
-    <h2 class="Gestionar3">Si deseas consultar o modificar la empresa haz clic aquí</h2>
-    <button class="shadow__btn1" onclick="window.location.href='<?= base_url('/Sabores-Delicias/public/administrador/entorno_consulta_empresa') ?>'">clic aquí</button>
-</div>
 
 <?php echo $this->endSection(); ?>

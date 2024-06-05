@@ -22,7 +22,7 @@ function enlace($url)
         </label>
 
         <label>
-            <input class="input" type="text" placeholder="" required="" value="<?php echo $tienda->dirección?>">
+            <input class="input" type="text" placeholder="" required="" value="<?php echo $tienda->direccion?>">
             <span>Dirreción</span>
         </label>
     </div>  
@@ -37,7 +37,7 @@ function enlace($url)
         <span>correo</span>
     </label>
     <label>
-        <input class="input" type="number" placeholder="" required="" value="<?php echo $tienda->teléfono?>">
+        <input class="input" type="number" placeholder="" required="" value="<?php echo $tienda->telefono?>">
         <span>Teléfono</span>
     </label>
     <button class="submit">Modificar</button>
