@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 use App\Models\ProductosModel;
 
-class AñadirProducto extends BaseController
+class AnadirProducto extends BaseController
 {
     private $productoModel;
 
@@ -15,6 +15,7 @@ class AñadirProducto extends BaseController
     {
         $this->productoModel = new ProductosModel();    
     }
+    
     public function index()
     {
 
@@ -120,7 +121,7 @@ class AñadirProducto extends BaseController
                 $unidadMedida = $this->request->getPost('unidad_medida');
                 $unidadMedida = $cantidadMedida." ".$unidadMedida;
 
-                $nombreImagen = $nombreArchivo . '.png';
+                $nombreImagen = str_replace(' ', '_', $nombreArchivo) . '.png';
                 $ruta = ROOTPATH . 'public/images/productos';
                 /* True se usa para sobre escribir, si no quieres sobreescribir borralo */
                 $file->move($ruta, $nombreImagen, true);
@@ -134,13 +135,13 @@ class AñadirProducto extends BaseController
                     'estado'=> 1,
                     'created_by' => "admin",
                     'Inventario_id_inventario'=>$inventario,
-                    'comentarios'=>$comentario,
+                    'descripcion'=>$comentario,
                 ];
                 $this->productoModel->insert($data);
 
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '.$inventario
+                    'mensaje' => 'El producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '.$inventario
                 ];
 
                 return view('administrador/proceso_producto', $data);
@@ -161,21 +162,18 @@ class AñadirProducto extends BaseController
         return view('administrador/formulario_productos', $data); */
     }
 
-    public function consultarTienda(): string
+    public function consultarProducto(): string
     {
-        /*$db = \Config\Database::connect();
-        $query = $db->query("SELECT cod_postal, nombre, dirección, ubicacion, correo, teléfono FROM Tienda");
-        $resultado = $query->getResult();*/
 
         $resultado = $this->productoModel->findAll();
         
         $data = [
-            'titulo' => 'Consultar Tienda',
-            'tiendas' => $resultado];
-        return view('administrador/entorno_de_consulta_tienda', $data);
+            'titulo' => 'Consultar Producto',
+            'productos' => $resultado];
+        return view('administrador/entorno_de_consulta_producto', $data);
     }
 
-    public function verTiendaConsultada($id){
+    public function modificarProducto($id){
         $producto = $this->productoModel->find($id);
         $data = [
             'titulo' => 'Modificar Tienda',
@@ -290,16 +288,16 @@ class AñadirProducto extends BaseController
                     'precio'=>$precio,
                     'imagen'=>$nombreImagen,
                     'unidad_medida'=>$unidadMedida,
+                    'descripcion'=>$nombreArchivo,
                     'estado'=> 1,
                     'created_by' => "admin",
                     'Inventario_id_inventario'=>$inventario,
-                    'comentarios'=>$comentario,
                 ];
                 $this->productoModel->update($data);
 
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '.$inventario
+                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '.$comentario
                 ];
 
                 return view('administrador/proceso_producto', $data);

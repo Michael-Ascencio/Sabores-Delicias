@@ -1,8 +1,8 @@
 <?php
 function enlace($url)
 {
-    $enlace = 'http://' . $_SERVER['HTTP_HOST'] . $url;
-    echo $enlace;
+  $enlace = 'http://' . $_SERVER['HTTP_HOST'] . $url;
+  echo $enlace;
 }
 ?>
 
@@ -13,7 +13,7 @@ function enlace($url)
 
 <div class="searchBox">
 
-  <input class="searchInput" type="text" name="" placeholder="Search something">
+  <input class="searchInput" type="text" name="" placeholder="Agrega el id del producto a modificar">
   <button class="searchButton" href="#" method="POST">
 
 
@@ -45,25 +45,35 @@ function enlace($url)
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Código Postal</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Dirección</th>
-      <th scope="col">Ubicación</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Teléfono</th>
+      <th scope="col">ID producto</th>
+      <th scope="col">Nombre Producto</th>
+      <th scope="col">Precio unitario</th>
+      <th scope="col">imagen</th>
+      <th scope="col">unidad_medida</th>
+      <th scope="col">estado</th>
+      <th scope="col">ID Inventario perteneciente</th>
+      <th scope="col">Descripción</th>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($tiendas as $tienda) : ?>
-      
+    <?php foreach ($productos as $producto) : ?>
+
       <tr>
         <div class="Tabla_Productos">
-        <td> <?php echo $tienda->cod_postal; ?> </td>
-        <td> <?php echo $tienda->nombre; ?> </td>
-        <td> <?php echo $tienda->direccion; ?> </td>
-        <td> <?php echo $tienda->ubicacion; ?> </td>
-        <td> <?php echo $tienda->correo; ?> </td>
-        <td> <?php echo $tienda->telefono; ?> </td>
+          <td> <?php echo $producto->id_producto; ?> </td>
+          <td> <?php echo $producto->nombre; ?> </td>
+          <td> <?php echo $producto->precio; ?> </td>
+          <td> <img class ="responsive-img-producto" src=<?php echo enlace("/Sabores-Delicias/public/images/productos/".$producto->imagen); ?> > </td>
+          <td> <?php echo $producto->unidad_medida; ?> </td>
+          <td> <?php
+                if ($producto->estado == 1) {
+                  echo "Activo";
+                } else {
+                  echo "inactivo";
+                } ?>
+          </td>
+          <td> <?php echo $producto->Inventario_id_inventario; ?> </td>
+          <td> <?php echo $producto->descripcion; ?> </td>
         </div>
       </tr>
     <?php endforeach; ?>
