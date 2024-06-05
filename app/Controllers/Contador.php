@@ -1,13 +1,16 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\ClienteModel;
+/*use App\Models\ClienteModel;
 use App\Models\VentaModel;
 use App\Models\DetallepedidoModel;
 use App\Models\PedidoModel;
 use App\Models\ProductosModel;
+use CodeIgniter\Database\Database;*/
+use CodeIgniter\Controller;
+use Config\Database;
 
-class Contador extends BaseController
+class Contador extends Controller
 {
     public function login()
     {
@@ -15,63 +18,19 @@ class Contador extends BaseController
     }
     public function fechas_de_reporte()
     {
-        return view ('contador/formulario_de_fechas');
+        $data = ['titulo' => 'Ingreso de fechas para Reporte'];
+        return view ('contador/formulario_de_fechas',$data);
     }
     
-    public function consultar_informe()
+    
+    private function obtenerConsultaInforme($fecha_inicial, $fecha_final)
     {
-        $fecha_inicial = $this->request->getPost('fecha_inicial');
-        $fecha_final = $this->request->getPost('fecha_final');
-        $coneccion_bd=Database::conect();
-                $sql =("  SELECT 
-                    Cliente.nombre, 
-                    Cliente.apellido, 
-                    SUM(Producto.precio * subquery.product_count) AS total_compras,
-                    '$fecha_inicial - $fecha_final' AS fechas
-                FROM 
-                    Cliente
-                JOIN 
-                    Pedido ON Cliente.cedula = Pedido.Cliente_id_cliente
-                JOIN 
-                    (
-                        SELECT 
-                            Pedido_id_pedido, 
-                            Refrigerio_has_Producto_Producto_id_producto1 AS Producto_id_producto, 
-                            COUNT(*) AS product_count
-                        FROM 
-                            DetallePedido
-                        GROUP BY 
-                            Pedido_id_pedido, Refrigerio_has_Producto_Producto_id_producto1
-                    ) AS subquery ON Pedido.id_pedido = subquery.Pedido_id_pedido
-                JOIN 
-                    Producto ON subquery.Producto_id_producto = Producto.id_producto
-                WHERE 
-                    Pedido.fecha BETWEEN '$fecha_inicial' AND '$fecha_final'
-                GROUP BY 
-                    Cliente.nombre, Cliente.apellido"
-        );
-
-        $query = $db->query($sql, [$fecha_inicial, $fecha_final]);
-        $resultado_query=$coneccion_bd->getResult();
-
-        $data =['titulo'=>'Informe de Ventas', 'ventas'=>$resultado_query];
-        return view('contador/Informe_de_ventas',$data);
-        
-    }
-
-    public function descargar_csv()
-    {
-        $fecha_inicial = $this->request->getGet('fecha_inicial');
-        $fecha_final = $this->request->getGet('fecha_final');
-
-        $db = Database::connect();
-
-        $sql = "
+        return "
             SELECT 
                 Cliente.nombre, 
                 Cliente.apellido, 
                 SUM(Producto.precio * subquery.product_count) AS total_compras,
-                '$fecha_inicial - $fecha_final' AS fechas
+                ? AS fechas
             FROM 
                 Cliente
             JOIN 
@@ -94,36 +53,57 @@ class Contador extends BaseController
             GROUP BY 
                 Cliente.nombre, Cliente.apellido
         ";
-
-        $query = $db->query($sql, [$fecha_inicial, $fecha_final]);
-        $resultado_query = $query->getResultArray();
-
-        // Definir el nombre del archivo CSV
-        $filename = 'Reporte_consumos' . date('Ymd') . '.csv';
-
-        // Establecer los encabezados para la descarga del archivo
-        header('Content-Type: text/csv');
-        header('Content-Disposition: attachment;filename="' . $filename . '"');
-
-        // Abrir la salida de PHP para escribir el archivo CSV
-        $fp = fopen('php://output', 'w');
-
-        // Escribir la fila de encabezados
-        fputcsv($fp, ['Nombre', 'Apellido', 'Total Compras']);
-
-        // Escribir las filas de datos
-        foreach ( $resultado_query as $row) {
-            fputcsv($fp, [$row['nombre'], $row['apellido'], $row['total_compras']]);
-        }
-
-        // Cerrar el archivo
-        fclose($fp);
-
-        // Detener la ejecución del script
-        exit;
     }
 
+    public function consultar_informe()
+    {
+        $fecha_inicial = $this->request->getPost('fecha_inicial');
+        $fecha_final = $this->request->getPost('fecha_final');
+        $db = Database::connect();
 
+        try {
+            $sql = $this->obtenerConsultaInforme($fecha_inicial, $fecha_final);
+            $query = $db->query($sql, ["$fecha_inicial - $fecha_final", $fecha_inicial, $fecha_final]);
+            $resultado_query = $query->getResultArray();
+
+            $data = ['titulo' => 'Informe de Ventas', 'ventas' => $resultado_query];
+            return view('contador/Informe_de_ventas', $data);
+        } catch (\Exception $e) {
+            // Manejo de errores
+            return redirect()->back()->with('error', 'Hubo un error al consultar el informe: ' . $e->getMessage());
+        }
+    }
+
+    public function descargar_csv()
+    {
+        $fecha_inicial = $this->request->getGet('fecha_inicial');
+        $fecha_final = $this->request->getGet('fecha_final');
+        $db = Database::connect();
+
+        try {
+            $sql = $this->obtenerConsultaInforme($fecha_inicial, $fecha_final);
+            $query = $db->query($sql, ["$fecha_inicial - $fecha_final", $fecha_inicial, $fecha_final]);
+            $resultado_query = $query->getResultArray();
+
+            $filename = 'Reporte_consumos_' . date('Ymd') . '.csv';
+
+            header('Content-Type: text/csv');
+            header('Content-Disposition: attachment;filename="' . $filename . '"');
+
+            $fp = fopen('php://output', 'w');
+            fputcsv($fp, ['Nombre', 'Apellido', 'Total Compras', 'Fechas']);
+
+            foreach ($resultado_query as $row) {
+                fputcsv($fp, [$row['nombre'], $row['apellido'], $row['total_compras'], $row['fechas']]);
+            }
+
+            fclose($fp);
+            exit;
+        } catch (\Exception $e) {
+            // Manejo de errores
+            return redirect()->back()->with('error', 'Hubo un error al descargar el CSV: ' . $e->getMessage());
+        }
+    }
 
 
 
