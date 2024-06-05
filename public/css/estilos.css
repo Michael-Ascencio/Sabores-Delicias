@@ -1795,3 +1795,47 @@ footer {
     height: auto;
 }
 /******************************************************************************/
+
+
+.cart-popup,
+.cart-popup * {
+  color: black;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-item img {
+  width: 75px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.cart-item .info {
+  flex: 1;
+}
+
+.cart-item .remove-from-cart {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.total-amount {
+  font-weight: bold;
+}
