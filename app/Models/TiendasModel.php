@@ -14,7 +14,7 @@ class TiendasModel extends Model
     protected $returnType     = 'object';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields =['cod_postal', 'nombre', 'dirección', 'ubicacion', 'correo', 'teléfono'];
+    protected $allowedFields =['cod_postal', 'nombre', 'direccion', 'ubicacion', 'correo', 'telefono'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

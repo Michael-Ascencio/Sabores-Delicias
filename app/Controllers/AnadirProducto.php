@@ -141,7 +141,7 @@ class AnadirProducto extends BaseController
 
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'El producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '.$inventario
+                    'mensaje' => 'El producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '
                 ];
 
                 return view('administrador/proceso_producto', $data);
@@ -177,14 +177,13 @@ class AnadirProducto extends BaseController
         $producto = $this->productoModel->find($id);
         $data = [
             'titulo' => 'Modificar Tienda',
-            'tienda' => $producto];
-        return view('administrador/entorno_modificar_tienda', $data);
+            'producto' => $producto];
+        return view('administrador/entorno_modificar_producto', $data);
     }
 
     public function actualizar()
     {
         $file = $this->request->getFile('archivo');
-        /* print_r($file); */
 
 
         if ($file->guessExtension() == 'jpg' || $file->guessExtension() == 'png' || $file->guessExtension() == 'jpeg') {
@@ -220,26 +219,12 @@ class AnadirProducto extends BaseController
 
             if (!$file->hasMoved()) {
                 $reglas = [
-                    'nombre' => [
-                        'rules' => 'required',
-                        'label' => 'Nombre',
-                        'errors' => [
-                            'required' => 'El campo {field} es obligatorio'
-                        ],
-                    ],
                     'precio' => [
                         'rules' => 'required|greater_than[49]',
                         'label' => 'Precio',
                         'errors' => [
                             'required' => 'El campo {field} es obligatorio',
                             'greater_than' => 'El {field} minimo para el producto es de 50$'
-                        ],
-                    ],
-                    'cantidad_medida' => [
-                        'rules' => 'required',
-                        'label' => 'Cantidad',
-                        'errors' => [
-                            'required' => 'El campo {field} es obligatorio'
                         ],
                     ],
                     'inventario' => [
@@ -256,26 +241,17 @@ class AnadirProducto extends BaseController
                             'required' => 'Los {field} deben ser obligatorios'
                         ],
                     ],
-                    'unidad_medida' => [
-                        'rules' => 'required',
-                        'label' => 'Unidad de medida',
-                        'errors' => [
-                            'required' => 'El campo {field} es obligatorio'
-                        ],
-                    ],
-
                 ];
                 if (!$this->validate($reglas)) {
                     return redirect()->back()->withInput();
                 }
+                $id_producto = $this->request->getPost('id');
                 $nombreArchivo = $this->request->getPost('nombre');
                 $precio = $this->request->getPost('precio');
+                $unidadMedida = $this->request->getPost('unidad_medida');
+                $estado_producto =$this->request->getPost('estado');
                 $inventario = $this->request->getPost('inventario');
                 $comentario = $this->request->getPost('comentarios');
-                $cantidadMedida = $this->request->getPost('cantidad_medida');
-                $unidadMedida = $this->request->getPost('unidad_medida');
-                $unidadMedida = $this->request->getPost('unidad_medida');
-                $unidadMedida = $cantidadMedida." ".$unidadMedida;
 
                 $nombreImagen = $nombreArchivo . '.png';
                 $ruta = ROOTPATH . 'public/images/productos';
@@ -283,21 +259,22 @@ class AnadirProducto extends BaseController
                 $file->move($ruta, $nombreImagen, true);
                 
                 $data = [
-
+                    'id_producto'=>$id_producto,
                     'nombre'=>$nombreArchivo,
                     'precio'=>$precio,
                     'imagen'=>$nombreImagen,
                     'unidad_medida'=>$unidadMedida,
-                    'descripcion'=>$nombreArchivo,
-                    'estado'=> 1,
+                    'estado'=>$estado_producto,
                     'created_by' => "admin",
+                    'descripcion'=>$comentario,
                     'Inventario_id_inventario'=>$inventario,
                 ];
-                $this->productoModel->update($data);
+
+                $this->productoModel->update($id_producto, $data);
 
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '.$comentario
+                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha modificado correctamente en el inventario '
                 ];
 
                 return view('administrador/proceso_producto', $data);
