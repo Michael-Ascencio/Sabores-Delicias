@@ -115,11 +115,17 @@ function enlace($url)
         }
     ?>
         <div class="product">
-            <img class="responsive-img-producto" src="<?php echo enlace("/Sabores-Delicias/public/images/productos/".$producto->imagen); ?>" alt="<?php echo $producto->nombre; ?>">
+            <img class="responsive-img-producto<?php echo ($producto->estado == 0) ? ' product-disabled' : ''; ?>" src="<?php echo enlace("/Sabores-Delicias/public/images/productos/".$producto->imagen); ?>" alt="<?php echo $producto->nombre; ?>">
             <h3><?php echo $producto->nombre; ?></h3>
-            <p>Precio: <?php echo $producto->precio; ?></p>
-            <p>Descripción: <?php echo $producto->descripcion; ?></p>
-            <button class="add-to-cart" data-product="<?php echo $producto->nombre; ?>" data-description="<?php echo $producto->descripcion; ?>" data-image="<?php echo enlace("/Sabores-Delicias/public/images/productos/".$producto->imagen); ?>" >Agregar al carrito</button>
+            <?php if ($producto->estado == 1) : ?>
+                <p>Precio: <?php echo $producto->precio; ?></p>
+            <?php else : ?>
+                <p>Producto agotado</p>
+            <?php endif; ?>
+            <?php if ($producto->estado == 1) : ?>
+                <p>Descripción: <?php echo $producto->descripcion; ?></p>
+                <button class="add-to-cart" data-product="<?php echo $producto->nombre; ?>" data-description="<?php echo $producto->descripcion; ?>" data-image="<?php echo enlace("/Sabores-Delicias/public/images/productos/".$producto->imagen); ?>" >Agregar al carrito</button>
+            <?php endif; ?>
         </div>
     <?php 
         $count++;
@@ -129,7 +135,6 @@ function enlace($url)
     }
     ?>
 </div>
-
 
 
 

@@ -13,34 +13,37 @@ function enlace($url)
 
 <div class="form">
     <h2 class="form-title">Modificar producto</h2>
-    <p class="message">Datos del producto" <?php echo $producto->nombre?> "</p>
-    <h4 class="form-title"><?php echo validation_list_errors().'Recuerda volver a subir la imagen de tu producto';?></h4>
-    <form id="registroProductos" action="<?php base_url('admin/productos/actualizar/'); ?>" method="post" enctype="multipart/form-data">
-        
+    <h4 class="form-title"><?php echo validation_list_errors() . 'Recuerda volver a subir la imagen de tu producto'; ?></h4>
+    <form id="registroProductos" action="<?php echo base_url('admin/productos/actualizar'); ?>" method="post" enctype="multipart/form-data">
+
         <div class="form-group">
             <label>
-                <input type="text" placeholder="Nombre" name="nombre" value="<?php echo set_value('nombre'); ?>">
+                <input type="text" placeholder="id" name="id" value="<?php echo $producto->id_producto ?>" readonly>
+            </label>
+            <label>
+                <input type="text" placeholder="Nombre" name="nombre" value="<?php echo $producto->nombre ?>">
             </label>
 
             <br><label>
-                <input type="number" placeholder="Precio" required="" min="0" step="0.01" pattern="\d+(\,\d{0,2})?" name="precio" value="<?php echo set_value('precio, 0.00'); ?>">
+                <input type="floatval" placeholder="Precio" required="" min="0" step="0.01" name="precio" value="<?php echo $producto->precio ?>">
+            </label>
+
+            <label>
+                <input type="text" placeholder="Unidad de medida" name="unidad_medida" value="<?php echo $producto->unidad_medida?>" readonly>
             </label>
 
             <div class="drop-container">
                 <label for="file-input" class="drop-title">
-                    <span >Selecciona o arrastra un archivo para la imagen de tu producto (jpg o png)</span>
+                    <span>Selecciona o arrastra un archivo para la imagen de tu producto (jpg o png)</span>
                 </label>
-                <input type="file" name="archivo" id="file-input" accept="image/jpg, image/jpeg, image/png" required="" value="<?php echo set_value('archivo'); ?>">
+                <input type="file" name="archivo" id="file-input" accept="image/jpg, image/jpeg, image/png" required="" value="<?php echo $producto->imagen ?>">
             </div>
-
-            <br><label for="unidad_medida" class="form-group">
-                <input type="number" placeholder="Cantidad de medida" required="" min="0" name= "cantidad_medida" value="<?php echo set_value('cantidad, 0.00'); ?>">
-                <select id="unidad_medida" name="unidad_medida">
-                    <option value="">Selecciona una unidad de medida</option>
-                    <option value="g">Gramo</option>
-                    <option value="kg">Kilogramo</option>
-                    <option value="l">Litro</option>
-                    <option value="ml">Mililitro</option>
+            <br><label for="estado" class="form-group">
+                <span>Estado del producto</span>
+                <select id="estado" name="estado">
+                    <option>Seleccione un estado para su producto</option>
+                    <option value=1>Activo</option>
+                    <option value=0>Inactivo</option>
                 </select>
             </label>
 
@@ -52,52 +55,22 @@ function enlace($url)
                     <option value="<?php /* echo $inventario->id_inventario; */ ?>"><?php /* echo $inventario->id_inventario */; ?></option>
                     <?php /* endforeach;  */ ?>
                     <option value="1">inventario 1</option>
+                    <option value="2">inventario 2</option>
                 </select>
             </label>
 
             <br><label class="form-group">
                 <span>Realiza una descripción de 300 caracteres sobre el producto</span>
-                <textarea id="comentarios" name="comentarios" maxlength="299" rows="4" placeholder="Escribe tus comentarios aquí..." value="<?php echo set_value('comentarios'); ?>"></textarea>
+                <textarea id="comentarios" name="comentarios" maxlength="299" rows="4" placeholder="Escribe tus comentarios aquí..."><?php echo $producto->descripcion ?></textarea>
             </label>
 
         </div>
         <div class="form-paragraph">
-            <button type="submit">Añadir Producto</button>
+            <button type="submit">Modificar Producto</button>
         </div>
     </form>
 </div>
-
-<form class="form">
-    <p class="title">Modificar tienda</p>
-    <p class="message">La postal de la tienda es: " <?php echo $tienda->cod_postal?> "</p>
-        <div class="flex">
-        <label>
-            <input class="input" type="text" placeholder="" required="" value="<?php echo $tienda->nombre?>">
-            <span>Nombre</span>
-        </label>
-
-        <label>
-            <input class="input" type="text" placeholder="" required="" value="<?php echo $tienda->dirección?>">
-            <span>Dirreción</span>
-        </label>
-    </div>  
-            
-    <label>
-        <input class="input" type="text" placeholder="" required="" value="<?php echo $tienda->ubicacion?>">
-        <span>Ubicación</span>
-    </label> 
-        
-    <label>
-        <input class="input" type="email" placeholder="" required="" value="<?php echo $tienda->correo?>">
-        <span>correo</span>
-    </label>
-    <label>
-        <input class="input" type="number" placeholder="" required="" value="<?php echo $tienda->teléfono?>">
-        <span>Teléfono</span>
-    </label>
-    <button class="submit">Modificar</button>
-
-</form>
-<h2 class="Gestionar3">Si deseas consultar o modificar otra tienda haz clic aqui</h2>
-<button class="shadow__btn1" href="entorno_de_consulta_tienda.php">clic aqui</button>
+<br><br><br><br><br><br><br>
+<!-- <h2 class="Gestionar3">Si deseas consultar o modificar otro producto haz clic aqui</h2>
+<button class="shadow__btn1" href="<?php base_url('admin/productos/consulta'); ?>">clic aqui</button> -->
 <?php echo $this->endSection(); ?>
