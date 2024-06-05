@@ -8,7 +8,7 @@ function enlace($url)
 <!-- Carpeta en la cual se encuentra el layout -->
 <?php echo $this->extend('Plantilla/layout_contador'); ?>
 <!-- Nombre del contenido en el layout -->
-<?php echo $this->section('content'); ?>
+<?php echo $this->section('contendo'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
