@@ -1217,7 +1217,6 @@ th {
     flex-direction: column;
     gap: 10px;
     max-width: 500px;
-  
     padding: 50px;
     border-radius: 20px;
     position: relative;
@@ -1583,10 +1582,6 @@ th {
     background-color: #555;
 }
 
-
-
-
-
 footer {
     background-color: #555657; /* Color de fondo del footer */
     padding: 10px; /* Espaciado interno del footer */
@@ -1613,18 +1608,22 @@ footer {
   }
 
 
+
+
+
 /*------------------------------------------------------------------------------*/
 /*Formularios de productos*/
 
 .form {
-    background-color: #000000;
+    background-color: #ffffff;
     box-shadow: 0 10px 60px rgb(218, 229, 255);
     border: 1px solid rgb(159, 159, 160);
     border-radius: 20px;
     padding: 5% 3%;
     text-align: center;
     font-size: 1.125rem;
-    max-width: 90%;
+    max-width: 70%;
+    height: 70%;
     margin: 0 auto; /* Centrar el formulario */
 }
 
@@ -1699,6 +1698,69 @@ footer {
     background: #0d45a5;
 }
 
+.estilodeletras{
+    font-size: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    margin: 20px 0;
+}
+.form-group label {
+    width: 100%;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+.form-group input[type="number"] {
+    -moz-appearance: textfield;
+}
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.form-group select {
+    cursor: pointer;
+}
+.estilodeletras {
+    font-size: 1rem;
+    color: #666;
+}
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background .2s ease-in-out;
+    margin-top: 20px;
+}
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
 /* Media queries para ajustar estilos para diferentes tamaños de pantalla */
 @media only screen and (max-width: 768px) {
     .form {
@@ -1709,3 +1771,27 @@ footer {
 /*------------------------------------------------------------------------------*/
 
 
+.message1{
+    color: yellow;
+}
+
+/*------------Estilos para la imagen del producto----------------*/
+.responsive-img-producto {
+    width: 100%;
+    max-width: 300px; /* Ajusta este valor al tamaño original de tu imagen */
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .responsive-img-producto {
+        max-width: 100%; /* En pantallas pequeñas, permite que la imagen ocupe el 100% del ancho disponible */
+    }
+}
+/******************************************************************************/
+
+/*------------Estilos para la imagen del producto en el carrito del usuario----------------*/
+.img{
+    width: 200px;
+    height: auto;
+}
+/******************************************************************************/

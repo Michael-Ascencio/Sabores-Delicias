@@ -40,35 +40,35 @@ function enlace($url)
 
             <div class="drop-container">
                 <label for="file-input" class="drop-title">
-                    <span >Selecciona o arrastra un archivo para la imagen de tu producto (jpg o png)</span>
+                    <span class="estilodeletras">Selecciona o arrastra un archivo para la imagen de tu producto (jpg o png)</span>
                 </label>
                 <input type="file" name="archivo" id="file-input" accept="image/jpg, image/jpeg, image/png" required="" value="<?php echo set_value('archivo'); ?>">
             </div>
 
             <br><label for="unidad_medida" class="form-group">
-                <input type="floatval" placeholder="Cantidad de medida" required="" min="0" name= "cantidad_medida" value="<?php echo set_value('cantidad, 0.00'); ?>">
+                <input type="number" placeholder="Cantidad de medida" required="" min="0" name= "cantidad_medida" value="<?php echo set_value('cantidad, 0.00'); ?>">
                 <select id="unidad_medida" name="unidad_medida">
-                    <option value="">Selecciona una unidad de medida</option>
-                    <option value="g">Gramo</option>
-                    <option value="kg">Kilogramo</option>
-                    <option value="l">Litro</option>
-                    <option value="ml">Mililitro</option>
+                    <option value=""    class="estilodeletras">Selecciona una unidad de medida</option>
+                    <option value="g"   class="estilodeletras">Gramo</option>
+                    <option value="kg"  class="estilodeletras">Kilogramo</option>
+                    <option value="l"   class="estilodeletras">Litro</option>
+                    <option value="ml"  class="estilodeletras">Mililitro</option>
                 </select>
             </label>
 
             <br><label for="inventario" class="form-group">
-                <span>Inventarios</span>
+                <span class="estilodeletras">Inventarios</span>
                 <select id="inventario" name="inventario">
-                    <option>Seleccione un inventario</option>
+                    <option class="estilodeletras">Seleccione un inventario</option>
                     <?php /* foreach ($inventarios as $inventario) :  */ ?>
                     <option value="<?php /* echo $inventario->id_inventario; */ ?>"><?php /* echo $inventario->id_inventario */; ?></option>
                     <?php /* endforeach;  */ ?>
-                    <option value="1">inventario 1</option>
+                    <option value="1" class="estilodeletras">inventario 1</option>
                 </select>
             </label>
 
             <br><label class="form-group">
-                <span>Realiza una descripción de 300 caracteres sobre el producto</span>
+                <span class="estilodeletras">Realiza una descripción de 300 caracteres sobre el producto</span>
                 <textarea id="comentarios" name="comentarios" maxlength="299" rows="4" placeholder="Escribe tus comentarios aquí..." value="<?php echo set_value('comentarios'); ?>"></textarea>
             </label>
 
