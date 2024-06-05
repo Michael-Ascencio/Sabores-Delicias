@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\ProductosModel;
+use App\Models\ClienteModel;
 
 class Cliente extends BaseController
 {
@@ -31,8 +32,10 @@ class Cliente extends BaseController
         return view('cliente/consumo');
     }
 
-    public function configuracion()
+    public function configuracion($cedula = null)
     {
-        return view('cliente/entorno_configuracion');
+        $clientesModel = new ClienteModel;
+        $data['clientes'] = $clientesModel->find(cedula);
+        return view('cliente/entorno_configuracion', $data);
     }
 }
