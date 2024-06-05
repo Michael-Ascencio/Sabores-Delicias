@@ -1,3 +1,4 @@
+
 <?php
 function enlace($url)
 {
@@ -15,8 +16,8 @@ function enlace($url)
         <?= session('error') ?>
     </div>
 <?php endif; ?>
-
 <h2 class="message1">Ingrese el NIT de la empresa que desea modificar</h2>
+
 <div class="searchBox">
   <form id="searchForm" method="get" action="<?= base_url('/Sabores-Delicias/public/administrador/entorno_editar_empresa') ?>">
     <input class="searchInput" type="number" id="nitInput" placeholder="NIT">
@@ -80,4 +81,6 @@ function enlace($url)
     <?php endforeach; ?>
   </tbody>
 </table>
+
+
 <?php echo $this->endSection(); ?>

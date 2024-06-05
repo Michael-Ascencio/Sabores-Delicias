@@ -24,15 +24,28 @@ function enlace($url)
     <div id="cart-icon">
         <img src="<?php enlace('/Sabores-Delicias/public/images/logos/carrito-de-compras.png');?>" alt="" class="carritodecompras">
     </div>
-
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Carrito de Compras</h2>
             <div id="cart-items"></div>
+          <p></p>
             <button id="checkout">Proceder al pago</button>
         </div>
     </div>
+   
+    <tbody>
+  
+      
+      <tr>
+        <div class="Carrito de compras">
+        <td> </td>
+     
+        </div>
+      </tr>
+
+  </tbody>
+  
 
     <script>
               document.addEventListener('DOMContentLoaded', function () {

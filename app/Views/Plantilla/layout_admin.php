@@ -11,7 +11,7 @@
     <title><?php echo esc($titulo); ?> </title>
 </head>
 
-<body class="body4">
+<body >
     <header>
         <nav class="menu">
             
@@ -27,13 +27,13 @@
     <?php echo $this->renderSection("contenido"); ?>
 
     <footer>
-        <!-- Footer legal -->
-        <section class="ft-legal">
+        <!--
+        <! <section class="ft-legal">
             <ul class="ft-legal-list">
                 <li class="ejemplo">&copy; 2024 Arquitectura de software.</li>
             </ul>
         </section>
-    </footer>
+    </footer>-->
 </body>
 
 </html>

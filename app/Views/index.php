@@ -37,7 +37,7 @@ function enlace($url)
                 <div class="box">
                     <div class="background-image" style="background-image: url('<?php enlace('/Sabores-Delicias/public/images/logos/5939837 (2).png');?>');"></div>
                     <h2 class="texto">Contador</h2>
-                    <button type="button" class="btn-regresar" onclick="window.location.href='contador/contador.php';">Ingresar</button>
+                    <button type="button" class="btn-regresar" onclick="window.location.href='/logincontador';">Ingresar</button>
                 </div>
             </div>
         </div>

@@ -26,14 +26,14 @@
 
     <?php echo $this->renderSection("contenido"); ?>
 
-    <footer>
-        <!-- Footer legal -->
+    <!--<footer>
+         Footer legal 
         <section class="ft-legal">
             <ul class="ft-legal-list">
                 <li class="ejemplo">&copy; 2024 Arquitectura de software.</li>
             </ul>
         </section>
-    </footer>
+    </footer>-->
 </body>
 
 </html>

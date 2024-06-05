@@ -19,43 +19,5 @@ function enlace($url)
     <h1 id="inicio" class="sitio1">Bienvenido a nuestro sitio</h1>
     <div class="caja4"></div>
 
-    <table>
-        <thead>
-            <tr>
-
-                <th></th>
-                <th></th>
-                <th></th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-
-                <td></td>
-                <td></td>
-                <td><button>Ver</button></td>
-            </tr>
-            <tr>
-
-                <td></td>
-                <td></td>
-                <td><button>Ver</button></td>
-            </tr>
-            <tr>
-
-                <td></td>
-                <td></td>
-                <td><button>Ver</button></td>
-            </tr>
-            <tr>
-
-                <td></td>
-                <td></td>
-                <td><button>Ver</button></td>
-            </tr>
-        </tbody>
-    </table>
-   
-</div>
+ 
 <?php echo $this->endSection(); ?>

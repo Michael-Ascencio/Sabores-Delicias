@@ -1583,11 +1583,41 @@ th {
     background-color: #555;
 }
 
+
+
+
+
+footer {
+    background-color: #555657; /* Color de fondo del footer */
+    padding: 10px; /* Espaciado interno del footer */
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Estilos para el texto del footer */
+  .ft-legal-list {
+    list-style: none; /* Eliminar los puntos de la lista */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .ft-legal-list li {
+    color: #333; /* Color del texto */
+    font-size: 14px; /* Tamaño de fuente */
+  }
+  
+  /* Ajuste para el contenido principal */
+  .main-content {
+    margin-bottom: 80px; /* Ajusta el margen inferior para que no se solape con el footer */
+  }
+
+
 /*------------------------------------------------------------------------------*/
 /*Formularios de productos*/
 
 .form {
-    background-color: #fff;
+    background-color: #000000;
     box-shadow: 0 10px 60px rgb(218, 229, 255);
     border: 1px solid rgb(159, 159, 160);
     border-radius: 20px;
@@ -1679,6 +1709,3 @@ th {
 /*------------------------------------------------------------------------------*/
 
 
-.message1{
-    color: yellow;
-}

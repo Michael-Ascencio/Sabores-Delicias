@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ClienteModel extends Model
+class PedidoModel extends Model
 {
     protected $table      = 'pedido';
     protected $primaryKey = 'id_pedido ';
@@ -12,7 +12,7 @@ class ClienteModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'object';
-    protected $useSoftDeletes = false;
+    protected $useSoftDeletes = true;
 
     protected $allowedFields =['id_pedido', 'created_by', 'creaded_at', 'updated_by', 'updated_at', 'fecha', 'Estado', 'Cliente_id_cliente '];
 
