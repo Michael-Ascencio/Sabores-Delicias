@@ -38,8 +38,8 @@ $routes->get('/loginempleado', 'Empleado::login');
 
 /* Contador */
 $routes->get('/logincontador', 'Contador::login');
+$routes->get('/contador/informe_de_ventas', 'Contador::fechas_de_reporte');
 $routes->post('/contador/consultar_informe', 'Contador::consultar_informe');
-
-
+$routes->post('/contador/descargar_csv', 'Contador::descargar_csv');
 
 /* $routes->get('/modificartienda', 'Administrador::transaccionTienda'); */
