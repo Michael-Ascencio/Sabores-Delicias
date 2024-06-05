@@ -46,7 +46,7 @@ function enlace($url)
             </div>
 
             <br><label for="unidad_medida" class="form-group">
-                <input type="floatval" placeholder="Cantidad de medida" required="" min="0" name= "cantidad_medida" value="<?php echo set_value('cantidad, 0.00'); ?>">
+                <input type="number" placeholder="Cantidad de medida" required="" min="0" name= "cantidad_medida" value="<?php echo set_value('cantidad, 0.00'); ?>">
                 <select id="unidad_medida" name="unidad_medida">
                     <option value="">Selecciona una unidad de medida</option>
                     <option value="g">Gramo</option>

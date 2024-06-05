@@ -1677,3 +1677,29 @@ th {
 }
 
 /*------------------------------------------------------------------------------*/
+
+
+.message1{
+    color: yellow;
+}
+
+/*------------Estilos para la imagen del producto----------------*/
+.responsive-img-producto {
+    width: 100%;
+    max-width: 300px; /* Ajusta este valor al tamaño original de tu imagen */
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .responsive-img-producto {
+        max-width: 100%; /* En pantallas pequeñas, permite que la imagen ocupe el 100% del ancho disponible */
+    }
+}
+/******************************************************************************/
+
+/*------------Estilos para la imagen del producto en el carrito del usuario----------------*/
+.img{
+    width: 200px;
+    height: auto;
+}
+/******************************************************************************/
