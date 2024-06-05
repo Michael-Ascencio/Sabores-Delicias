@@ -1678,6 +1678,11 @@ th {
 
 /*------------------------------------------------------------------------------*/
 
+
+.message1{
+    color: yellow;
+}
+
 /*------------Estilos para la imagen del producto----------------*/
 .responsive-img-producto {
     width: 100%;

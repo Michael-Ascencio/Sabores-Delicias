@@ -5,7 +5,6 @@ function enlace($url)
     echo $enlace;
 }
 ?>
-
 <!-- Carpeta en la cual se encuentra el layout -->
 <?php echo $this->extend('Plantilla/layout_admin'); ?>
 <!-- Nombre del contenido en el layout -->
@@ -16,9 +15,11 @@ function enlace($url)
         <?= session('error') ?>
     </div>
 <?php endif; ?>
+
+<h2 class="message1">Ingrese el NIT de la empresa que desea modificar</h2>
 <div class="searchBox">
-<form id="searchForm" method="get" action="<?= base_url('/Sabores-Delicias/public/administrador/entorno_editar_empresa') ?>">
-    <input class="searchInput" type="text" id="nitInput" placeholder="Search something">
+  <form id="searchForm" method="get" action="<?= base_url('/Sabores-Delicias/public/administrador/entorno_editar_empresa') ?>">
+    <input class="searchInput" type="number" id="nitInput" placeholder="NIT">
     <button class="searchButton" type="submit">
       <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
         <g clip-path="url(#clip0_2_17)">
