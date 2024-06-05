@@ -147,7 +147,7 @@ class Administrador extends BaseController
             'empresa' => $empresa
         ];
         return view('administrador/entorno_editar_empresa', $data);
-    }    
+    }   
 
     public function actualizarDatosBD(){
 
