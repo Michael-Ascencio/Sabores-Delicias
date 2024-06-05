@@ -10,13 +10,25 @@ use CodeIgniter\Router\RouteCollection;
  $routes->get('/', 'Home::index');
 
 /* Administrador */
+    /* login */
 $routes->get('/loginadmin', 'Administrador::login');
+    /* Entorno */
 $routes->get('/admin/entorno', 'Administrador::index');
+    /* Tienda */
 $routes->get('/admin/tienda', 'Administrador::gestionarTienda');
+$routes->post('/admin/tienda', 'Administrador::gestionarTienda');
 $routes->get('/admin/tienda/consulta', 'Administrador::consultarTienda');
 $routes->get('/admin/tienda/modificar/(:num)', 'Administrador::verTiendaConsultada/$1');
-$routes->get('/admin/productos/add', 'AñadirProducto::index');
-$routes->post('/admin/productos/add', 'AñadirProducto::subir');
+$routes->get('/admin/tienda/consulta', 'Administrador::consultarTienda');
+    /* Productos */
+$routes->get('/admin/productos', 'AnadirProducto::index'); /* Arreglar porque solo acepta enteros*/
+$routes->post('/admin/productos', 'AnadirProducto::subir');
+$routes->get('/admin/productos/consulta', 'AnadirProducto::consultarProducto');
+$routes->get('/admin/productos/modificar/(:num)', 'AnadirProducto::modificarProducto/$1');
+$routes->post('/admin/productos/actualizar', 'AnadirProducto::actualizar');
+
+
+
 $routes->get('/admin/entorno_inventario', 'Administrador::gestionarInventario');
 $routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
 $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestionarEmpresa');
