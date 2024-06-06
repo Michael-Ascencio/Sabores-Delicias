@@ -135,7 +135,7 @@ class Administrador extends BaseController
         return view('administrador/entorno_editar_empresa', $data);
     }   
 
-    public function actualizarDatosBD(){
+    public function actualizarDatosBD(){ //Actualizar datos bd empresa
 
         try{
             $nit = $this->request->getVar('nit');
@@ -157,7 +157,7 @@ class Administrador extends BaseController
             ];
             $empresaModel->update($nit, $data);
     
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa creada exitosamente.');    
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa actualizada exitosamente.');    
         }
         catch(\Exception $e){
             return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
@@ -169,6 +169,54 @@ class Administrador extends BaseController
         $data = [
             'titulo' => 'Gestion Cliente'];
         return  view('administrador/entorno_gestionar_cliente', $data);
+    }
+
+    public function transaccionCliente(){
+        
+        try{
+            $cedula = $this->request->getVar('cedula');
+            $nombre = $this->request->getVar('nombre');
+            $apellido = $this->request->getVar('apellido');
+            $correo = $this->request->getVar('correo');
+            $contrasena = $this->request->getVar('contrasena');
+            $Area_id_area = $this->request->getVar('Area_id_area');
+            $telefono = $this->request->getVar('telefono');
+            $Empresa_nit = $this->request->getVar('Empresa_nit');
+
+            $clienteModel = new ClienteModel();
+ 
+            if(strlen($cedula) < 6 || strlen($cedula) > 10){
+                throw new \Exception("La cédula debe tener mínimo 6 dígitos y máximo 10.");
+            } elseif(!preg_match("/^[A-Za-z]+$/", $nombre)){
+                throw new \Exception("El nombre solo debe contener letras.");
+            } elseif(strlen($nombre)<2 || strlen($nombre)>50){
+                throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
+            } elseif(!preg_match("/^[A-Za-z]+$/", $apellido)){
+                throw new \Exception("El apellido solo debe contener letras.");
+            } elseif(strlen($apellido)<2 || strlen($apellido)>50){
+                throw new \Exception("El apellido debe tener mínimo 2 letras y máximo 50.");
+            } elseif(strlen($contrasena)<5){
+                throw new \Exception("La contraseña debe tener mínimo 5 caracteres.");
+            } elseif(strlen($telefono) !== 7 && strlen($telefono) !== 10){
+                throw new \Exception("El número de teléfono no es válido.");
+            }
+
+            $data = [
+                'cedula' => $cedula,
+                'nombre' => $nombre,
+                'apellido' => $apellido,
+                'correo' => $correo,
+                'contrasena' => $contrasena,
+                'telefono' => $telefono
+            ];
+            
+            $clienteModel->insert($data);
+    
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('success', 'Cliente creado exitosamente.');    
+        }
+        catch(\Exception $e){
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
+        }
     }
 
     public function consultarCliente(){
@@ -201,6 +249,51 @@ class Administrador extends BaseController
         ];
         return view('administrador/entorno_editar_cliente', $data);
     }   
+
+    public function actualizarDatosBDCliente(){
+
+        try{
+            $cedula = $this->request->getVar('cedula');
+            $nombre = $this->request->getVar('nombre');
+            $apellido = $this->request->getVar('apellido');
+            $correo = $this->request->getVar('correo');
+            $contrasena = $this->request->getVar('contrasena');
+            $Area_id_area = $this->request->getVar('Area_id_area');
+            $telefono = $this->request->getVar('telefono');
+            $Empresa_nit = $this->request->getVar('Empresa_nit');
+
+            $clienteModel = new ClienteModel();
+ 
+            if(!preg_match("/^[A-Za-z]+$/", $nombre)){
+                throw new \Exception("El nombre solo debe contener letras.");
+            } elseif(strlen($nombre)<2 || strlen($nombre)>50){
+                throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
+            } elseif(!preg_match("/^[A-Za-z]+$/", $apellido)){
+                throw new \Exception("El apellido solo debe contener letras.");
+            } elseif(strlen($apellido)<2 || strlen($apellido)>50){
+                throw new \Exception("El apellido debe tener mínimo 2 letras y máximo 50.");
+            } elseif(strlen($contrasena)<5){
+                throw new \Exception("La contraseña debe tener mínimo 5 caracteres.");
+            } elseif(strlen($telefono) !== 7 && strlen($telefono) !== 10){
+                throw new \Exception("El número de teléfono no es válido.");
+            }
+
+            $data = [
+                'cedula' => $cedula,
+                'nombre' => $nombre,
+                'apellido' => $apellido,
+                'correo' => $correo,
+                'contrasena' => $contrasena,
+                'telefono' => $telefono
+            ];
+            $clienteModel->update($cedula, $data);
+    
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('success', 'Cliente actualizado exitosamente.');    
+        }
+        catch(\Exception $e){
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
+        }
+    }
 
     public function gestionarInventario(): string
     {
