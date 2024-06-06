@@ -28,20 +28,20 @@ function enlace($url)
 <form class="form" method="post" action="<?=base_url('/Sabores-Delicias/public/administrador/actualizarCliente')?>">
     <p class="title">Actualizar Datos</p>
     <p class="message">Datos del cliente <?php echo $cliente->nombre?> </p>
+    <label>
+        <input class="input" readonly required name="cedula" value="<?php echo $cliente->cedula?>">
+        <span>Cédula</span>
+    </label>
     <div class="flex">
-        <label>
-            <input class="input" readonly required name="cedula" value="<?php echo $cliente->cedula?>">
-            <span>Cédula</span>
-        </label>
         <label>
             <input class="input" type="text" required name="nombre" value="<?php echo $cliente->nombre?>">
             <span>Nombre</span>
         </label>
+        <label>
+            <input class="input" type="text" required name="apellido" value="<?php echo $cliente->apellido?>">
+            <span>Apellido</span>
+        </label>
     </div>
-    <label>
-        <input class="input" type="text" required name="apellido" value="<?php echo $cliente->apellido?>">
-        <span>Apellido</span>
-    </label>
     <label>
         <input class="input" type="email" required name="correo" value="<?php echo $cliente->correo?>">
         <span>Correo</span>

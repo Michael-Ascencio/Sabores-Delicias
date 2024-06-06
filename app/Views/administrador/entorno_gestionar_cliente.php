@@ -27,6 +27,10 @@ function enlace($url)
 <form class="form" method="post" action="<?=base_url('/Sabores-Delicias/public/administrador/entorno_gestionar_cliente')?>">
     <p class="title">Registrar cliente</p>
     <p class="message">Ingrese el cliente que desea Registrar  </p>
+    <label>
+        <input class="input" type="number" required name="cedula">
+        <span>Cédula</span>
+    </label>
     <div class="flex">
         <label>
             <input class="input" type="text" required name="nombre">
@@ -37,10 +41,6 @@ function enlace($url)
             <span>Apellido</span>
         </label>
     </div>
-    <label>
-        <input class="input" type="number" required name="number">
-        <span>Cédula</span>
-    </label>
     <label>
         <input class="input" type="email" required name="correo">
         <span>Correo</span>

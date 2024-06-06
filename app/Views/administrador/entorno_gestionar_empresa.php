@@ -9,6 +9,7 @@ function enlace($url)
 <?php echo $this->extend('Plantilla/layout_admin'); ?>
 <!-- Nombre del contenido en el layout -->
 <?php echo $this->section('contenido'); ?>
+
 <h2 class="Gestionar2">Gestionar empresa</h2>
 
 <?php if (session()->has('success')) : ?>

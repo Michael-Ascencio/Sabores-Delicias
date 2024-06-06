@@ -38,7 +38,7 @@ function enlace($url)
     </div>
     <?php } ?>
 
-    <form action="<?= base_url('Administrador/validacionInventario') ?>" class="row g-3" method="post" autocomplete="off">
+    <form  ?>" class="row g-3" method="post" autocomplete="off">
 
         <div class="col-md-6">
             <label for="Id_Tienda" class="form-label">Id_Tienda</label>
