@@ -55,7 +55,7 @@ function enlace($url)
         <div class="gallery-content">
             <h2 class="gallery-title">Gestionar inventario</h2>
             <p class="gallery-text">Descripción</p>
-            <button class="shadow__btn">Entrar</button>
+            <button class="shadow__btn"onclick="window.location.href='entorno_inventario';">Entrar</button>
         </div>
     </div>
     <div class="gallery-item">

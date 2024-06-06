@@ -42,8 +42,9 @@ function enlace($url)
 </div>
 <h3 class="my-3" id="titulo">Inventario</h3>
         <table class="table table-hover table-bordered my-3" aria-describedby="titulo">
-          <a href="nuevo.html" class="btn btn-success">Agregar</a>
-
+          <div class="botoncentrar">
+          <a href="entorno_registro_inventario" class="btn btn-success">Agregar</a>
+          </div>
     <table class="table-dark">
         <thead>
             <tr>
