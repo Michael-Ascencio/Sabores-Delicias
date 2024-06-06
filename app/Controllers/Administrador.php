@@ -59,21 +59,6 @@ class Administrador extends BaseController
         $insert = $tiendaModel->insert([]);
     }
 
-    public function gestionarCliente()
-    {
-        $data = [
-            'titulo' => 'Gestion Cliente'];
-        return  view('administrador/entorno_gestionar_cliente', $data);
-    }
-
-    public function transaccionCliente(){
-        $data=[
-            'cedula', 'nombre', 'apellido', 'correo', 'contrasena', 'teléfono'
-        ]; 
-        $clienteModel = new ClienteModel();
-        $insert = $clienteModel->insert([]);
-    }
-
     public function gestionarEmpresa()
     {
         $data = [
@@ -177,6 +162,44 @@ class Administrador extends BaseController
             return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
         }
     }
+
+    public function gestionarCliente()
+    {
+        $data = [
+            'titulo' => 'Gestion Cliente'];
+        return  view('administrador/entorno_gestionar_cliente', $data);
+    }
+
+    public function consultarCliente(){
+        
+        $clienteModel = new ClienteModel();
+        $resultado = $clienteModel->orderBy('cedula','ASC')->findAll();
+        $data = [
+            'titulo' => 'Consultar Cliente',
+            'clientes' => $resultado];
+        
+            return view('administrador/entorno_consulta_cliente', $data);
+    }
+
+    public function editarCliente($cedula= null)
+    {
+        if ($cedula === null) {
+            $cedula = $this->request->getGet('nit');
+        }
+    
+        $clienteModel = new ClienteModel();
+        $cliente = $clienteModel->find($cedula);
+    
+        if (!$cliente) {
+            return redirect()->to(base_url('/Sabores-Delicias/public/administrador/entorno_consulta_cliente'))->with('error', 'La cédula ingresada no existe en la base de datos.');
+        }
+    
+        $data = [
+            'titulo' => 'Modificar Cliente',
+            'cliente' => $cliente
+        ];
+        return view('administrador/entorno_editar_cliente', $data);
+    }   
 
     public function gestionarInventario(): string
     {

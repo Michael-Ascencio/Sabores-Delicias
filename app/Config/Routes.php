@@ -18,14 +18,19 @@ $routes->get('/admin/tienda/modificar/(:num)', 'Administrador::verTiendaConsulta
 $routes->get('/admin/productos/add', 'AñadirProducto::index');
 $routes->post('/admin/productos/add', 'AñadirProducto::subir');
 $routes->get('/admin/entorno_inventario', 'Administrador::gestionarInventario');
-$routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
+
 $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestionarEmpresa');
 $routes->post('/administrador/entorno_gestionar_empresa', 'Administrador::transaccionEmpresa');
 $routes->get('/administrador/entorno_consulta_empresa', 'Administrador::consultarEmpresa');
 $routes->get('/administrador/entorno_editar_empresa/(:num)', 'Administrador::editarEmpresa/$1'); //Cuando se ingresa un nit existente en la bd
 $routes->get('/administrador/entorno_editar_empresa', 'Administrador::editarEmpresa'); //Cuando se ingresa un nit NO existente en la bd
+$routes->post('/administrador/actualizar', 'Administrador::actualizarDatosBD'); //Actualizar datos de empresa
 
-$routes->post('/administrador/actualizar', 'Administrador::actualizarDatosBD');
+$routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
+$routes->get('/administrador/entorno_consulta_cliente', 'Administrador::consultarCliente');
+$routes->post('/administrador/actualizarCliente', 'Administrador::actualizarDatosBDCliente');
+$routes->get('/administrador/entorno_editar_cliente/(:num)', 'Administrador::editarCliente/$1'); //Cuando se ingresa un nit existente en la bd
+$routes->get('/administrador/entorno_editar_cliente', 'Administrador::editarCliente'); //Cuando se ingresa un nit NO existente en la bd
 
 /* Cliente */
 $routes->get('/logincliente', 'Cliente::login');

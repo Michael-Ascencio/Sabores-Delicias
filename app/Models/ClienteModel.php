@@ -14,7 +14,7 @@ class ClienteModel extends Model
     protected $returnType     = 'object';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields =['cedula', 'nombre', 'apellido', 'correo', 'contrasena', 'teléfono'];
+    protected $allowedFields =['cedula', 'nombre', 'apellido', 'correo', 'contrasena', 'Area_id_area', 'telefono', 'Empresa_nit'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
