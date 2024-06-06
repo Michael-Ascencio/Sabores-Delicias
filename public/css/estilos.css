@@ -1711,7 +1711,7 @@ th {
     color: yellow;
 }
 
-/*------------Estilos para la imagen del producto----------------*/
+/*------------Estilos para la imagen del  en el entorno de consulta----------------*/
 .responsive-img-producto {
     width: 100%;
     max-width: 300px; /* Ajusta este valor al tamaño original de tu imagen */

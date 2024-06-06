@@ -10,12 +10,12 @@ function enlace($url)
 <!-- Nombre del contenido en el layout -->
 <?php echo $this->section('contenido'); ?>
 
-<div class = "form">
-    <h2 class="form-title">Añadir producto</h2>
-    <h4 class="form-title"><?php echo validation_list_errors() . 'Recuerda volver a subir la imagen de tu producto'; ?></h4>
+<div>
+    <h2>Añadir producto</h2>
+    <h4><?php echo validation_list_errors() . 'Recuerda volver a subir la imagen de tu producto'; ?></h4>
     <form id="registroProductos" action="<?php base_url('admin/productos/anadir'); ?>" method="post" enctype="multipart/form-data">
 
-        <div class="form-group">
+        <div>
             <label>
                 <input type="text" placeholder="Nombre" name="nombre" value="<?php echo set_value('nombre'); ?>">
             </label>
@@ -24,14 +24,14 @@ function enlace($url)
                 <input type="number" placeholder="Precio" required="" min="0" step="0.01" pattern="\d+(\,\d{0,2})?" name="precio" value="<?php echo set_value('precio, 0.00'); ?>">
             </label>
 
-            <div class="drop-container">
-                <label for="file-input" class="drop-title">
+            <div>
+                <label for="file-input">
                     <span>Selecciona o arrastra un archivo para la imagen de tu producto (jpg o png)</span>
                 </label>
                 <input type="file" name="archivo" id="file-input" accept="image/jpg, image/jpeg, image/png" required="" value="<?php echo set_value('archivo'); ?>">
             </div>
 
-            <br><label for="unidad_medida" class="form-group">
+            <br><label for="unidad_medida">
                 <input type="number" placeholder="Cantidad de medida" required="" min="0" name="cantidad_medida" value="<?php echo set_value('cantidad, 0.00'); ?>">
                 <select id="unidad_medida" name="unidad_medida">
                     <option value="">Selecciona una unidad de medida</option>
@@ -42,31 +42,20 @@ function enlace($url)
                 </select>
             </label>
 
-            <br><label for="inventario" class="form-group">
-                <span>Inventarios</span>
-                <select id="inventario" name="inventario">
-                    <option>Seleccione un inventario</option>
-                    <?php /* foreach ($inventarios as $inventario) :  */ ?>
-                    <option value="<?php /* echo $inventario->id_inventario; */ ?>"><?php /* echo $inventario->id_inventario */; ?></option>
-                    <?php /* endforeach;  */ ?>
-                    <option value="1">inventario 1</option>
-                </select>
-            </label>
-
-            <br><label class="form-group">
+            <br><label>
                 <span>Realiza una descripción de 300 caracteres sobre el producto</span>
                 <textarea id="comentarios" name="comentarios" maxlength="299" rows="4" placeholder="Escribe tus comentarios aquí..." value="<?php echo set_value('comentarios'); ?>"></textarea>
             </label>
 
         </div>
-        <div class="form-paragraph">
+        <div>
             <button type="submit">Añadir Producto</button>
         </div>
-    </form>
+
+        <p>Si deseas consultar o modificar la empresa haz clic aquí<p>
+        <button onclick="window.location.href='<?= base_url('admin/productos/consulta') ?>'">clic aquí</button>
+</form>
 </div>
-<div class="consultar-modificar">
-            <h2 class="Gestionar3">Si deseas consultar o modificar la empresa haz clic aquí</h2>
-            <button class="shadow__btn1" onclick="window.location.href='<?= base_url('admin/productos/consulta') ?>'">clic aquí</button>
-        </div>
+
 
 <?php echo $this->endSection(); ?>
