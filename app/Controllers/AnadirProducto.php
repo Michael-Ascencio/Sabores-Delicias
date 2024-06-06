@@ -22,7 +22,7 @@ class AnadirProducto extends BaseController
         $data = [
             'titulo' => 'Agregar Producto'
         ];
-        return view('administrador/formulario_productos', $data);
+        return view('administrador/producto/formulario_productos', $data);
     }
 
     public function subir()
@@ -39,7 +39,7 @@ class AnadirProducto extends BaseController
                     'titulo' => 'Proceso Producto',
                     'mensaje' => 'La imagen no cumple con los parametros'
                 ];
-                return view('administrador/proceso_producto', $data);
+                return view('administrador/producto/proceso_producto', $data);
                 exit;
             }
 
@@ -58,7 +58,7 @@ class AnadirProducto extends BaseController
                     'titulo' => 'Proceso Producto',
                     'mensaje' => 'Su imagen es demasiado ancha o alta. Verifique que su imagen sea de unas dimensiones iguales por ejemplo 200 px por 300 px, máxima resolución 1024*768 px'
                 ];
-                return view('administrador/proceso_producto', $data);
+                return view('administrador/producto/proceso_producto', $data);
                 exit;
             }
 
@@ -86,13 +86,6 @@ class AnadirProducto extends BaseController
                             'required' => 'El campo {field} es obligatorio'
                         ],
                     ],
-                    'inventario' => [
-                        'rules' => 'required',
-                        'label' => 'Inventario',
-                        'errors' => [
-                            'required' => 'El campo {field} es obligatorio',
-                        ],
-                    ],
                     'comentarios' => [
                         'rules' => 'required',
                         'label' => 'Comentario',
@@ -114,7 +107,6 @@ class AnadirProducto extends BaseController
                 }
                 $nombreArchivo = $this->request->getPost('nombre');
                 $precio = $this->request->getPost('precio');
-                $inventario = $this->request->getPost('inventario');
                 $comentario = $this->request->getPost('comentarios');
                 $cantidadMedida = $this->request->getPost('cantidad_medida');
                 $unidadMedida = $this->request->getPost('unidad_medida');
@@ -134,7 +126,6 @@ class AnadirProducto extends BaseController
                     'unidad_medida'=>$unidadMedida,
                     'estado'=> 1,
                     'created_by' => "admin",
-                    'Inventario_id_inventario'=>$inventario,
                     'descripcion'=>$comentario,
                 ];
                 $this->productoModel->insert($data);
@@ -144,7 +135,7 @@ class AnadirProducto extends BaseController
                     'mensaje' => 'El producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '
                 ];
 
-                return view('administrador/proceso_producto', $data);
+                return view('administrador/producto/proceso_producto', $data);
                 exit;
             }
         } else {
@@ -152,7 +143,7 @@ class AnadirProducto extends BaseController
                 'titulo' => 'Proceso Producto',
                 'mensaje' => 'Su archivo no es jpg o png o jpeg'
             ];
-            return view('administrador/proceso_producto', $data);
+            return view('administrador/producto/proceso_producto', $data);
             exit;
         }
 
@@ -170,7 +161,7 @@ class AnadirProducto extends BaseController
         $data = [
             'titulo' => 'Consultar Producto',
             'productos' => $resultado];
-        return view('administrador/entorno_de_consulta_producto', $data);
+        return view('administrador/producto/entorno_de_consulta_producto', $data);
     }
 
     public function modificarProducto($id){
@@ -178,7 +169,7 @@ class AnadirProducto extends BaseController
         $data = [
             'titulo' => 'Modificar Tienda',
             'producto' => $producto];
-        return view('administrador/entorno_modificar_producto', $data);
+        return view('administrador/producto/entorno_modificar_producto', $data);
     }
 
     public function actualizar()
@@ -194,7 +185,7 @@ class AnadirProducto extends BaseController
                     'titulo' => 'Proceso Producto',
                     'mensaje' => 'La imagen no cumple con los parametros'
                 ];
-                return view('administrador/proceso_producto', $data);
+                return view('administrador/producto/proceso_producto', $data);
                 exit;
             }
 
@@ -213,7 +204,7 @@ class AnadirProducto extends BaseController
                     'titulo' => 'Proceso Producto',
                     'mensaje' => 'Su imagen es demasiado ancha o alta. Verifique que su imagen sea de unas dimensiones iguales por ejemplo 200 px por 300 px, máxima resolución 1024*768 px'
                 ];
-                return view('administrador/proceso_producto', $data);
+                return view('administrador/producto/proceso_producto', $data);
                 exit;
             }
 
@@ -225,13 +216,6 @@ class AnadirProducto extends BaseController
                         'errors' => [
                             'required' => 'El campo {field} es obligatorio',
                             'greater_than' => 'El {field} minimo para el producto es de 50$'
-                        ],
-                    ],
-                    'inventario' => [
-                        'rules' => 'required',
-                        'label' => 'Inventario',
-                        'errors' => [
-                            'required' => 'El campo {field} es obligatorio',
                         ],
                     ],
                     'comentarios' => [
@@ -250,7 +234,6 @@ class AnadirProducto extends BaseController
                 $precio = $this->request->getPost('precio');
                 $unidadMedida = $this->request->getPost('unidad_medida');
                 $estado_producto =$this->request->getPost('estado');
-                $inventario = $this->request->getPost('inventario');
                 $comentario = $this->request->getPost('comentarios');
 
                 $nombreImagen = $nombreArchivo . '.png';
@@ -267,7 +250,6 @@ class AnadirProducto extends BaseController
                     'estado'=>$estado_producto,
                     'created_by' => "admin",
                     'descripcion'=>$comentario,
-                    'Inventario_id_inventario'=>$inventario,
                 ];
 
                 $this->productoModel->update($id_producto, $data);
@@ -285,7 +267,7 @@ class AnadirProducto extends BaseController
                 'titulo' => 'Proceso Producto',
                 'mensaje' => 'Su archivo no es jpg o png o jpeg'
             ];
-            return view('administrador/proceso_producto', $data);
+            return view('administrador/producto/proceso_producto', $data);
             exit;
         }
 

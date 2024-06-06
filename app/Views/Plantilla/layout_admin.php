@@ -16,9 +16,9 @@
         <nav class="menu">
             
             <ul>
-                <li><a href="entorno">Inicio</a></li>
+                <li><a href="<?= base_url('admin/entorno') ?>">Inicio</a></li>
                 <li><a href="#">Configuración de Cuenta</a></li>
-                <li><a href="../index.php">Cerrar Sesión</a></li>
+                <li><a href="<?= base_url('loginadmin') ?>">Cerrar Sesión</a></li>
             </ul>
         </nav>
 

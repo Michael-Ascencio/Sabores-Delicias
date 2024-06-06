@@ -18,7 +18,7 @@ function enlace($url)
             <input type="text" name="username" placeholder="Cedula" required>
             <input type="password" name="password" placeholder="Contraseña" required>
             <button type="submit" onclick="window.location.href='cliente/entorno';">Iniciar Sesión</button>
-            <button type="button" onclick="window.location.href='../index.php';">Regresar</button>
+            <button type="button" onclick="window.location.href='index.php';">Regresar</button>
         </form>
 
     </div>
