@@ -6,28 +6,60 @@ use App\Models\TiendasModel;
 use App\Models\ClienteModel;
 use App\Models\EmpresaModel;
 Use App\Models\InventarioModel;
+use App\Models\EmpleadoModel;
 
 class Administrador extends BaseController
 {
     public function login(): string
     {
-        $data = [
-            'titulo' => 'login'];
+        $data = ['titulo' => 'login'];
         return view('administrador/administrador', $data);
     }
 
     public function index(): string
     {
         $data = [
-            'titulo' => 'DashBoard', 
-            'Nombre_admin' => 'Carlos'];
+            'titulo' => 'DashBoard',
+            'Nombre_admin' => 'Carlos'
+        ];
         return view('administrador/entorno_administrador', $data);
     }
+
+    public function ingreso()
+    {
+        $usuario = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+        /* $password = password_hash($password, PASSWORD_DEFAULT);  */
+        $Usuario = new EmpleadoModel();
+        $resultado = $Usuario->where('cedula', $usuario)->first();
+
+        if ($resultado !== null) {
+            // Verificamos si la contraseña coincide
+            if ($password === $resultado->contrasena/* password_verify($password, $resultado->contrasena) */) {
+                // Contraseña correcta, establecemos la sesión y retornamos la página deseada
+                $data = [
+                    'usuario' => $resultado->nombre,
+                    'cargo' => $resultado->Cargo_id_cargo,
+                ];
+                $session = session();
+                $session->set($data);
+                return redirect()->to(base_url('admin/entorno'));
+            } else {
+                // Contraseña incorrecta, redirigimos de nuevo a la página de inicio de sesión con un mensaje
+                return redirect()->to(base_url('loginadmin'))->with('mensaje', 'Contraseña incorrecta, la que esta en la base de datos es: '.$resultado->contrasena.' Y la que estas enviando es: '.$password);
+            }
+        } else {
+            // Usuario no encontrado, redirigimos de nuevo a la página de inicio de sesión con un mensaje
+            return redirect()->to(base_url('loginadmin'))->with('mensaje', 'Usuario no encontrado.');
+        }
+    }
+
+
     public function gestionarTienda(): string
     {
         $data = [
             'titulo' => 'Gestion Tienda'];
-        return view('administrador/entorno_Gestionar_tienda', $data);
+        return view('administrador/tienda/entorno_Gestionar_tienda', $data);
     }
     public function consultarTienda(): string
     {
@@ -40,7 +72,7 @@ class Administrador extends BaseController
         $data = [
             'titulo' => 'Consultar Tienda',
             'tiendas' => $resultado];
-        return view('administrador/entorno_de_consulta_tienda', $data);
+        return view('administrador/tienda/entorno_de_consulta_tienda', $data);
     }
     public function verTiendaConsultada($cod_postal){
         $tiendaModel = new TiendasModel();
@@ -48,7 +80,7 @@ class Administrador extends BaseController
         $data = [
             'titulo' => 'Modificar Tienda',
             'tienda' => $tienda];
-        return view('administrador/entorno_modificar_tienda', $data);
+        return view('administrador/tienda/entorno_modificar_tienda', $data);
         /*return "Hola $cod_postal";*/
     }
 
@@ -244,7 +276,16 @@ class Administrador extends BaseController
             'fecha_caducidad'      => $post['fecha_caducidad'],
         ]);
 
-        return view('admin/entorno_inventario', $data);
+        return view('administrador/entorno_inventario');
+    }
+
+    public function editarInventario($id_inventario = null){
+
+        $inventarioModel = new InventarioModel();
+        $data['inventario'] = $inventarioModel->find($id_inventario);
+
+        return view('administrador/entorno_edit_inventario', $data);
+
     }
 
 }

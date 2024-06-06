@@ -22,9 +22,9 @@ VALUES
 -- Poblar la tabla Cliente
 INSERT INTO `sYd`.`Cliente` (`cedula`, `nombre`, `apellido`, `correo`, `contrasena`, `created_by`, `created_at`, `updated_by`, `updated_at`, `Area_id_area`, `telefono`, `Empresa_nit`)
 VALUES 
-(54997632, 'Juan', 'Pérez', 'juan.perez@example.com', '54997632', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 1, 1234567890,800123456),
-(1005469824, 'María', 'Gómez', 'maria.gomez@example.com', '1005469824', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 2, 3288846987,900987654),
-(108745412, 'María', 'Gutierrez', 'maria.gutierrez@example.com', '108745412', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 3, 3135468795,900987654);
+(54997632, 'Juan', 'Pérez', 'juan.perez@example.com', '$2y$10$2u5wk7OEpnDIZ0KBK3ogx.4eT8QTiH7h.u3aULJTmgd.QXEEYFlVq', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 1, 1234567890,800123456),
+(1005469824, 'María', 'Gómez', 'maria.gomez@example.com', '$2y$10$2u5wk7OEpnDIZ0KBK3ogx.4eT8QTiH7h.u3aULJTmgd.QXEEYFlVq', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 2, 3288846987,900987654),
+(108745412, 'María', 'Gutierrez', 'maria.gutierrez@example.com', '$2y$10$2u5wk7OEpnDIZ0KBK3ogx.4eT8QTiH7h.u3aULJTmgd.QXEEYFlVq', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 3, 3135468795,900987654);
 
 -- Poblar la tabla Cargo
 INSERT INTO `sYd`.`Cargo` (`nombre`, `created_by`, `creaded_at`, `updated_by`, `updated_at`)
@@ -36,12 +36,12 @@ VALUES
 -- Poblar la tabla Empleado
 INSERT INTO `sYd`.`Empleado` (`cedula`, `nombre`, `apellido`, `contrasena`, `correo`, `telefono`, `created_by`, `created_at`, `updated_by`, `updated_at`, `Cargo_id_cargo`)
 VALUES 
-(12345, 'admin', 'admin', 'password123', 'ana.lopez@example.com', 3135489654, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 1);
+(12345, 'admin', 'admin', '$2y$10$2u5wk7OEpnDIZ0KBK3ogx.4eT8QTiH7h.u3aULJTmgd.QXEEYFlVq', 'ana.lopez@example.com', 3135489654, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 1);
 
 INSERT INTO `sYd`.`Empleado` (`Cedula`, `nombre`, `apellido`, `contrasena`, `correo`, `telefono`, `created_by`, `created_at`, `updated_by`, `updated_at`, `Cargo_id_cargo`, `Tienda_cod_postal`)
 VALUES 
-(1554786423, 'Ana', 'López', 'password123', 'ana.lopez@example.com', 3135489654, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 2, 199115),
-(52448302, 'Carlos', 'Martínez', 'password123', 'carlos.martinez@example.com', 3759842157, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 3, 199115);
+(1554786423, 'Ana', 'López', '$2y$10$2u5wk7OEpnDIZ0KBK3ogx.4eT8QTiH7h.u3aULJTmgd.QXEEYFlVq', 'ana.lopez@example.com', 3135489654, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 2, 199115),
+(52448302, 'Carlos', 'Martínez', '$2y$10$2u5wk7OEpnDIZ0KBK3ogx.4eT8QTiH7h.u3aULJTmgd.QXEEYFlVq', 'carlos.martinez@example.com', 3759842157, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 3, 199115);
 
 -- Poblar la tabla Proveedor
 INSERT INTO `sYd`.`Proveedor` (`Nit`, `nombre_empresa`, `direccion`, `correo`, `teléfono`, `created_by`, `creaded_at`, `updated_by`, `updated_at`)
@@ -97,7 +97,7 @@ VALUES
 (2, 4);
 
 -- Poblar la tabla DetallePedido
-INSERT INTO `sYd`.`DetallePedido` (`Estado`, `created_by`, `creaded_at`, `updated_by`, `updated_at`, `Pedido_id_pedido`, `Refrigerio_has_Producto_Refrigerio_idRefrigerio1`,`cantidad_de_producto` ,`Refrigerio_has_Producto_Producto_id_producto1`)
+INSERT INTO `sYd`.`DetallePedido` (`Estado`, `created_by`, `creaded_at`, `updated_by`, `updated_at`, `Pedido_id_pedido`, `Refrigerio_has_Producto_Refrigerio_idRefrigerio1`,`cantidad_de_producto` ,`Refrigerio_has_Producto_Producto_id_producto1`,`precio_total_de_detalle`)
 VALUES 
-(1, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 1, 1,2, 1),
-(1, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 2, 2, 7, 2);
+(1, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 1, 1,2, 1,15120),
+(1, 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00', 2, 2, 7, 2,54915);

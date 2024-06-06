@@ -20,6 +20,7 @@ function enlace($url)
     <table>
         <thead>
             <tr>
+                <th>Cedula</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Total Compras</th>
@@ -28,6 +29,7 @@ function enlace($url)
         <tbody>
             <?php foreach ($ventas as $resultado): ?>
                 <tr>
+                    <td><?= esc($resultado['id_cliente']) ?></td>
                     <td><?= esc($resultado['nombre']) ?></td>
                     <td><?= esc($resultado['apellido']) ?></td>
                     <td><?= esc($resultado['total_compras']) ?></td>

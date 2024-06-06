@@ -12,6 +12,7 @@ use CodeIgniter\Router\RouteCollection;
 /* Administrador */
     /* login */
 $routes->get('/loginadmin', 'Administrador::login');
+$routes->post('/loginadmin', 'Administrador::ingreso');
     /* Entorno */
 $routes->get('/admin/entorno', 'Administrador::index');
     /* Tienda */
@@ -29,6 +30,7 @@ $routes->post('/admin/productos/actualizar', 'AnadirProducto::actualizar');
     /* Inventario */
 $routes->get('/admin/entorno_inventario', 'Administrador::gestionarInventario');
 $routes->get('/admin/entorno_registro_inventario', 'Administrador::agregarInventario');
+$routes->get('/admin/entorno_edit_inventario', 'Administrador::editarInventario');
 
 $routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
 $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestionarEmpresa');
