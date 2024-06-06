@@ -16,12 +16,12 @@
         <nav class="menu">
             
             <ul>
-                <li><a href="entorno_administrador.php">Inicio</a></li>
+                <li><a href="entorno">Inicio</a></li>
                 <li><a href="#">Configuración de Cuenta</a></li>
                 <li><a href="../index.php">Cerrar Sesión</a></li>
             </ul>
         </nav>
-        <img src=<?php echo $logo; ?> alt="" class="logo5">
+
     </header>
 
     <?php echo $this->renderSection("contenido"); ?>

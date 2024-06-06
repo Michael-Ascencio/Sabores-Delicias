@@ -188,4 +188,9 @@ class Administrador extends BaseController
             'inventarios' => $resultado];
         return view('administrador/entorno_inventario', $data);
     }
+
+    public function agregarInventario(){
+        
+        return view('administrador/entorno_registro_inventario');
+    }
 }

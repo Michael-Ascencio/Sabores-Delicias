@@ -26,10 +26,11 @@ $routes->post('/admin/productos', 'AnadirProducto::subir');
 $routes->get('/admin/productos/consulta', 'AnadirProducto::consultarProducto');
 $routes->get('/admin/productos/modificar/(:num)', 'AnadirProducto::modificarProducto/$1');
 $routes->post('/admin/productos/actualizar', 'AnadirProducto::actualizar');
-
-
-
+    /* Inventario */
 $routes->get('/admin/entorno_inventario', 'Administrador::gestionarInventario');
+$routes->get('/admin/entorno_registro_inventario', 'Administrador::agregarInventario');
+
+
 $routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
 $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestionarEmpresa');
 $routes->post('/administrador/entorno_gestionar_empresa', 'Administrador::transaccionEmpresa');
