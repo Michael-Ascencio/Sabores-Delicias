@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\ProductosModel;
+use App\Models\ClienteModel;
 
 class Cliente extends BaseController
 {
@@ -33,6 +34,11 @@ class Cliente extends BaseController
 
     public function configuracion()
     {
-        return view('cliente/entorno_configuracion');
+        $clientesModel=new ClienteModel();
+        $resultado = $clientesModel->findAll();
+        $data = ['titulo' => 'cliente',
+                 'clientes' => $resultado];
+
+        return view('cliente/entorno_configuracion', $data);
     }
 }

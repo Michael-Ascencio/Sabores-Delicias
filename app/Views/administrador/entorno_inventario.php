@@ -58,18 +58,21 @@ function enlace($url)
             <th scope="col">cantidad</th>
             <th scope="col">lote</th>
             <th scope="col">fecha_caducidad</th>
+            <th scope="col">Editar</th>
             </tr>
         </thead>
         <tbody>
     <?php foreach ($inventarios as $inventario) : ?>
       
             <tr>
-            <div class="Tabla_Productos">
+            <div class="Tabla_Inventario">
             <td> <?php echo $inventario->id_inventario; ?> </td>
             <td> <?php echo $inventario->cantidad; ?> </td>
             <td> <?php echo $inventario->lote; ?> </td>
             <td> <?php echo $inventario->fecha_caducidad; ?> </td>
-            </div>
+            <td>
+                <a href="<?= base_url('/administrador/editar_inventario/' . $inventario->id_inventario) ?>" class="btn btn-primary">Editar</a>
+            </td>
             </tr>
     <?php endforeach; ?>
         </tbody>
