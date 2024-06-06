@@ -213,7 +213,38 @@ class Administrador extends BaseController
     }
 
     public function agregarInventario(){
-        
+
         return view('administrador/entorno_registro_inventario');
+
     }
+
+    public function validacionInventario(){    
+        $reglas=[
+            'id_inventario'        => 'required|numeric',
+            'Tienda_cod_postal'    => 'required|numeric',
+            'Producto_id_producto' => 'required|numeric',
+            'cantidad'             => 'required|numeric',
+            'lote'                 => 'required',
+            'fecha_caducidad'      => 'required'
+        ];
+
+        if (!$this->validate($reglas)) {
+            return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
+        }
+
+        $post = $this->request->getPost(['id_inventario', 'Tienda_cod_postal', 'Producto_id_producto', 'cantidad', 'lote', 'fecha_caducidad']);
+    
+        $inventariosModel = new InventarioModel();
+        $inventariosModel->insert([
+            'id_inventario'        => trim($post['id_inventario']),
+            'Tienda_cod_postal'    => trim($post['Tienda_cod_postal']),
+            'Producto_id_producto' => trim($post['Producto_id_producto']),
+            'cantidad'             => trim($post['cantidad']),
+            'lote'                 => trim($post['lote']),
+            'fecha_caducidad'      => $post['fecha_caducidad'],
+        ]);
+
+        return view('admin/entorno_inventario', $data);
+    }
+
 }
