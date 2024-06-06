@@ -40,11 +40,21 @@ class Administrador extends BaseController
 
         $resultado = $this->sessionService->iniciarSesion($usuario, $password);
 
-        if ($resultado === true) {
-            return redirect()->to(base_url('admin/entorno'));
+        if ($resultado['status'] === true) {
+            $cargo = $resultado['data']['cargo'];
+            if ($cargo == 1 || $cargo == 2) {
+                return redirect()->to(base_url('admin/entorno'));
+            } else {
+                return redirect()->to(base_url('loginadmin'))->with('mensaje', 'No tiene permisos para acceder como administrador.');
+            }
         } else {
-            return redirect()->to(base_url('loginadmin'))->with('mensaje', $resultado);
+            return redirect()->to(base_url('loginadmin'))->with('mensaje', $resultado['message']);
         }
+    }
+
+    public function salida()
+    {
+        return $this->sessionService->cerrarSesion();
     }
 
 

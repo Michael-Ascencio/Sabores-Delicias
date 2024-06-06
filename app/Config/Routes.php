@@ -13,6 +13,7 @@ use CodeIgniter\Router\RouteCollection;
     /* login */
 $routes->get('/loginadmin', 'Administrador::login');
 $routes->post('/loginadmin', 'Administrador::ingreso');
+$routes->get('/logoutadmin', 'Administrador::salida');
     /* Entorno */
 $routes->get('/admin/entorno', 'Administrador::index');
     /* Tienda */

@@ -19,12 +19,21 @@ class EmpleadosSession
                 ];
                 $session = session();
                 $session->set($data);
-                return true;
+                return [
+                    'status' => true,
+                    'data' => $data
+                ];
             } else {
-                return 'Contraseña incorrecta.';
+                return [
+                    'status' => false,
+                    'message' => 'Contraseña incorrecta.'
+                ];
             }
         } else {
-            return 'Usuario no encontrado.';
+            return [
+                'status' => false,
+                'message' => 'Usuario no encontrado.'
+            ];
         }
     }
 

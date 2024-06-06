@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Models\ClienteModel;
 
-class EmpleadosSession
+class ClientesSession
 {
     public function iniciarSesion($usuario, $password)
     {
@@ -19,12 +19,21 @@ class EmpleadosSession
                 ];
                 $session = session();
                 $session->set($data);
-                return true;
+                return [
+                    'status' => true,
+                    'data' => $data
+                ];
             } else {
-                return 'Contraseña incorrecta.';
+                return [
+                    'status' => false,
+                    'message' => 'Contraseña incorrecta.'
+                ];
             }
         } else {
-            return 'Usuario no encontrado.';
+            return [
+                'status' => false,
+                'message' => 'Usuario no encontrado.'
+            ];
         }
     }
 
@@ -32,6 +41,6 @@ class EmpleadosSession
     {
         $session = session();
         $session->destroy();
-        return redirect()->to(base_url('index'));
+        return redirect()->to(base_url('loginadmin'));
     }
 }
