@@ -10,15 +10,25 @@ use CodeIgniter\Router\RouteCollection;
  $routes->get('/', 'Home::index');
 
 /* Administrador */
+    /* login */
 $routes->get('/loginadmin', 'Administrador::login');
+    /* Entorno */
 $routes->get('/admin/entorno', 'Administrador::index');
+    /* Tienda */
 $routes->get('/admin/tienda', 'Administrador::gestionarTienda');
+$routes->post('/admin/tienda', 'Administrador::gestionarTienda');
 $routes->get('/admin/tienda/consulta', 'Administrador::consultarTienda');
 $routes->get('/admin/tienda/modificar/(:num)', 'Administrador::verTiendaConsultada/$1');
-$routes->get('/admin/productos/add', 'AñadirProducto::index');
-$routes->post('/admin/productos/add', 'AñadirProducto::subir');
+$routes->get('/admin/tienda/consulta', 'Administrador::consultarTienda');
+    /* Productos */
+$routes->get('/admin/productos', 'AnadirProducto::index'); /* Arreglar porque solo acepta enteros*/
+$routes->post('/admin/productos', 'AnadirProducto::subir');
+$routes->get('/admin/productos/consulta', 'AnadirProducto::consultarProducto');
+$routes->get('/admin/productos/modificar/(:num)', 'AnadirProducto::modificarProducto/$1');
+$routes->post('/admin/productos/actualizar', 'AnadirProducto::actualizar');
+    /* Inventario */
 $routes->get('/admin/entorno_inventario', 'Administrador::gestionarInventario');
-
+$routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
 $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestionarEmpresa');
 $routes->post('/administrador/entorno_gestionar_empresa', 'Administrador::transaccionEmpresa');
 $routes->get('/administrador/entorno_consulta_empresa', 'Administrador::consultarEmpresa');
@@ -43,8 +53,8 @@ $routes->get('/loginempleado', 'Empleado::login');
 
 /* Contador */
 $routes->get('/logincontador', 'Contador::login');
+$routes->get('/contador/informe_de_ventas', 'Contador::fechas_de_reporte');
 $routes->post('/contador/consultar_informe', 'Contador::consultar_informe');
-
-
+$routes->get('/contador/descargar_csv', 'Contador::descargar_csv');
 
 /* $routes->get('/modificartienda', 'Administrador::transaccionTienda'); */
