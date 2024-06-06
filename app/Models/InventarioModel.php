@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TiendasModel extends Model
+class InventarioModel extends Model
 {
-    protected $table      = 'tienda';
-    protected $primaryKey = 'cod_postal';
+    protected $table      = 'inventario';
+    protected $primaryKey = 'id_inventario';
 
-    protected $useAutoIncrement = false;
+    protected $useAutoIncrement = True;
 
     protected $returnType     = 'object';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields =['cod_postal', 'nombre', 'direccion', 'ubicacion', 'correo', 'telefono'];
+    protected $allowedFields =['id_inventario', 'cantidad', 'lote', 'fecha_caducidad'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -22,4 +22,5 @@ class TiendasModel extends Model
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
+
 }

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\TiendasModel;
 use App\Models\ClienteModel;
 use App\Models\EmpresaModel;
+Use App\Models\InventarioModel;
 
 class Administrador extends BaseController
 {
@@ -203,8 +204,16 @@ class Administrador extends BaseController
 
     public function gestionarInventario(): string
     {
+        $inventarioModel = new InventarioModel();
+        $resultado = $inventarioModel->findAll();
         $data = [
-            'titulo' => 'Inventario'];
+            'titulo' => 'inventario',
+            'inventarios' => $resultado];
         return view('administrador/entorno_inventario', $data);
+    }
+
+    public function agregarInventario(){
+        
+        return view('administrador/entorno_registro_inventario');
     }
 }

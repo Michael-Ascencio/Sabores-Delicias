@@ -103,55 +103,38 @@ function enlace($url)
 
 
 <h1 class="Refrigerios1">Refrigerios</h1>
-
 <div class="products">
-    <div class="row">
+    <?php 
+    $count = 0;
+    foreach ($productos as $producto) : 
+        if ($count % 4 == 0) {
+            if ($count > 0) {
+                echo '</div>'; // Cierra el div.row anterior si no es el primer producto
+            }
+            echo '<div class="row">'; // Abre un nuevo div.row
+        }
+    ?>
         <div class="product">
-            <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 1">
-            <h3>Producto 1</h3>
-            <button class="add-to-cart" data-product="Producto 1">Agregar al carrito</button>
+            <img class="responsive-img-producto<?php echo ($producto->estado == 0) ? ' product-disabled' : ''; ?>" src="<?php echo enlace("/Sabores-Delicias/public/images/productos/".$producto->imagen); ?>" alt="<?php echo $producto->nombre; ?>">
+            <h3><?php echo $producto->nombre; ?></h3>
+            <?php if ($producto->estado == 1) : ?>
+                <p>Precio: <?php echo $producto->precio; ?></p>
+            <?php else : ?>
+                <p>Producto agotado</p>
+            <?php endif; ?>
+            <?php if ($producto->estado == 1) : ?>
+                <p>Descripción: <?php echo $producto->descripcion; ?></p>
+                <button class="add-to-cart" data-product="<?php echo $producto->nombre; ?>" data-description="<?php echo $producto->descripcion; ?>" data-image="<?php echo enlace("/Sabores-Delicias/public/images/productos/".$producto->imagen); ?>" >Agregar al carrito</button>
+            <?php endif; ?>
         </div>
-        <div class="product">
-            <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 2">
-            <h3>Producto 2</h3>
-            <button class="add-to-cart" data-product="Producto 2">Agregar al carrito</button>
-        </div>
-        <div class="product">
-            <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
-            <h3>Producto 3</h3>
-            <button class="add-to-cart" data-product="Producto 3">Agregar al carrito</button>
-        </div>
-        <div class="product">
-        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
-            <h3>Producto 4</h3>
-            <button class="add-to-cart" data-product="Producto 4" data-description="Descripción del Producto 4" data-image="producto4.jpg">Agregar al carrito</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="product">
-        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
-            <h3>Producto 5</h3>
-            <button class="add-to-cart" data-product="Producto 5">Agregar al carrito</button>
-        </div>
-        <div class="product">
-        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
-            <h3>Producto 6</h3>
-            <button class="add-to-cart" data-product="Producto 6">Agregar al carrito</button>
-        </div>
-        <div class="product">
-        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
-            <h3>Producto 7</h3>
-            <button class="add-to-cart" data-product="Producto 7">Agregar al carrito</button>
-        </div>
-        <div class="product">
-        <img src="/Sabores-Delicias/public/images/Fotos/pngwing.com (12).png" alt="Producto 3">
-            <h3>Producto 8</h3>
-            <button class="add-to-cart" data-product="Producto 8">Agregar al carrito</button>
-        </div>
-    </div>
+    <?php 
+        $count++;
+    endforeach; 
+    if ($count > 0) {
+        echo '</div>'; // Cierra el último div.row
+    }
+    ?>
 </div>
-
-
 
 
 
