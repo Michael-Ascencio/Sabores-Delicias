@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>Seleccionar Fechas</h1>
-    <form action="<?= base_url('/contador/consultar_informe') ?>" method="post">
+    <form action="<?= base_url('contador/consultar_informe') ?>" method="post">
         <label for="fecha_inicial">Fecha Inicial:</label>
         <input type="date" id="fecha_inicial" name="fecha_inicial" required>
         <br>
