@@ -14,7 +14,7 @@ class ProductosModel extends Model
     protected $returnType     = 'object';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields =['id_producto', 'nombre', 'precio', 'imagen', 'unidad_medida', 'estado', 'Inventario_id_inventario', 'descripcion'];
+    protected $allowedFields =['id_producto', 'nombre', 'precio', 'imagen', 'unidad_medida', 'estado', 'descripcion'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
