@@ -14,7 +14,7 @@ class InventarioModel extends Model
     protected $returnType     = 'object';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields =['id_inventario', 'cantidad', 'lote', 'fecha_caducidad'];
+    protected $allowedFields =['id_inventario', 'cantidad', 'lote', 'fecha_caducidad', 'Producto_id_producto', 'Tienda_cod_postal'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
