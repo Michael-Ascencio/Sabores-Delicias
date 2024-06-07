@@ -1731,3 +1731,308 @@ th {
     height: auto;
 }
 /******************************************************************************/
+
+/***********Formulario para los productos al momento de añadir*************/
+.body_productos_total {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    margin: 0;
+    margin-top: 5%;
+  }
+
+  .container_productoadd {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form_productoadd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .flex_productoadd {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form_productoadd label {
+    position: relative;
+    flex: 1;
+  }
+  
+  .form_productoadd label .input_productoadd {
+    width: 90%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 5px;
+  }
+  
+  .form_productoadd label .input_productoadd + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form_productoadd label .input_productoadd:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form_productoadd label .input_productoadd:focus + span,
+  .form_productoadd label .input_productoadd:valid + span {
+    top: 5px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form_productoadd label .input_productoadd:valid + span {
+    color: green;
+  }
+  
+  .input01_productoadd {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 5px;
+  }
+  
+  .form_productoadd label .input01_productoadd + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form_productoadd label .input01_productoadd:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form_productoadd label .input01_productoadd:focus + span,
+  .form_productoadd label .input01_productoadd:valid + span {
+    top: 5px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form_productoadd label .input01_productoadd:valid + span {
+    color: green;
+  }
+  
+  .fancy_productoadd {
+    background-color: transparent;
+    border: 2px solid #cacaca;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #818181;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 390;
+    letter-spacing: 2px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 8px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+  }
+  
+  .fancy_productoadd::before {
+    content: " ";
+    width: 1.7rem;
+    height: 2px;
+    background: #cacaca;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform: translateX(230%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+  }
+  
+  .fancy_productoadd .text_productoadd {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #818181;
+    transform: translateX(30%);
+  }
+  
+  .fancy_productoadd .top-key_productoadd {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: white;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+  }
+  
+  .fancy_productoadd .bottom-key-1_productoadd {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: white;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+  
+  .fancy_productoadd .bottom-key-2_productoadd {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: white;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+  
+  .fancy_productoadd:hover {
+    color: white;
+    background: #cacaca;
+  }
+  
+  .fancy_productoadd:hover::before {
+    width: 1.5rem;
+    background: white;
+  }
+  
+  .fancy_productoadd:hover .text_productoadd {
+    color: white;
+    padding-left: 1.5em;
+  }
+  
+  .fancy_productoadd:hover .top-key_productoadd {
+    left: -2px;
+    width: 0px;
+  }
+  
+  .fancy_productoadd:hover .bottom-key-1_productoadd,
+  .fancy_productoadd:hover .bottom-key-2_productoadd {
+    right: 0;
+    width: 0;
+  }
+  
+  
+/***************************************************************************/
+
+/******************Tabla para consultar productos*************************/
+.container_consultarProd {
+    width: 90%; /* Cambiado el ancho del contenedor */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Para evitar que la tabla se salga del contenedor */
+  }
+  
+  
+  .form-container_consultarProd {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .form_consultarProd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form_consultarProd input,
+  .form_consultarProd button {
+    padding: 10px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .form_consultarProd button {
+    background-color: transparent;
+    cursor: pointer;
+    color: #818181;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .form_consultarProd button:hover {
+    background-color: #cacaca;
+    color: white;
+  }
+  
+  .table_consultarProd {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table_consultarProd th,
+  .table_consultarProd td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table_consultarProd th {
+    background-color: #f2f2f2;
+  }
+  
+  .table_consultarProd tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table_consultarProd img.responsive-img-producto {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .table_consultarProd button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #cacaca;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .table_consultarProd button:hover {
+    background-color: #b0b0b0;
+  }
+  
+/**********************************************************************/

@@ -13,9 +13,9 @@ class AnadirProducto extends BaseController
 
     public function __construct()
     {
-        $this->productoModel = new ProductosModel();    
+        $this->productoModel = new ProductosModel();
     }
-    
+
     public function index()
     {
 
@@ -29,7 +29,18 @@ class AnadirProducto extends BaseController
     {
         $file = $this->request->getFile('archivo');
         /* print_r($file); */
-
+        $nombreArchivo = $this->request->getPost('nombre');
+        $unidadMedida = $this->request->getPost('unidad_medida');
+        $productoExistente = $this->productoModel->where('nombre', $nombreArchivo)
+            ->where('unidad_medida', $unidadMedida)
+            ->first();
+        if ($productoExistente !== null) {
+            $data = [
+                'titulo' => 'Proceso Producto',
+                'mensaje' => 'El producto ya existe en el inventario.'
+            ];
+            return view('administrador/producto/proceso_producto', $data);
+        }
 
         if ($file->guessExtension() == 'jpg' || $file->guessExtension() == 'png' || $file->guessExtension() == 'jpeg') {
 
@@ -111,28 +122,28 @@ class AnadirProducto extends BaseController
                 $cantidadMedida = $this->request->getPost('cantidad_medida');
                 $unidadMedida = $this->request->getPost('unidad_medida');
                 $unidadMedida = $this->request->getPost('unidad_medida');
-                $unidadMedida = $cantidadMedida." ".$unidadMedida;
+                $unidadMedida = $cantidadMedida . " " . $unidadMedida;
 
                 $nombreImagen = str_replace(' ', '_', $nombreArchivo) . '.png';
                 $ruta = ROOTPATH . 'public/images/productos';
                 /* True se usa para sobre escribir, si no quieres sobreescribir borralo */
                 $file->move($ruta, $nombreImagen, true);
-                
+
                 $data = [
 
-                    'nombre'=>$nombreArchivo,
-                    'precio'=>$precio,
-                    'imagen'=>$nombreImagen,
-                    'unidad_medida'=>$unidadMedida,
-                    'estado'=> 1,
+                    'nombre' => $nombreArchivo,
+                    'precio' => $precio,
+                    'imagen' => $nombreImagen,
+                    'unidad_medida' => $unidadMedida,
+                    'estado' => 1,
                     'created_by' => "admin",
-                    'descripcion'=>$comentario,
+                    'descripcion' => $comentario,
                 ];
                 $this->productoModel->insert($data);
 
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'El producto con nombre '.$nombreArchivo.' se ha registrado correctamente en el inventario '
+                    'mensaje' => 'El producto con nombre ' . $nombreArchivo . ' se ha registrado correctamente en el inventario '
                 ];
 
                 return view('administrador/producto/proceso_producto', $data);
@@ -156,19 +167,38 @@ class AnadirProducto extends BaseController
     public function consultarProducto(): string
     {
 
+        // Obtén los datos del producto que se va a actualizar
+        $nombreArchivo = $this->request->getPost('nombre');
+        $unidadMedida = $this->request->getPost('unidad_medida');
+
+        // Verifica si existe otro producto con el mismo nombre y unidad de medida (excepto el que se está actualizando)
+        $productoExistente = $this->productoModel->where('nombre', $nombreArchivo)
+            ->where('unidad_medida', $unidadMedida)
+            ->first();
+        // Si ya existe otro producto con las mismas características, muestra un mensaje y evita la actualización
+        if ($productoExistente !== null) {
+            $data = [
+                'titulo' => 'Proceso Producto',
+                'mensaje' => 'No se puede actualizar el producto porque ya existe otro producto con el mismo nombre y unidad de medida.'
+            ];
+            return view('administrador/producto/proceso_producto', $data);
+        }
         $resultado = $this->productoModel->findAll();
-        
+
         $data = [
             'titulo' => 'Consultar Producto',
-            'productos' => $resultado];
+            'productos' => $resultado
+        ];
         return view('administrador/producto/entorno_de_consulta_producto', $data);
     }
 
-    public function modificarProducto($id){
+    public function modificarProducto($id)
+    {
         $producto = $this->productoModel->find($id);
         $data = [
             'titulo' => 'Modificar Tienda',
-            'producto' => $producto];
+            'producto' => $producto
+        ];
         return view('administrador/producto/entorno_modificar_producto', $data);
     }
 
@@ -233,33 +263,33 @@ class AnadirProducto extends BaseController
                 $nombreArchivo = $this->request->getPost('nombre');
                 $precio = $this->request->getPost('precio');
                 $unidadMedida = $this->request->getPost('unidad_medida');
-                $estado_producto =$this->request->getPost('estado');
+                $estado_producto = $this->request->getPost('estado');
                 $comentario = $this->request->getPost('comentarios');
 
                 $nombreImagen = $nombreArchivo . '.png';
                 $ruta = ROOTPATH . 'public/images/productos';
                 /* True se usa para sobre escribir, si no quieres sobreescribir borralo */
                 $file->move($ruta, $nombreImagen, true);
-                
+
                 $data = [
-                    'id_producto'=>$id_producto,
-                    'nombre'=>$nombreArchivo,
-                    'precio'=>$precio,
-                    'imagen'=>$nombreImagen,
-                    'unidad_medida'=>$unidadMedida,
-                    'estado'=>$estado_producto,
+                    'id_producto' => $id_producto,
+                    'nombre' => $nombreArchivo,
+                    'precio' => $precio,
+                    'imagen' => $nombreImagen,
+                    'unidad_medida' => $unidadMedida,
+                    'estado' => $estado_producto,
                     'created_by' => "admin",
-                    'descripcion'=>$comentario,
+                    'descripcion' => $comentario,
                 ];
 
                 $this->productoModel->update($id_producto, $data);
 
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'el producto con nombre '.$nombreArchivo.' se ha modificado correctamente en el inventario '
+                    'mensaje' => 'El producto con nombre ' . $nombreArchivo . ' se ha modificado correctamente'
                 ];
 
-                return view('administrador/proceso_producto', $data);
+                return view('administrador/producto/proceso_producto', $data);
                 exit;
             }
         } else {
