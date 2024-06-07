@@ -235,8 +235,11 @@ class Administrador extends BaseController
             $Empresa_nit = $this->request->getVar('Empresa_nit');
 
             $clienteModel = new ClienteModel();
+            $clienteExistente = $clienteModel->find($cedula);
  
-            if (!preg_match("/^[1-9]\d{6,9}$/", $cedula)) {
+            if($clienteExistente){
+                throw new \Exception("Está cédula ya se encuentra registrada en la página.");
+            } elseif (!preg_match("/^[1-9]\d{5,9}$/", $cedula)) {
                 throw new \Exception("La cédula debe tener entre 7 y 10 dígitos y no puede comenzar con cero.");
             } elseif(!preg_match("/^[A-Za-z\s]+$/", $nombre)){
                 throw new \Exception("El nombre solo debe contener letras.");
