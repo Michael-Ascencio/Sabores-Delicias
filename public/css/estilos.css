@@ -371,6 +371,20 @@ section {
         transform: translate(-50%, -50%);
 }
 
+/* Agrega este estilo en tu archivo CSS */
+
+.imagen_inventario {
+    text-align: center; /* Centra la imagen */
+    margin-bottom: 20px; /* Añade un espacio entre la imagen y el formulario */
+}
+
+.imagen_inventario img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+
+
 /* ------------------------------------------------------------------------------------------- */
 
 .caja1{

@@ -235,13 +235,10 @@ class Administrador extends BaseController
             $Empresa_nit = $this->request->getVar('Empresa_nit');
 
             $clienteModel = new ClienteModel();
-            $clienteExistente = $clienteModel->find($cedula);
  
-            if($clienteExistente){
-                throw new \Exception("Está cédula ya se encuentra registrada en la página.");
-            } elseif (!preg_match("/^[1-9]\d{5,9}$/", $cedula)) {
-                throw new \Exception("La cédula debe tener entre 7 y 10 dígitos y no puede comenzar con cero.");
-            } elseif(!preg_match("/^[A-Za-z\s]+$/", $nombre)){
+            if(strlen($cedula) < 6 || strlen($cedula) > 10){
+                throw new \Exception("La cédula debe tener mínimo 6 dígitos y máximo 10.");
+            } elseif(!preg_match("/^[A-Za-z]+$/", $nombre)){
                 throw new \Exception("El nombre solo debe contener letras.");
             } elseif(strlen($nombre)<2 || strlen($nombre)>50){
                 throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
@@ -291,7 +288,7 @@ class Administrador extends BaseController
     public function editarCliente($cedula= null)
     {
         if ($cedula === null) {
-            $cedula = $this->request->getGet('cedula');
+            $cedula = $this->request->getGet('nit');
         }
     
         $clienteModel = new ClienteModel();
@@ -299,17 +296,15 @@ class Administrador extends BaseController
         $empresaModel = new EmpresaModel();
 
         $cliente = $clienteModel->find($cedula);
-        
-        if (!$cliente) {
-            return redirect()->to(base_url('/administrador/entorno_consulta_cliente'))->with('error', 'La cédula ingresada no existe en la base de datos.');
-        }
-    
         $area = $areaModel->find($cliente->Area_id_area);
         $empresa = $empresaModel->find($cliente->Empresa_nit);
 
         $areas = $areaModel->orderBy('id_area','ASC')->findAll();
         $empresas = $empresaModel->orderBy('nit','ASC')->findAll();
     
+        if (!$cliente) {
+            return redirect()->to(base_url('/administrador/entorno_consulta_cliente'))->with('error', 'La cédula ingresada no existe en la base de datos.');
+        }
     
         $data = [
             'titulo' => 'Modificar Cliente',
@@ -369,96 +364,7 @@ class Administrador extends BaseController
             return redirect()->to(base_url('administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
         }
     }
-
-    public function entornoSubirUsuarios(){
-        $data = [
-            'titulo' => 'Subir Usuarios'];
-        return  view('administrador/entorno_subir_usuarios', $data);
-    }
-
-    public function procesarSubidaUsuarios() {
-        $file = $this->request->getFile('archivo');
-    
-        // Verificar si el archivo es válido y se ha subido correctamente
-        if ($file->isValid() && !$file->hasMoved()) {
-            // Crear el directorio si no existe
-            $uploadPath = WRITEPATH . 'uploads';
-            if (!is_dir($uploadPath)) {
-                mkdir($uploadPath, 0777, true);
-            }
-    
-            // Mover el archivo al directorio deseado
-            if ($file->move($uploadPath, $file->getName())) {
-                $filePath = $uploadPath . '/' . $file->getName();
-    
-                // Procesar el archivo CSV
-                $csvFile = fopen($filePath, 'r');
-                
-                // Ignorar la primera fila (encabezados)
-                fgetcsv($csvFile, 1000, ";");
-    
-                while (($line = fgetcsv($csvFile, 1000, ";")) !== FALSE) {
-                    // Suponiendo que el CSV tiene los campos en el orden adecuado
-                    $data = [
-                        'cedula' => $line[0],
-                        'nombre' => $line[1],
-                        'apellido' => $line[2],
-                        'correo' => $line[3],
-                        'contrasena' => $line[4],
-                        'Area_id_area' => $line[5],
-                        'telefono' => $line[6],
-                        'Empresa_nit' => $line[7]
-                    ];
-    
-                    try {
-                        $this->transaccionClienteDesdeCSV($data);
-                    } catch (\Exception $e) {
-                        return redirect()->to(base_url('administrador/entorno_subir_usuarios'))->with('error', $e->getMessage());
-                    }
-                }
-                fclose($csvFile);
-    
-                return redirect()->to(base_url('administrador/entorno_subir_usuarios'))->with('success', 'Archivo subido y procesado correctamente.');
-            } else {
-                return redirect()->to(base_url('administrador/entorno_subir_usuarios'))->with('error', 'No se pudo mover el archivo subido.');
-            }
-        } else {
-            return redirect()->to(base_url('administrador/entorno_subir_usuarios'))->with('error', 'Error en la carga del archivo.');
-        }
-    }
-
-    public function transaccionClienteDesdeCSV($data) {
-        try {
-
-            // Validaciones similares al método transaccionCliente
-            if (!preg_match("/^[1-9]\d{5,9}$/", $data['cedula'])) {
-                throw new \Exception("La cédula debe tener entre 7 y 10 dígitos y no puede comenzar con cero.");
-            } elseif (!preg_match("/^[A-Za-z\s]+$/", $data['nombre'])) {
-                throw new \Exception("El nombre solo debe contener letras.");
-            } elseif (strlen($data['nombre']) < 2 || strlen($data['nombre']) > 50) {
-                throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
-            } elseif (!preg_match("/^[A-Za-z\s]+$/", $data['apellido'])) {
-                throw new \Exception("El apellido solo debe contener letras.");
-            } elseif (strlen($data['apellido']) < 2 || strlen($data['apellido']) > 50) {
-                throw new \Exception("El apellido debe tener mínimo 2 letras y máximo 50.");
-            } elseif (strlen($data['contrasena']) < 5) {
-                throw new \Exception("La contraseña debe tener mínimo 5 caracteres.");
-            } elseif (strlen($data['telefono']) !== 7 && strlen($data['telefono']) !== 10) {
-                throw new \Exception("El número de teléfono no es válido.");
-            }
-
-            $clienteModel = new ClienteModel();
-            $clienteExistente = $clienteModel->find($data['cedula']);
-    
-            if ($clienteExistente) {
-                throw new \Exception("Está cédula ya se encuentra registrada en la página.");
-            }
-    
-            $clienteModel->insert($data);
-        } catch (\Exception $e) {
-            throw $e;
-        }
-    }
+//Objeto área y empresa
 
     public function gestionarInventario(): string
     {
@@ -471,7 +377,58 @@ class Administrador extends BaseController
     }
 
     public function agregarInventario(){
+
+        $inventarioModel = new InventarioModel();
+    
+        $inventarios = $inventarioModel->orderBy('id_inventario','ASC')->findAll();
+    
+        $data = [
+            'titulo' => 'Gestion Inventario',
+            'inventarios' => $inventarios
+        ];
         
-        return view('administrador/entorno_registro_inventario');
+        return view('administrador/entorno_registro_inventario', $data);
     }
+
+    public function transaccionInventario(){
+        try{
+
+            $Producto_id_producto = $this->request->getVar('Producto_id_producto');
+            $Tienda_cod_postal = $this->request->getVar('Tienda_cod_postal');
+            $cantidad = $this->request->getVar('Cantidad');
+            $fecha_caducidad = $this->request->getVar('fecha_caducidad');
+            $lote = $this->request->getVar('lote');
+            
+            $inventarioModel = new InventarioModel();
+
+            
+            $data = [
+                'id_inventario' => $id_inventario,
+                'Producto_id_producto' => $Producto_id_producto,
+                'Tienda_cod_postal' => $Tienda_cod_postal,
+                'cantidad' => $cantidad,
+                'fecha_caducidad' => $fecha_caducidad,
+                'lote' => $lote
+            ];
+            
+            $inventarioModel->insert($data);
+    
+
+            return redirect()->to(base_url('administrador/entorno_registro_inventario'))->with('success', 'Cliente creado exitosamente.');    
+        }
+        catch(\Exception $e){
+            return redirect()->to(base_url('administrador/entorno_registro_inventario'))->with('error', $e->getMessage());
+        }
+    }
+
+    public function editarInventario($id_inventario = null){
+
+        
+        $inventarioModel = new InventarioModel();
+        $data['inventario'] = $inventarioModel->find($id_inventario);
+
+        return view('administrador/entorno_edit_inventario', $data);
+
+    }
+
 }

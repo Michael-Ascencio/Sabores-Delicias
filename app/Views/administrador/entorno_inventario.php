@@ -63,14 +63,13 @@ function enlace($url)
         <tr>
             <div class="Tabla_Inventario">
             <td> <?php echo $inventario->id_inventario; ?> </td>
-            <td> <?php echo $inventario->lote; ?> </td>
-            <td> <?php echo $inventario->fecha_caducidad; ?> </td>
+            <td> <?php echo $inventario->Tienda_cod_postal; ?> </td>
+            <td> <?php echo $inventario->Producto_id_producto; ?> </td>
             <td> <?php echo $inventario->cantidad; ?> </td>
             <td> <?php echo $inventario->lote; ?> </td>
             <td> <?php echo $inventario->fecha_caducidad; ?> </td>           
             <td>
-                <a href="edita.html" class="btn btn-warning btn-sm me-2">Editar</a>
-                <a href="edita.html" class="btn btn-warning btn-sm me-2">Eliminar</a>
+                <a href="entorno_edit_inventario" class="btn btn-warning btn-sm me-2">Editar</a>
             </td>
           </div>
         </tr>
