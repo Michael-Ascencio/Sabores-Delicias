@@ -12,7 +12,7 @@ function enlace($url)
 
 
     <h1>Informe de Consumos</h1>
-   
+    <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/fondocontador.jpg');?>" alt="" class="fondo_contador">
     <php>
     <div class="tabla_resultado_consulta"><table>
         <thead>
