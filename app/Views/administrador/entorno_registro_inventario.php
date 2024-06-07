@@ -24,13 +24,9 @@ function enlace($url)
 
 <div class="imagen_inventario">
     <img src="<?= enlace('/Sabores-Delicias/public/images/logos/36ed206f-c52a-467b-84eb-4f164b3f303a-removebg-preview.png');?>" alt="" class="inventario">
-</div>
-<form class="form" method="post" action="<?=base_url('administrador/entorno_registro_inventario')?>">
-    <p class="title">Registrar Inventario</p>
-    <label>
-        <input class="input" type="number" required name="id_inventario">
-        <span>id_inventario</span>
-    </label>
+    </div>
+        <form class="form" method="post" action="<?=base_url('administrador/entorno_registro_inventario')?>">
+        <p class="title">Registrar Inventario</p>
     <label>
         <input class="input" type="number" required name="Producto_id_producto">
         <span>Producto_id_producto</span>

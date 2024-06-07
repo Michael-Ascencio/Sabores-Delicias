@@ -392,23 +392,21 @@ class Administrador extends BaseController
 
     public function transaccionInventario(){
         try{
-            $id_inventario = $this->request->getVar('id_inventario');
-            $cantidad = $this->request->getVar('Cantidad');
-            $lote = $this->request->getVar('lote');
-            $fecha_caducidad = $this->request->getVar('fecha_caducidad');
             $Producto_id_producto = $this->request->getVar('Producto_id_producto');
             $Tienda_cod_postal = $this->request->getVar('Tienda_cod_postal');
+            $cantidad = $this->request->getVar('Cantidad');
+            $fecha_caducidad = $this->request->getVar('fecha_caducidad');
+            $lote = $this->request->getVar('lote');
             
             $inventarioModel = new InventarioModel();
 
+            
             $data = [
-                'id_inventario' => $id_inventario,
-                'cantidad' => $cantidad,
-                'lote' => $lote,
-                'fecha_caducidad' => $fecha_caducidad,
                 'Producto_id_producto' => $Producto_id_producto,
-                'Tienda_cod_postal' => $Tienda_cod_postal
-
+                'Tienda_cod_postal' => $Tienda_cod_postal,
+                'cantidad' => $cantidad,
+                'fecha_caducidad' => $fecha_caducidad,
+                'lote' => $lote
             ];
             
             $inventarioModel->insert($data);

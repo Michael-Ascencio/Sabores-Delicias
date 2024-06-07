@@ -70,7 +70,6 @@ function enlace($url)
             <td> <?php echo $inventario->fecha_caducidad; ?> </td>           
             <td>
                 <a href="entorno_edit_inventario" class="btn btn-warning btn-sm me-2">Editar</a>
-                <a href="edita.html" class="btn btn-warning btn-sm me-2">Inabilitar</a>
             </td>
           </div>
         </tr>
