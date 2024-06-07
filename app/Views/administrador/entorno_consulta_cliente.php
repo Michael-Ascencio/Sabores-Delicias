@@ -18,7 +18,9 @@ function enlace($url)
 
 <h2 class="message1">Ingrese la cédula del cliente que desea modificar</h2>
 <div class="searchBox">
+
   <form id="searchForm" method="get" action="<?= base_url('administrador/entorno_editar_cliente') ?>">
+
     <input class="searchInput" type="number" id="nitInput" placeholder="Cédula">
     <button class="searchButton" type="submit">
       <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
@@ -52,7 +54,9 @@ function enlace($url)
     e.preventDefault();
     var nit = document.getElementById('nitInput').value;
     if(nit) {
+
       var url = "<?= base_url('administrador/entorno_editar_cliente') ?>/" + nit;
+
       window.location.href = url;
     }
   });

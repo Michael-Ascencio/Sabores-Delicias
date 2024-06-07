@@ -194,6 +194,7 @@ class Administrador extends BaseController
             $empresaModel->update($nit, $data);
     
             return redirect()->to(base_url('administrador/entorno_gestionar_empresa'))->with('success', 'Empresa actualizada exitosamente.');    
+
         }
         catch(\Exception $e){
             return redirect()->to(base_url('administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
@@ -260,10 +261,12 @@ class Administrador extends BaseController
                 'Area_id_area' => $Area_id_area,
                 'telefono' => $telefono,
                 'Empresa_nit' => $Empresa_nit
+
             ];
             
             $clienteModel->insert($data);
     
+
             return redirect()->to(base_url('administrador/entorno_gestionar_cliente'))->with('success', 'Cliente creado exitosamente.');    
         }
         catch(\Exception $e){
@@ -362,6 +365,7 @@ class Administrador extends BaseController
         }
     }
 //Objeto área y empresa
+
     public function gestionarInventario(): string
     {
         $inventarioModel = new InventarioModel();
