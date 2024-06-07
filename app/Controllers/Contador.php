@@ -7,16 +7,49 @@ use App\Models\DetallepedidoModel;
 use App\Models\PedidoModel;
 use App\Models\ProductosModel;
 use CodeIgniter\Database\Database;*/
-
+use App\Services\ClientesSession; 
 use CodeIgniter\Controller;
 use Config\Database;
 
 class Contador extends Controller
 {
+    protected $sessionService;
+
+    public function __construct()
+    {
+        $this->sessionService = new ClientesSession();  // Instancia el servicio
+    }
+
     public function login()
     {
-        return view('contador/contador');
+        $data = ['titulo' => 'login'];
+        return view('contador/contador', $data);
     }
+
+    public function ingreso()
+    {
+        $usuario = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+
+        $resultado = $this->sessionService->iniciarSesion($usuario, $password);
+
+        if ($resultado['status'] === true) {
+            $cargo = $resultado['data']['cargo'];
+            if ($cargo == 2) {
+                return redirect()->to(base_url('contador/informe_de_ventas'));
+            } else {
+                return redirect()->to(base_url('logincontador'))->with('mensaje', 'No tiene permisos para acceder como administrador.');
+            }
+        } else {
+            return redirect()->to(base_url('logincontador'))->with('mensaje', $resultado['message']);
+        }
+    }
+
+    public function salida()
+    {
+        return $this->sessionService->cerrarSesion();
+    }
+
     public function fechas_de_reporte()
     {
         $data = ['titulo' => 'Ingreso de fechas para Reporte' ];
@@ -51,12 +84,19 @@ class Contador extends Controller
         $fecha_inicial = $this->request->getPost('fecha_inicial');
         $fecha_final = $this->request->getPost('fecha_final');
         $db = Database::connect();
-
+        if ($fecha_final < $fecha_inicial) {
+            session()->setFlashdata('error', 'La fecha final no puede ser anterior a la fecha inicial. Por favor, corrige las fechas ingresadas.');
+            return redirect()->to(base_url('contador/informe_de_ventas'))->withInput();  
+        }
         
             $sql = $this->obtenerConsultaInforme($fecha_inicial, $fecha_final);
             $query = $db->query($sql, ["$fecha_inicial - $fecha_final", $fecha_inicial, $fecha_final]);
             $resultado_query = $query->getResultArray();
 
+            if (empty($resultado_query)) {
+                session()->setFlashdata('error', 'No hay consumos registrados en el rango de fechas seleccionado.');
+                return redirect()->to(base_url('contador/informe_de_ventas'))->withInput();  
+            }
             $data = ['titulo' => 'Informe de Ventas', 'ventas' => $resultado_query, 'fecha_inicial' => $fecha_inicial, 'fecha_final' => $fecha_final, 'ventas' => $resultado_query];
             return view('contador/Informe_de_ventas', $data);
          
