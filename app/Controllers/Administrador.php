@@ -132,10 +132,10 @@ class Administrador extends BaseController
             
             $empresaModel->insert($data);
     
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa creada exitosamente.');    
+            return redirect()->to(base_url('administrador/entorno_gestionar_empresa'))->with('success', 'Empresa creada exitosamente.');    
         }
         catch(\Exception $e){
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
+            return redirect()->to(base_url('administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
         }
     }
     
@@ -160,7 +160,7 @@ class Administrador extends BaseController
         $empresa = $empresaModel->find($nit);
     
         if (!$empresa) {
-            return redirect()->to(base_url('/Sabores-Delicias/public/administrador/entorno_consulta_empresa'))->with('error', 'El NIT no existe en la base de datos.');
+            return redirect()->to(base_url('/administrador/entorno_consulta_empresa'))->with('error', 'El NIT no existe en la base de datos.');
         }
     
         $data = [
@@ -192,10 +192,11 @@ class Administrador extends BaseController
             ];
             $empresaModel->update($nit, $data);
     
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa actualizada exitosamente.');    
+            return redirect()->to(base_url('administrador/entorno_gestionar_empresa'))->with('success', 'Empresa actualizada exitosamente.');    
+
         }
         catch(\Exception $e){
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
+            return redirect()->to(base_url('administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
         }
     }
 
@@ -242,15 +243,19 @@ class Administrador extends BaseController
                 'apellido' => $apellido,
                 'correo' => $correo,
                 'contrasena' => $contrasena,
-                'telefono' => $telefono
+                'Area_id_area' => $Area_id_area,
+                'telefono' => $telefono,
+                'Empresa_nit' => $Empresa_nit
+
             ];
             
             $clienteModel->insert($data);
     
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('success', 'Cliente creado exitosamente.');    
+
+            return redirect()->to(base_url('administrador/entorno_gestionar_cliente'))->with('success', 'Cliente creado exitosamente.');    
         }
         catch(\Exception $e){
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
+            return redirect()->to(base_url('administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
         }
     }
 
@@ -275,7 +280,7 @@ class Administrador extends BaseController
         $cliente = $clienteModel->find($cedula);
     
         if (!$cliente) {
-            return redirect()->to(base_url('/Sabores-Delicias/public/administrador/entorno_consulta_cliente'))->with('error', 'La cédula ingresada no existe en la base de datos.');
+            return redirect()->to(base_url('/administrador/entorno_consulta_cliente'))->with('error', 'La cédula ingresada no existe en la base de datos.');
         }
     
         $data = [
@@ -319,16 +324,20 @@ class Administrador extends BaseController
                 'apellido' => $apellido,
                 'correo' => $correo,
                 'contrasena' => $contrasena,
+
+                'Area_id_area' => 1,
                 'telefono' => $telefono
             ];
+            
             $clienteModel->update($cedula, $data);
     
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('success', 'Cliente actualizado exitosamente.');    
+            return redirect()->to(base_url('administrador/entorno_gestionar_cliente'))->with('success', 'Cliente actualizado exitosamente.');    
         }
         catch(\Exception $e){
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
+            return redirect()->to(base_url('administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
         }
     }
+//Objeto área y empresa
 
     public function gestionarInventario(): string
     {

@@ -1559,20 +1559,142 @@ th {
 /*------------------------------------------------------------------------------*/
 /*contador*/
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
 
+.logocontador {
+    margin-bottom: 20px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
 
+.formulario_ingreso_fechas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
 
+.formulario_ingreso_fechas label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
 
+.formulario_ingreso_fechas input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
+.boton_consulta {
+    text-align: center;
+    width: 100%;
+}
 
+.boton_consulta button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.boton_consulta button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .logocontador,
+    .formulario_ingreso_fechas,
+    .tabla_resultado_consulta,
+    .boton_descargar,
+    .login-container-contador {
+        width: 90%;
+    }
+
+    .formulario_ingreso_fechas {
+        padding: 15px;
+    }
+
+    .boton_consulta button,
+    .boton_descargar button {
+        width: 100%;
+    }
+
+    .tabla_resultado_consulta th,
+    .tabla_resultado_consulta td {
+        font-size: 14px;
+    }
+}
+
+.boton_descargar {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boton_descargar button {
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton_descargar button:hover {
+    background-color: #218838;
+}
+
+.tabla_resultado_consulta {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla_resultado_consulta th,
+.tabla_resultado_consulta td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla_resultado_consulta th {
+    background-color: #f2f2f2;
+}
+
+.tabla_resultado_consulta tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 
 .login-container-contador {
     position: absolute;
-    left:-150px ;
-    top: -100px;
-    width: 300px;
-    height: 350px;
-    margin: 100px auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 300px;
+    height: auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -1610,6 +1732,7 @@ th {
 .login-container-contador button:hover {
     background-color: #555;
 }
+
 
 /*------------------------------------------------------------------------------*/
 /*Formularios de productos*/
@@ -1732,129 +1855,307 @@ th {
 }
 /******************************************************************************/
 
-/*------------------------------------------------------------------------------*/
-/*contador*/
-body {
+/***********Formulario para los productos al momento de añadir*************/
+.body_productos_total {
+    background-color: #f0f0f0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /* align-items: center; */
+    height: 100vh;
     margin: 0;
-}
+    margin-top: 5%;
+  }
 
-.logocontador {
-    margin-bottom: 20px;
-    width: 220px;
-    height: 220px;
-    /* Para hacer que la imagen se ajuste bien */
-    object-fit: cover;
-}
-
-.formulario_ingreso_fechas {
+  .container_productoadd {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form_productoadd {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px; /* Ajusta según sea necesario */
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .flex_productoadd {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form_productoadd label {
+    position: relative;
+    flex: 1;
+  }
+  
+  .form_productoadd label .input_productoadd {
+    width: 90%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* Si necesitas un fondo blanco para el formulario */
-}
-
-.formulario_ingreso_fechas label {
+  }
+  
+  .form_productoadd label .input_productoadd + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form_productoadd label .input_productoadd:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form_productoadd label .input_productoadd:focus + span,
+  .form_productoadd label .input_productoadd:valid + span {
+    top: 5px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form_productoadd label .input_productoadd:valid + span {
+    color: green;
+  }
+  
+  .input01_productoadd {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 5px;
+  }
+  
+  .form_productoadd label .input01_productoadd + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form_productoadd label .input01_productoadd:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form_productoadd label .input01_productoadd:focus + span,
+  .form_productoadd label .input01_productoadd:valid + span {
+    top: 5px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form_productoadd label .input01_productoadd:valid + span {
+    color: green;
+  }
+  
+  .fancy_productoadd {
+    background-color: transparent;
+    border: 2px solid #cacaca;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #818181;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 390;
+    letter-spacing: 2px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 8px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+  }
+  
+  .fancy_productoadd::before {
+    content: " ";
+    width: 1.7rem;
+    height: 2px;
+    background: #cacaca;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform: translateX(230%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+  }
+  
+  .fancy_productoadd .text_productoadd {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.formulario_ingreso_fechas input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.boton_consulta {
-    text-align: center;
-    width: 100%;
-}
-
-.boton_consulta button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: -5px; 
-    margin-bottom: 10px;
-}
-
-.boton_consulta button:hover {
-    background-color: #0056b3;
-}
-
-
-@media (max-width: 768px) {
-    .logocontador, .formulario_ingreso_fechas, .tabla_resultado_consulta {
-        width: 90%;
-    }
-
-    .formulario_ingreso_fechas {
-        padding: 15px;
-    }
-
-    .boton_consulta button, .boton_descargar button {
-        width: 100%;
-    }
-
-    .tabla_resultado_consulta th, .tabla_resultado_consulta td {
-        font-size: 14px;
-    }
-}
-
-.boton_descargar {
-    text-align: center;
-    margin-top: 150px; /* Ajusta según sea necesario */
-    margin-bottom: 350px; /* Ajusta según sea necesario */
-}
-
-.boton_descargar button {
-    padding: 10px 20px;
-    background-color: #28A745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.boton_descargar button:hover {
-    background-color: #218838;
-}
-
-.tabla_resultado_consulta {
-    width: 100%;
-    max-width: 800px;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.tabla_resultado_consulta th, .tabla_resultado_consulta td {
-    border: 1px solid #ddd;
-    padding: 8px;
     text-align: left;
-}
+    transition: all 0.3s ease-in-out;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #818181;
+    transform: translateX(30%);
+  }
+  
+  .fancy_productoadd .top-key_productoadd {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: white;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+  }
+  
+  .fancy_productoadd .bottom-key-1_productoadd {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: white;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+  
+  .fancy_productoadd .bottom-key-2_productoadd {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: white;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+  
+  .fancy_productoadd:hover {
+    color: white;
+    background: #cacaca;
+  }
+  
+  .fancy_productoadd:hover::before {
+    width: 1.5rem;
+    background: white;
+  }
+  
+  .fancy_productoadd:hover .text_productoadd {
+    color: white;
+    padding-left: 1.5em;
+  }
+  
+  .fancy_productoadd:hover .top-key_productoadd {
+    left: -2px;
+    width: 0px;
+  }
+  
+  .fancy_productoadd:hover .bottom-key-1_productoadd,
+  .fancy_productoadd:hover .bottom-key-2_productoadd {
+    right: 0;
+    width: 0;
+  }
+  
+  
+/***************************************************************************/
 
-.tabla_resultado_consulta th {
-    background-color: #f2f2f2;
-}
-
-.tabla_resultado_consulta tr:nth-child(even) {
+/******************Tabla para consultar productos*************************/
+.container_consultarProd {
+    width: 90%; /* Cambiado el ancho del contenedor */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     background-color: #f9f9f9;
-}
-
-/******************************************************************************/
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Para evitar que la tabla se salga del contenedor */
+  }
+  
+  
+  .form-container_consultarProd {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .form_consultarProd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form_consultarProd input,
+  .form_consultarProd button {
+    padding: 10px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .form_consultarProd button {
+    background-color: transparent;
+    cursor: pointer;
+    color: #818181;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .form_consultarProd button:hover {
+    background-color: #cacaca;
+    color: white;
+  }
+  
+  .table_consultarProd {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table_consultarProd th,
+  .table_consultarProd td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table_consultarProd th {
+    background-color: #f2f2f2;
+  }
+  
+  .table_consultarProd tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table_consultarProd img.responsive-img-producto {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .table_consultarProd button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #cacaca;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .table_consultarProd button:hover {
+    background-color: #b0b0b0;
+  }
+  
+/**********************************************************************/

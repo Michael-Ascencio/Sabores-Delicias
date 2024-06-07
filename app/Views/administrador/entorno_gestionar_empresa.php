@@ -25,7 +25,7 @@ function enlace($url)
 <?php endif; ?>
 
 
-<form class="form" method="post" action="<?= base_url('/Sabores-Delicias/public/administrador/entorno_gestionar_empresa') ?>">
+<form class="form" method="post" action="<?= base_url('/administrador/entorno_gestionar_empresa') ?>">
     <p class="title">Registrar empresa</p>
     <p class="message">Ingrese la empresa que desea Registrar </p>
     <div class="flex">
@@ -50,7 +50,7 @@ function enlace($url)
 
     <div class="consultar-modificar">
         <h2 class="Gestionar3">Si deseas consultar o modificar la empresa haz clic aquí</h2>
-        <button class="shadow__btn1" onclick="window.location.href='<?= base_url('/Sabores-Delicias/public/administrador/entorno_consulta_empresa') ?>'">clic aquí</button>
+        <button class="shadow__btn1" onclick="window.location.href='<?= base_url('administrador/entorno_consulta_empresa') ?>'">clic aquí</button>
     </div>
 </form>
 

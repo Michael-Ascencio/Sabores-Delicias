@@ -11,7 +11,7 @@
     <title><?php echo esc($titulo); ?> </title>
 </head>
 
-<body>
+<body  class = "body_productos_total">
     <header>
         <nav class="menu">
             
