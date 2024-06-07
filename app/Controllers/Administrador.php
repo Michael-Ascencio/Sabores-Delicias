@@ -2,22 +2,14 @@
 
 namespace App\Controllers;
 
-use App\Services\EmpleadosSession; //Consumir el servicio de session
-
 use App\Models\TiendasModel;
 use App\Models\ClienteModel;
 use App\Models\EmpresaModel;
 Use App\Models\InventarioModel;
+use App\Models\EmpleadoModel;
 
 class Administrador extends BaseController
 {
-    protected $sessionService;
-
-    public function __construct()
-    {
-        $this->sessionService = new EmpleadosSession();  // Instancia el servicio
-    }
-
     public function login(): string
     {
         $data = ['titulo' => 'login'];
@@ -37,24 +29,29 @@ class Administrador extends BaseController
     {
         $usuario = $this->request->getPost('username');
         $password = $this->request->getPost('password');
+        /* $password = password_hash($password, PASSWORD_DEFAULT);  */
+        $Usuario = new EmpleadoModel();
+        $resultado = $Usuario->where('cedula', $usuario)->first();
 
-        $resultado = $this->sessionService->iniciarSesion($usuario, $password);
-
-        if ($resultado['status'] === true) {
-            $cargo = $resultado['data']['cargo'];
-            if ($cargo == 1 || $cargo == 2) {
+        if ($resultado !== null) {
+            // Verificamos si la contraseña coincide
+            if ($password === $resultado->contrasena/* password_verify($password, $resultado->contrasena) */) {
+                // Contraseña correcta, establecemos la sesión y retornamos la página deseada
+                $data = [
+                    'usuario' => $resultado->nombre,
+                    'cargo' => $resultado->Cargo_id_cargo,
+                ];
+                $session = session();
+                $session->set($data);
                 return redirect()->to(base_url('admin/entorno'));
             } else {
-                return redirect()->to(base_url('loginadmin'))->with('mensaje', 'No tiene permisos para acceder como administrador.');
+                // Contraseña incorrecta, redirigimos de nuevo a la página de inicio de sesión con un mensaje
+                return redirect()->to(base_url('loginadmin'))->with('mensaje', 'Contraseña incorrecta, la que esta en la base de datos es: '.$resultado->contrasena.' Y la que estas enviando es: '.$password);
             }
         } else {
-            return redirect()->to(base_url('loginadmin'))->with('mensaje', $resultado['message']);
+            // Usuario no encontrado, redirigimos de nuevo a la página de inicio de sesión con un mensaje
+            return redirect()->to(base_url('loginadmin'))->with('mensaje', 'Usuario no encontrado.');
         }
-    }
-
-    public function salida()
-    {
-        return $this->sessionService->cerrarSesion();
     }
 
 
@@ -170,7 +167,7 @@ class Administrador extends BaseController
         return view('administrador/entorno_editar_empresa', $data);
     }   
 
-    public function actualizarDatosBD(){ //Actualizar datos bd empresa
+    public function actualizarDatosBD(){
 
         try{
             $nit = $this->request->getVar('nit');
@@ -192,7 +189,7 @@ class Administrador extends BaseController
             ];
             $empresaModel->update($nit, $data);
     
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa actualizada exitosamente.');    
+            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('success', 'Empresa creada exitosamente.');    
         }
         catch(\Exception $e){
             return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_empresa'))->with('error', $e->getMessage());
@@ -204,54 +201,6 @@ class Administrador extends BaseController
         $data = [
             'titulo' => 'Gestion Cliente'];
         return  view('administrador/entorno_gestionar_cliente', $data);
-    }
-
-    public function transaccionCliente(){
-        
-        try{
-            $cedula = $this->request->getVar('cedula');
-            $nombre = $this->request->getVar('nombre');
-            $apellido = $this->request->getVar('apellido');
-            $correo = $this->request->getVar('correo');
-            $contrasena = $this->request->getVar('contrasena');
-            $Area_id_area = $this->request->getVar('Area_id_area');
-            $telefono = $this->request->getVar('telefono');
-            $Empresa_nit = $this->request->getVar('Empresa_nit');
-
-            $clienteModel = new ClienteModel();
- 
-            if(strlen($cedula) < 6 || strlen($cedula) > 10){
-                throw new \Exception("La cédula debe tener mínimo 6 dígitos y máximo 10.");
-            } elseif(!preg_match("/^[A-Za-z]+$/", $nombre)){
-                throw new \Exception("El nombre solo debe contener letras.");
-            } elseif(strlen($nombre)<2 || strlen($nombre)>50){
-                throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
-            } elseif(!preg_match("/^[A-Za-z]+$/", $apellido)){
-                throw new \Exception("El apellido solo debe contener letras.");
-            } elseif(strlen($apellido)<2 || strlen($apellido)>50){
-                throw new \Exception("El apellido debe tener mínimo 2 letras y máximo 50.");
-            } elseif(strlen($contrasena)<5){
-                throw new \Exception("La contraseña debe tener mínimo 5 caracteres.");
-            } elseif(strlen($telefono) !== 7 && strlen($telefono) !== 10){
-                throw new \Exception("El número de teléfono no es válido.");
-            }
-
-            $data = [
-                'cedula' => $cedula,
-                'nombre' => $nombre,
-                'apellido' => $apellido,
-                'correo' => $correo,
-                'contrasena' => $contrasena,
-                'telefono' => $telefono
-            ];
-            
-            $clienteModel->insert($data);
-    
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('success', 'Cliente creado exitosamente.');    
-        }
-        catch(\Exception $e){
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
-        }
     }
 
     public function consultarCliente(){
@@ -285,51 +234,6 @@ class Administrador extends BaseController
         return view('administrador/entorno_editar_cliente', $data);
     }   
 
-    public function actualizarDatosBDCliente(){
-
-        try{
-            $cedula = $this->request->getVar('cedula');
-            $nombre = $this->request->getVar('nombre');
-            $apellido = $this->request->getVar('apellido');
-            $correo = $this->request->getVar('correo');
-            $contrasena = $this->request->getVar('contrasena');
-            $Area_id_area = $this->request->getVar('Area_id_area');
-            $telefono = $this->request->getVar('telefono');
-            $Empresa_nit = $this->request->getVar('Empresa_nit');
-
-            $clienteModel = new ClienteModel();
- 
-            if(!preg_match("/^[A-Za-z]+$/", $nombre)){
-                throw new \Exception("El nombre solo debe contener letras.");
-            } elseif(strlen($nombre)<2 || strlen($nombre)>50){
-                throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
-            } elseif(!preg_match("/^[A-Za-z]+$/", $apellido)){
-                throw new \Exception("El apellido solo debe contener letras.");
-            } elseif(strlen($apellido)<2 || strlen($apellido)>50){
-                throw new \Exception("El apellido debe tener mínimo 2 letras y máximo 50.");
-            } elseif(strlen($contrasena)<5){
-                throw new \Exception("La contraseña debe tener mínimo 5 caracteres.");
-            } elseif(strlen($telefono) !== 7 && strlen($telefono) !== 10){
-                throw new \Exception("El número de teléfono no es válido.");
-            }
-
-            $data = [
-                'cedula' => $cedula,
-                'nombre' => $nombre,
-                'apellido' => $apellido,
-                'correo' => $correo,
-                'contrasena' => $contrasena,
-                'telefono' => $telefono
-            ];
-            $clienteModel->update($cedula, $data);
-    
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('success', 'Cliente actualizado exitosamente.');    
-        }
-        catch(\Exception $e){
-            return redirect()->to(base_url('Sabores-Delicias/public/administrador/entorno_gestionar_cliente'))->with('error', $e->getMessage());
-        }
-    }
-
     public function gestionarInventario(): string
     {
         $inventarioModel = new InventarioModel();
@@ -340,14 +244,11 @@ class Administrador extends BaseController
         return view('administrador/entorno_inventario', $data);
     }
 
-    public function agregarInventario(){
-
-        return view('administrador/entorno_registro_inventario');
-
-    }
-
-    public function validacionInventario(){    
-        $reglas=[
+    public function agregarInventario()
+{
+    if ($this->request->getMethod() === 'post') {
+        // Validación de los datos enviados
+        $reglas = [
             'id_inventario'        => 'required|numeric',
             'Tienda_cod_postal'    => 'required|numeric',
             'Producto_id_producto' => 'required|numeric',
@@ -357,11 +258,14 @@ class Administrador extends BaseController
         ];
 
         if (!$this->validate($reglas)) {
+            // Si la validación falla, vuelve al formulario con errores
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
         }
 
+        // Obtener los datos enviados
         $post = $this->request->getPost(['id_inventario', 'Tienda_cod_postal', 'Producto_id_producto', 'cantidad', 'lote', 'fecha_caducidad']);
     
+        // Guardar en la base de datos
         $inventariosModel = new InventarioModel();
         $inventariosModel->insert([
             'id_inventario'        => trim($post['id_inventario']),
@@ -372,11 +276,17 @@ class Administrador extends BaseController
             'fecha_caducidad'      => $post['fecha_caducidad'],
         ]);
 
-        return view('administrador/entorno_inventario');
+        // Redirigir con mensaje de éxito
+        return redirect()->to('/admin/entorno_registro_inventario')->with('success', 'Inventario agregado exitosamente.');
     }
+
+    // Mostrar el formulario
+    return view('administrador/entorno_registro_inventario');
+}
 
     public function editarInventario($id_inventario = null){
 
+        
         $inventarioModel = new InventarioModel();
         $data['inventario'] = $inventarioModel->find($id_inventario);
 

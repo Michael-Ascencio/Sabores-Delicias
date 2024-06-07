@@ -38,39 +38,39 @@ function enlace($url)
     </div>
     <?php } ?>
 
-    <form  ?>" class="row g-3" method="post" autocomplete="off">
+    <!-- Enlace actualizado al método correcto del controlador -->
+    <form action="<?= base_url('administrado/agregarInventario') ?>" class="row g-3" method="" autocomplete="off">
+        <?= csrf_field() ?>
 
         <div class="col-md-6">
             <label for="Id_Tienda" class="form-label">Id_Tienda</label>
-            <input type="text" class="form-control" id="Id_Tienda" name="Tienda_cod_postal" value="<?= set_value('Tienda_cod_postal') ?>"required autofocus>
+            <input type="text" class="form-control" id="Id_Tienda" name="Tienda_cod_postal" value="<?= set_value('Tienda_cod_postal') ?>" required autofocus>
         </div>
 
         <div class="col-md-6">
             <label for="Id_producto" class="form-label">Id_producto</label>
-            <input type="text" class="form-control" id="Id_producto" name="Producto_id_producto" required>
+            <input type="text" class="form-control" id="Id_producto" name="Producto_id_producto" value="<?= set_value('Producto_id_producto') ?>" required>
         </div>
 
         <div class="col-md-6">
             <label for="Cantidad" class="form-label">Cantidad</label>
-            <input type="number" class="form-control" id="Cantidad" name="cantidad" required>
+            <input type="number" class="form-control" id="Cantidad" name="cantidad" value="<?= set_value('cantidad') ?>" required>
         </div>
 
         <div class="col-md-6">
             <label for="Lote" class="form-label">Lote</label>
-            <input type="text" class="form-control" id="Lote" name="lote" required>
+            <input type="text" class="form-control" id="Lote" name="lote" value="<?= set_value('lote') ?>" required>
         </div>
 
         <div class="col-md-6">
             <label for="Fecha_caducidad" class="form-label">Fecha_caducidad</label>
-            <input type="date" class="form-control" id="fFecha_caducidad" name="fecha_caducidad" required>
+            <input type="date" class="form-control" id="Fecha_caducidad" name="fecha_caducidad" value="<?= set_value('fecha_caducidad') ?>" required>
         </div>
         
         <div class="col-12">
-            <button class="btn btn-success" onclick="window.location.href='entorno_inventario';" >Regresar</button>
+            <button class="btn btn-success" onclick="window.location.href='entorno_inventario';" type="button">Regresar</button>
             <button class="btn btn-success" type="submit">Guardar</button>
-</div>
         </div>
-
     </form>
 
 </body>
