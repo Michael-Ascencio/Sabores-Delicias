@@ -14,6 +14,11 @@ function enlace($url)
     <h1>Informe de Consumos</h1>
     <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/fondocontador.jpg');?>" alt="" class="fondo_contador">
     <php>
+    <?php if (session()->getFlashdata('error')): ?>
+    <div id="error-message" class="error-message">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+    <?php endif; ?>
     <div class="tabla_resultado_consulta"><table>
         <thead>
             <tr>

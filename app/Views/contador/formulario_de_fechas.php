@@ -12,6 +12,11 @@ function enlace($url)
 
 <!-- Nombre del contenido en el layout -->
 <?= $this->section('contenido'); ?>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div id="error-message" class="error-message">
+            <?= session()->getFlashdata('error') ?>
+        </div>
+    <?php endif; ?>
 
     <h1 class="formulario_fechas">Seleccionar Fechas</h1>
     <div class ="formulario_ingreso_fechas"><form action="<?= base_url('contador/consultar_informe') ?>" method="post">

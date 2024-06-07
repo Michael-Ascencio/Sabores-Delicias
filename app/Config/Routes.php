@@ -62,6 +62,8 @@ $routes->get('/loginempleado', 'Empleado::login');
 
 /* Contador */
 $routes->get('/logincontador', 'Contador::login');
+$routes->post('/logincontador', 'Contador::ingreso');
+$routes->get('/logoutontador', 'Contador::salida');
 $routes->get('/contador/informe_de_ventas', 'Contador::fechas_de_reporte');
 $routes->post('/contador/consultar_informe', 'Contador::consultar_informe');
 $routes->get('/contador/descargar_csv', 'Contador::descargar_csv');
