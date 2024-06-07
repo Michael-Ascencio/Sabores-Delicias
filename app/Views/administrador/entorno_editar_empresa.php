@@ -24,7 +24,7 @@ function enlace($url)
 <?php endif; ?>
 
 
-<form class="form" method="post" action="<?=base_url('/Sabores-Delicias/public/administrador/actualizar')?>">
+<form class="form" method="post" action="<?=base_url('administrador/actualizar')?>">
     <p class="title">Actualizar Datos</p>
     <p class="message">Datos de la empresa <?php echo $empresa->nombre?> </p>
     <div class="flex">
