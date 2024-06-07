@@ -5,75 +5,50 @@ function enlace($url)
     echo $enlace;
 }
 ?>
-
 <!-- Carpeta en la cual se encuentra el layout -->
-<?= $this->extend('Plantilla/layout_login'); ?>
+<?php echo $this->extend('Plantilla/layout_admin'); ?>
 <!-- Nombre del contenido en el layout -->
-<?= $this->section('contenido'); ?>
+<?php echo $this->section('contenido'); ?>
+
+<?php if (session()->has('success')): ?>
+    <div class="alert alert-success">
+        <?= session('success') ?>
+    </div>
+<?php endif; ?>
+
+<?php if (session()->has('error')): ?>
+    <div class="alert alert-success">
+        <?= session('error') ?>
+    </div>
+<?php endif; ?>
 
 <div class="imagen_inventario">
     <img src="<?= enlace('/Sabores-Delicias/public/images/logos/36ed206f-c52a-467b-84eb-4f164b3f303a-removebg-preview.png');?>" alt="" class="inventario">
 </div>
+<form class="form" method="post" action="<?=base_url('administrador/entorno_registro_inventario')?>">
+    <p class="title">Registrar Inventario</p>
+    <label>
+        <input class="input" type="number" required name="Producto_id_producto">
+        <span>Producto_id_producto</span>
+    </label>
+    <label>
+        <input class="input" type="number" required name="Tienda_cod_postal">
+        <span>Tienda_cod_postal</span>
+    </label>
+    <label>
+        <input class="input" type="number" required name="Cantidad">
+        <span>Cantidad</span>
+    </label> 
+    <label>
+        <input class="input" type="text" required name="fecha_caducidad" >
+        <span>fecha_caducidad</span>
+    </label>
+    <label>
+        <input class="input" type="text" required name="lote" >
+        <span>lote</span>
+    </label>
+    <button class="submit">Registrar</button>
+    <button class="btn btn-success" onclick="window.location.href='entorno_inventario';" type="button">Regresar</button>
+</form>
 
-<!DOCTYPE html>
-<html lang="es" class="h-100">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <link href="css/estilo.css" rel="stylesheet">
-</head>
-
-<body class="d-flex flex-column h-100">
-
-    <h3 class="my-3">Nuevo inventario</h3>
-
-    <?php if (session()->getFlashdata('error') !== null) { ?>
-    <div class="alert alert-danger">
-        <?= session()->getFlashdata('error'); ?>
-    </div>
-    <?php } ?>
-
-    <!-- Enlace actualizado al método correcto del controlador -->
-    <form action="<?= base_url('administrado/agregarInventario') ?>" class="row g-3" method="" autocomplete="off">
-        <?= csrf_field() ?>
-
-        <div class="col-md-6">
-            <label for="Id_Tienda" class="form-label">Id_Tienda</label>
-            <input type="text" class="form-control" id="Id_Tienda" name="Tienda_cod_postal" value="<?= set_value('Tienda_cod_postal') ?>" required autofocus>
-        </div>
-
-        <div class="col-md-6">
-            <label for="Id_producto" class="form-label">Id_producto</label>
-            <input type="text" class="form-control" id="Id_producto" name="Producto_id_producto" value="<?= set_value('Producto_id_producto') ?>" required>
-        </div>
-
-        <div class="col-md-6">
-            <label for="Cantidad" class="form-label">Cantidad</label>
-            <input type="number" class="form-control" id="Cantidad" name="cantidad" value="<?= set_value('cantidad') ?>" required>
-        </div>
-
-        <div class="col-md-6">
-            <label for="Lote" class="form-label">Lote</label>
-            <input type="text" class="form-control" id="Lote" name="lote" value="<?= set_value('lote') ?>" required>
-        </div>
-
-        <div class="col-md-6">
-            <label for="Fecha_caducidad" class="form-label">Fecha_caducidad</label>
-            <input type="date" class="form-control" id="Fecha_caducidad" name="fecha_caducidad" value="<?= set_value('fecha_caducidad') ?>" required>
-        </div>
-        
-        <div class="col-12">
-            <button class="btn btn-success" onclick="window.location.href='entorno_inventario';" type="button">Regresar</button>
-            <button class="btn btn-success" type="submit">Guardar</button>
-        </div>
-    </form>
-
-</body>
-
-</html>
-<?= $this->endSection(); ?>
+<?php echo $this->endSection(); ?>
