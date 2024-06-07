@@ -8,6 +8,7 @@ use App\Models\TiendasModel;
 use App\Models\ClienteModel;
 use App\Models\EmpresaModel;
 Use App\Models\InventarioModel;
+Use App\Models\AreaModel;
 
 class Administrador extends BaseController
 {
@@ -201,9 +202,23 @@ class Administrador extends BaseController
 
     public function gestionarCliente()
     {
+    
+        $clienteModel = new ClienteModel();
+        $areaModel = new AreaModel();
+        $empresaModel = new EmpresaModel();
+
+        $cliente = $clienteModel->orderBy('cedula','ASC')->findAll();
+        $area = $areaModel->orderBy('id_area','ASC')->findAll();
+        $empresa = $empresaModel->orderBy('nit','ASC')->findAll();
+    
         $data = [
-            'titulo' => 'Gestion Cliente'];
-        return  view('administrador/entorno_gestionar_cliente', $data);
+            'titulo' => 'Consultar Cliente',
+            'clientes' => $cliente,
+            'areas' => $area,
+            'empresas' => $empresa
+        ];
+        
+            return view('administrador/entorno_gestionar_cliente', $data);
     }
 
     public function transaccionCliente(){
@@ -220,13 +235,13 @@ class Administrador extends BaseController
 
             $clienteModel = new ClienteModel();
  
-            if(strlen($cedula) < 6 || strlen($cedula) > 10){
-                throw new \Exception("La cédula debe tener mínimo 6 dígitos y máximo 10.");
-            } elseif(!preg_match("/^[A-Za-z]+$/", $nombre)){
+            if (!preg_match("/^[1-9]\d{6,9}$/", $cedula)) {
+                throw new \Exception("La cédula debe tener entre 7 y 10 dígitos y no puede comenzar con cero.");
+            } elseif(!preg_match("/^[A-Za-z\s]+$/", $nombre)){
                 throw new \Exception("El nombre solo debe contener letras.");
             } elseif(strlen($nombre)<2 || strlen($nombre)>50){
                 throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
-            } elseif(!preg_match("/^[A-Za-z]+$/", $apellido)){
+            } elseif(!preg_match("/^[A-Za-z\s]+$/", $apellido)){
                 throw new \Exception("El apellido solo debe contener letras.");
             } elseif(strlen($apellido)<2 || strlen($apellido)>50){
                 throw new \Exception("El apellido debe tener mínimo 2 letras y máximo 50.");
@@ -274,7 +289,15 @@ class Administrador extends BaseController
         }
     
         $clienteModel = new ClienteModel();
+        $areaModel = new AreaModel();
+        $empresaModel = new EmpresaModel();
+
         $cliente = $clienteModel->find($cedula);
+        $area = $areaModel->find($cliente->Area_id_area);
+        $empresa = $empresaModel->find($cliente->Empresa_nit);
+
+        $areas = $areaModel->orderBy('id_area','ASC')->findAll();
+        $empresas = $empresaModel->orderBy('nit','ASC')->findAll();
     
         if (!$cliente) {
             return redirect()->to(base_url('/administrador/entorno_consulta_cliente'))->with('error', 'La cédula ingresada no existe en la base de datos.');
@@ -282,7 +305,11 @@ class Administrador extends BaseController
     
         $data = [
             'titulo' => 'Modificar Cliente',
-            'cliente' => $cliente
+            'cliente' => $cliente,
+            'area' => $area,
+            'areas' => $areas,
+            'empresa' => $empresa,
+            'empresas' => $empresas
         ];
         return view('administrador/entorno_editar_cliente', $data);
     }   
@@ -301,11 +328,11 @@ class Administrador extends BaseController
 
             $clienteModel = new ClienteModel();
  
-            if(!preg_match("/^[A-Za-z]+$/", $nombre)){
+            if(!preg_match("/^[A-Za-z\s]+$/", $nombre)){
                 throw new \Exception("El nombre solo debe contener letras.");
             } elseif(strlen($nombre)<2 || strlen($nombre)>50){
                 throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
-            } elseif(!preg_match("/^[A-Za-z]+$/", $apellido)){
+            } elseif(!preg_match("/^[A-Za-z\s]+$/", $apellido)){
                 throw new \Exception("El apellido solo debe contener letras.");
             } elseif(strlen($apellido)<2 || strlen($apellido)>50){
                 throw new \Exception("El apellido debe tener mínimo 2 letras y máximo 50.");
@@ -321,8 +348,9 @@ class Administrador extends BaseController
                 'apellido' => $apellido,
                 'correo' => $correo,
                 'contrasena' => $contrasena,
-                'Area_id_area' => 1,
-                'telefono' => $telefono
+                'Area_id_area' => $Area_id_area,
+                'telefono' => $telefono,
+                'Empresa_nit' => $Empresa_nit
             ];
             
             $clienteModel->update($cedula, $data);
