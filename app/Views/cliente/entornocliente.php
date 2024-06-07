@@ -51,7 +51,7 @@ function enlace($url)
                 if ($count > 0) {
                     echo '</div>'; // Cierra el div.row anterior si no es el primer producto
                 }
-                echo '<div class="row">'; // Abre un nuevo div.row
+                echo '<div class="row">'; // abre un nuevo div.row
             }
         ?>
             <div class="product">
