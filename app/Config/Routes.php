@@ -35,20 +35,23 @@ $routes->post('/administrador/entorno_registro_inventario','Administrador::trans
 $routes->get('/administrador/entorno_edit_inventario', 'Administrador::editarInventario');
 $routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
 
+//CRUD Empresa
 $routes->get('/administrador/entorno_gestionar_empresa', 'Administrador::gestionarEmpresa');
 $routes->post('/administrador/entorno_gestionar_empresa', 'Administrador::transaccionEmpresa');
 $routes->get('/administrador/entorno_consulta_empresa', 'Administrador::consultarEmpresa');
 $routes->get('/administrador/entorno_editar_empresa/(:num)', 'Administrador::editarEmpresa/$1'); //Cuando se ingresa un nit existente en la bd
-$routes->get('/administrador/entorno_editar_empresa', 'Administrador::editarEmpresa'); //Cuando se ingresa un nit NO existente en la bd
 $routes->post('/administrador/actualizar', 'Administrador::actualizarDatosBD'); //Actualizar datos de empresa
 
-//CRUD cliente
+//CRUD cliente - Administrador
 $routes->get('/administrador/entorno_gestionar_cliente', 'Administrador::gestionarCliente');
 $routes->post('/administrador/entorno_gestionar_cliente', 'Administrador::transaccionCliente');
 $routes->get('/administrador/entorno_consulta_cliente', 'Administrador::consultarCliente');
 $routes->get('/administrador/entorno_editar_cliente/(:num)', 'Administrador::editarCliente/$1'); //Cuando se ingresa un cedula existente en la bd
-$routes->get('/administrador/entorno_editar_cliente', 'Administrador::editarCliente'); //Cuando se ingresa un cedula NO existente en la bd
 $routes->post('/administrador/actualizarCliente', 'Administrador::actualizarDatosBDCliente');
+$routes->get('/administrador/entorno_subir_usuarios', 'Administrador::entornoSubirUsuarios');
+$routes->post('/administrador/entorno_subir_usuarios', 'Administrador::subirUsuarios');
+$routes->post('/administrador/procesar_subida_usuarios', 'Administrador::procesarSubidaUsuarios');
+
 
 /* Cliente */
 $routes->get('/logincliente', 'Cliente::login');

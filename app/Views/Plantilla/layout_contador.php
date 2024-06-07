@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
     <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>">
     <meta charset="UTF-8">
@@ -13,15 +14,7 @@
 
 <body class="body4">
     <header>
-        <nav class="menu">
-            
-            <ul>
-                <li><a href="entorno_administrador.php">Inicio</a></li>
-                <li><a href="#">Configuración de Cuenta</a></li>
-                <li><a href="../index.php">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
-        <img src=<?php echo $logo; ?> alt="" class="logo5">
+        <img src=<?php echo $logo; ?> alt="" class="logocontador">
     </header>
 
     <?php echo $this->renderSection("contenido"); ?>

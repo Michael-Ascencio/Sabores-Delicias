@@ -392,6 +392,7 @@ class Administrador extends BaseController
 
     public function transaccionInventario(){
         try{
+
             $Producto_id_producto = $this->request->getVar('Producto_id_producto');
             $Tienda_cod_postal = $this->request->getVar('Tienda_cod_postal');
             $cantidad = $this->request->getVar('Cantidad');
@@ -402,6 +403,7 @@ class Administrador extends BaseController
 
             
             $data = [
+                'id_inventario' => $id_inventario,
                 'Producto_id_producto' => $Producto_id_producto,
                 'Tienda_cod_postal' => $Tienda_cod_postal,
                 'cantidad' => $cantidad,

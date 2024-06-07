@@ -52,10 +52,10 @@ function enlace($url)
 <script>
   document.getElementById('searchForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    var nit = document.getElementById('nitInput').value;
-    if(nit) {
+    var cedula = document.getElementById('nitInput').value;
+    if(cedula) {
 
-      var url = "<?= base_url('administrador/entorno_editar_cliente') ?>/" + nit;
+      var url = "<?= base_url('administrador/entorno_editar_cliente') ?>/" + cedula;
 
       window.location.href = url;
     }
