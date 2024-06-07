@@ -8,10 +8,17 @@ VALUES
 INSERT INTO `sYd`.`Area` (`nombre`, `created_by`, `creaded_at`, `updated_by`, `updated_at`)
 VALUES 
 ('Recursos Humanos', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
-('Contador', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Contabilidad', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
 ('Ventas', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
-('Logística', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
-('T.I', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00');
+('Bases de datos', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Tecnologia', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Software', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Serv cliente', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Serv generales', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Mantenimiento', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Tesoreria', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Ingenieria', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00'),
+('Publicidad', 'admin', '2023-01-01 00:00:00', 'admin', '2023-01-01 00:00:00');
 
 -- Poblar la tabla Empresa
 INSERT INTO `sYd`.`Empresa` (`nit`,`nombre`,`direccion`,`telefono`,`created_by`, `created_at`, `updated_by`, `updated_at`)

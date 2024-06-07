@@ -50,16 +50,28 @@ function enlace($url)
         <span>Contraseña</span>
     </label>
     <label> <!--Lógica para el área-->
-        <input class="input" type="text" required name="Area_id_area" >
-        <span>Área</span>
+        <select name="Area_id_area">
+            <option value="">Seleccione</option>
+            <?php foreach ($areas as $area) : ?> 
+                <option value="<?php echo $area->id_area?>">
+                    <?php echo $area->nombre;?>
+                </option>
+            <?php endforeach; ?>
+        </select>
     </label>
     <label>
         <input class="input" type="number"required name="telefono"> 
         <span>Teléfono</span>
     </label>
     <label> <!--Lógica para la empresa-->
-       <input class="input" type="text" required name="Empresa_nit">
-        <span>Nit de empresa</span>
+        <select name="Empresa_nit">
+                <option value="">Seleccione</option>
+                <?php foreach ($empresas as $empresa) : ?> 
+                    <option value="<?php echo $empresa->nit?>">
+                        <?php echo $empresa->nombre;?>
+                    </option>
+                <?php endforeach; ?>
+        </select>
     </label>
     <button class="submit">Registrar</button>
 

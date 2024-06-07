@@ -235,13 +235,10 @@ class Administrador extends BaseController
             $Empresa_nit = $this->request->getVar('Empresa_nit');
 
             $clienteModel = new ClienteModel();
-            $clienteExistente = $clienteModel->find($cedula);
  
-            if($clienteExistente){
-                throw new \Exception("Está cédula ya se encuentra registrada en la página.");
-            } elseif (!preg_match("/^[1-9]\d{5,9}$/", $cedula)) {
-                throw new \Exception("La cédula debe tener entre 7 y 10 dígitos y no puede comenzar con cero.");
-            } elseif(!preg_match("/^[A-Za-z\s]+$/", $nombre)){
+            if(strlen($cedula) < 6 || strlen($cedula) > 10){
+                throw new \Exception("La cédula debe tener mínimo 6 dígitos y máximo 10.");
+            } elseif(!preg_match("/^[A-Za-z]+$/", $nombre)){
                 throw new \Exception("El nombre solo debe contener letras.");
             } elseif(strlen($nombre)<2 || strlen($nombre)>50){
                 throw new \Exception("El nombre debe tener mínimo 2 letras y máximo 50.");
@@ -380,14 +377,23 @@ class Administrador extends BaseController
     }
 
     public function agregarInventario(){
+
+        $inventarioModel = new InventarioModel();
+    
+        $inventarios = $inventarioModel->orderBy('id_inventario','ASC')->findAll();
+    
         $data = [
-            'titulo' => 'Gestion Inventario'];
-        return  view('administrador/entorno_registro_inventario', $data);
+            'titulo' => 'Gestion Inventario',
+            'inventarios' => $inventarios
+        ];
+        
+        return view('administrador/entorno_registro_inventario', $data);
     }
 
     public function transaccionInventario(){
         try{
-            $cantidad = $this->request->getVar('cantidad');
+            $id_inventario = $this->request->getVar('id_inventario');
+            $cantidad = $this->request->getVar('Cantidad');
             $lote = $this->request->getVar('lote');
             $fecha_caducidad = $this->request->getVar('fecha_caducidad');
             $Producto_id_producto = $this->request->getVar('Producto_id_producto');
@@ -396,6 +402,7 @@ class Administrador extends BaseController
             $inventarioModel = new InventarioModel();
 
             $data = [
+                'id_inventario' => $id_inventario,
                 'cantidad' => $cantidad,
                 'lote' => $lote,
                 'fecha_caducidad' => $fecha_caducidad,

@@ -28,6 +28,10 @@ function enlace($url)
 <form class="form" method="post" action="<?=base_url('administrador/entorno_registro_inventario')?>">
     <p class="title">Registrar Inventario</p>
     <label>
+        <input class="input" type="number" required name="id_inventario">
+        <span>id_inventario</span>
+    </label>
+    <label>
         <input class="input" type="number" required name="Producto_id_producto">
         <span>Producto_id_producto</span>
     </label>
@@ -48,7 +52,7 @@ function enlace($url)
         <span>lote</span>
     </label>
     <button class="submit">Registrar</button>
-    <button class="btn btn-success" onclick="window.location.href='entorno_inventario';" type="button">Regresar</button>
+    <button class="btn btn-success" onclick="window.location.href='administrador/entorno_inventario';" type="button">Regresar</button>
 </form>
 
 <?php echo $this->endSection(); ?>

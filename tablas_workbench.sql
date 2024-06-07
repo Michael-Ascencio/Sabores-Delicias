@@ -232,7 +232,7 @@ DROP TABLE IF EXISTS `sYd`.`Inventario` ;
 
 CREATE TABLE IF NOT EXISTS `sYd`.`Inventario` (
   `id_inventario` INT NOT NULL AUTO_INCREMENT,
-  `cantidad` INT(10) NOT NULL,
+  `cantidad` INT(10)  NULL,
   `lote` VARCHAR(45) NOT NULL,
   `fecha_caducidad` VARCHAR(45) NOT NULL,
   `created_by` VARCHAR(45) NOT NULL,
