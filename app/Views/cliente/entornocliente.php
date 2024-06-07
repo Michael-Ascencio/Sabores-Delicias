@@ -1,3 +1,4 @@
+
 <?php
 function enlace($url)
 {
@@ -6,11 +7,14 @@ function enlace($url)
 }
 ?>
 
+
 <!-- Carpeta en la cual se encuentra el layout -->
 <?php echo $this->extend('Plantilla/layout_cliente'); ?>
 <!-- Nombre del contenido en el layout -->
 <?php echo $this->section('contenido'); ?>
 
+
+    <img src="<?php enlace('/Sabores-Delicias/public/images/logos/36ed206f-c52a-467b-84eb-4f164b3f303a-removebg-preview.png');?>" alt="" class="logo66">
 
     <img src="<?php enlace('/Sabores-Delicias/public/images/logos/36ed206f-c52a-467b-84eb-4f164b3f303a-removebg-preview.png');?>" alt="" class="logo66">
 <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/paisaje-ilustracion-atardecer-en-el-bosque-montanas_3840x2160_xtrafondos.com.jpg');?>" alt="" class="Bienvenido">
@@ -28,6 +32,7 @@ function enlace($url)
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+            <h2 class="carrit">Carrito de Compras</h2>
             <h2 class="carrit">Carrito de Compras</h2>
             <div id="cart-items"></div>
             <button id="checkout">Proceder al pago</button>
