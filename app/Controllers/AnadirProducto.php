@@ -48,7 +48,7 @@ class AnadirProducto extends BaseController
                 print_r($file->getErrorString());
                 $data = [
                     'titulo' => 'Proceso Producto',
-                    'mensaje' => 'La imagen no cumple con los parametros'
+                    'mensaje' => 'La imagen no cumple con los parametros.'
                 ];
                 return view('administrador/producto/proceso_producto', $data);
                 exit;
