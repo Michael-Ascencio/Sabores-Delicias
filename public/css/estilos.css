@@ -1731,3 +1731,130 @@ th {
     height: auto;
 }
 /******************************************************************************/
+
+/*------------------------------------------------------------------------------*/
+/*contador*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.logocontador {
+    margin-bottom: 20px;
+    width: 220px;
+    height: 220px;
+    /* Para hacer que la imagen se ajuste bien */
+    object-fit: cover;
+}
+
+.formulario_ingreso_fechas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Ajusta según sea necesario */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Si necesitas un fondo blanco para el formulario */
+}
+
+.formulario_ingreso_fechas label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.formulario_ingreso_fechas input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.boton_consulta {
+    text-align: center;
+    width: 100%;
+}
+
+.boton_consulta button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: -5px; 
+    margin-bottom: 10px;
+}
+
+.boton_consulta button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .logocontador, .formulario_ingreso_fechas, .tabla_resultado_consulta {
+        width: 90%;
+    }
+
+    .formulario_ingreso_fechas {
+        padding: 15px;
+    }
+
+    .boton_consulta button, .boton_descargar button {
+        width: 100%;
+    }
+
+    .tabla_resultado_consulta th, .tabla_resultado_consulta td {
+        font-size: 14px;
+    }
+}
+
+.boton_descargar {
+    text-align: center;
+    margin-top: 150px; /* Ajusta según sea necesario */
+    margin-bottom: 350px; /* Ajusta según sea necesario */
+}
+
+.boton_descargar button {
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton_descargar button:hover {
+    background-color: #218838;
+}
+
+.tabla_resultado_consulta {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla_resultado_consulta th, .tabla_resultado_consulta td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla_resultado_consulta th {
+    background-color: #f2f2f2;
+}
+
+.tabla_resultado_consulta tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/******************************************************************************/

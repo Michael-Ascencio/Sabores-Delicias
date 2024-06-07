@@ -11,13 +11,10 @@ function enlace($url)
 <?php echo $this->section('contenido'); ?>
 
 
-    <h1>Informe de ventas</h1>
+    <h1>Informe de Consumos</h1>
    
-    <p>Fechas: <php? esc($fechas) ?></p>
-    <a href="descargar_csv?fecha_inicial=<?= esc($fecha_inicial) ?>&fecha_final=<?= esc($fecha_final) ?>" target="_blank">
-        <button>Descargar como CSV</button>
-    </a>
-    <table>
+    <php>
+    <div class="tabla_resultado_consulta"><table>
         <thead>
             <tr>
                 <th>Cedula</th>
@@ -36,7 +33,10 @@ function enlace($url)
                 </tr>
             <?php endforeach; ?>
         </tbody>
-    </table>
+    </table></div>
+    <a href="descargar_csv?fecha_inicial=<?= esc($fecha_inicial) ?>&fecha_final=<?= esc($fecha_final) ?>" target="_blank">
+        <div class = "boton_descargar" ><button>Descargar como CSV</button></div>
+    </a>
 
 
 <?php echo $this->endSection(); ?>
