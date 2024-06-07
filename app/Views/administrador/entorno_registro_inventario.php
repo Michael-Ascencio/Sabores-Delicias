@@ -52,7 +52,7 @@ function enlace($url)
         <span>lote</span>
     </label>
     <button class="submit">Registrar</button>
-    <button class="btn btn-success" onclick="window.location.href='administrador/entorno_inventario';" type="button">Regresar</button>
+    <button class="btn btn-success" onclick="window.location.href='entorno_inventario';" type="button">Regresar</button>
 </form>
 
 <?php echo $this->endSection(); ?>
