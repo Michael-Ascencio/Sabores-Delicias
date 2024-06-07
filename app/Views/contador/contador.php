@@ -10,10 +10,10 @@ function enlace($url)
 <!-- Nombre del contenido en el layout -->
 <?php echo $this->section('contenido'); ?>
 <div class="Faro_fondo">
-    <img src="<?php enlace('/Sabores-Delicias/public/images/logos/36ed206f-c52a-467b-84eb-4f164b3f303a-removebg-preview.png');?>" alt="" class="logo">
+    <img src="<?php enlace('/Sabores-Delicias/public/images/logos/36ed206f-c52a-467b-84eb-4f164b3f303a-removebg-preview.png');?>" alt="" class="logo_contador_log">
     <div class="login-container-contador">
         <h2>Iniciar Sesión (Contador)</h2>
-        <form id="loginFormContador" action="../../controllers/contador/ContadorController.php" method="POST">
+        <form id="loginFormAdmin" action="<?= base_url('logincontador'); ?>" method="POST">
             <input type="text" name="username" placeholder="Cedula" required>
             <input type="password" name="password" placeholder="Contraseña" required>
             <button type="submit">Iniciar Sesión</button>

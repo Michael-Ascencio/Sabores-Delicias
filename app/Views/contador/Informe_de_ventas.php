@@ -14,6 +14,11 @@ function enlace($url)
     <h1>Informe de Consumos</h1>
     <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/fondocontador.jpg');?>" alt="" class="fondo_contador">
     <php>
+    <?php if (session()->getFlashdata('error')): ?>
+    <div id="error-message" class="error-message">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+    <?php endif; ?>
     <div class="tabla_resultado_consulta"><table>
         <thead>
             <tr>
@@ -35,6 +40,7 @@ function enlace($url)
         </tbody>
     </table></div>
     <a href="descargar_csv?fecha_inicial=<?= esc($fecha_inicial) ?>&fecha_final=<?= esc($fecha_final) ?>" target="_blank">
+    <button type="button" onclick="window.location.href='informe_de_ventas';">Regresar</button>
         <div class = "boton_descargar" ><button>Descargar como CSV</button></div>
     </a>
 

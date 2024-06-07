@@ -12,6 +12,11 @@ function enlace($url)
 
 <!-- Nombre del contenido en el layout -->
 <?= $this->section('contenido'); ?>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div id="error-message" class="error-message">
+            <?= session()->getFlashdata('error') ?>
+        </div>
+    <?php endif; ?>
 
     <h1 class="formulario_fechas">Seleccionar Fechas</h1>
     <div class ="formulario_ingreso_fechas"><form action="<?= base_url('contador/consultar_informe') ?>" method="post">
@@ -22,7 +27,7 @@ function enlace($url)
         <input type="date" id="fecha_final" name="fecha_final" required>
         <br>
         <div class= "boton_consulta" ><button type="submit">Consultar</button></div>
-        
+        <button type="button" onclick="window.location.href='<?= base_url('logincontador') ?>';">Regresar</button>
     </form>
     <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/fondocontador.jpg');?>" alt="" class="fondo_contador">
 </div>

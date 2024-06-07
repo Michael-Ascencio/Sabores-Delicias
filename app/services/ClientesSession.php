@@ -15,7 +15,7 @@ class ClientesSession
             if (password_verify($password, $resultado->contrasena)) {
                 $data = [
                     'usuario' => $resultado->nombre,
-                    'cargo' => $resultado->Cargo_id_cargo,
+                    'cargo' => $resultado->Area_id_area,
                 ];
                 $session = session();
                 $session->set($data);
