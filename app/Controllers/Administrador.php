@@ -2,14 +2,22 @@
 
 namespace App\Controllers;
 
+use App\Services\EmpleadosSession; //Consumir el servicio de session
+
 use App\Models\TiendasModel;
 use App\Models\ClienteModel;
 use App\Models\EmpresaModel;
 Use App\Models\InventarioModel;
-use App\Models\EmpleadoModel;
 
 class Administrador extends BaseController
 {
+    protected $sessionService;
+
+    public function __construct()
+    {
+        $this->sessionService = new EmpleadosSession();  // Instancia el servicio
+    }
+
     public function login(): string
     {
         $data = ['titulo' => 'login'];
@@ -29,29 +37,24 @@ class Administrador extends BaseController
     {
         $usuario = $this->request->getPost('username');
         $password = $this->request->getPost('password');
-        /* $password = password_hash($password, PASSWORD_DEFAULT);  */
-        $Usuario = new EmpleadoModel();
-        $resultado = $Usuario->where('cedula', $usuario)->first();
 
-        if ($resultado !== null) {
-            // Verificamos si la contraseña coincide
-            if ($password === $resultado->contrasena/* password_verify($password, $resultado->contrasena) */) {
-                // Contraseña correcta, establecemos la sesión y retornamos la página deseada
-                $data = [
-                    'usuario' => $resultado->nombre,
-                    'cargo' => $resultado->Cargo_id_cargo,
-                ];
-                $session = session();
-                $session->set($data);
+        $resultado = $this->sessionService->iniciarSesion($usuario, $password);
+
+        if ($resultado['status'] === true) {
+            $cargo = $resultado['data']['cargo'];
+            if ($cargo == 1 || $cargo == 2) {
                 return redirect()->to(base_url('admin/entorno'));
             } else {
-                // Contraseña incorrecta, redirigimos de nuevo a la página de inicio de sesión con un mensaje
-                return redirect()->to(base_url('loginadmin'))->with('mensaje', 'Contraseña incorrecta, la que esta en la base de datos es: '.$resultado->contrasena.' Y la que estas enviando es: '.$password);
+                return redirect()->to(base_url('loginadmin'))->with('mensaje', 'No tiene permisos para acceder como administrador.');
             }
         } else {
-            // Usuario no encontrado, redirigimos de nuevo a la página de inicio de sesión con un mensaje
-            return redirect()->to(base_url('loginadmin'))->with('mensaje', 'Usuario no encontrado.');
+            return redirect()->to(base_url('loginadmin'))->with('mensaje', $resultado['message']);
         }
+    }
+
+    public function salida()
+    {
+        return $this->sessionService->cerrarSesion();
     }
 
 

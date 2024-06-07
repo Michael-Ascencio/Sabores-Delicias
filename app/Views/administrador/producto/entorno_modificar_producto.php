@@ -14,7 +14,7 @@ function enlace($url)
 <div>
     <h2>Modificar producto</h2>
     <h4><?php echo validation_list_errors() . 'Recuerda volver a subir la imagen de tu producto'; ?></h4>
-    <form id="registroProductos" action="<?php echo base_url('admin/productos/actualizar'); ?>" method="post" enctype="multipart/form-data">
+    <form id="registroProductos" action=     method="post" enctype="multipart/form-data">
 
         <div>
             <label>
