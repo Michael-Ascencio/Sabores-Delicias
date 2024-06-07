@@ -46,7 +46,6 @@ function enlace($url)
                 <span>Realiza una descripción de 300 caracteres sobre el producto</span>
                 <textarea id="comentarios" name="comentarios" maxlength="299" rows="4" placeholder="Escribe tus comentarios aquí..." value="<?php echo set_value('comentarios'); ?>"></textarea>
             </label>
-
         </div>
         <div>
             <button type="submit">Añadir Producto</button>
