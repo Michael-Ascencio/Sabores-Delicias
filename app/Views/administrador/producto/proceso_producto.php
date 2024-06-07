@@ -9,6 +9,8 @@ function enlace($url)
 <?php echo $this->extend('Plantilla/layout_admin'); ?>
 <!-- Nombre del contenido en el layout -->
 <?php echo $this->section('contenido'); ?>
-<button onclick="window.location.href='<?= redirect()->back()->withInput() ?>'">Volver a la vista anterior</button>
+<br><br><br><br>
 <h2><?php echo esc($mensaje); ?></h2>
+<br><br>
+<button class="shadow__btn" onclick="window.location.href='/Sabores-Delicias/public/admin/entorno';"> Volver a la vista anterior </button>
 <?php echo $this->endSection(); ?>

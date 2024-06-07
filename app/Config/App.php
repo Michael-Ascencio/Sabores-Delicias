@@ -7,17 +7,19 @@ use CodeIgniter\Config\BaseConfig;
 class App extends BaseConfig
 {
     /**
-     * --------------------------------------------------------------------------
      * Base Site URL
-     * --------------------------------------------------------------------------
      *
      * URL to your CodeIgniter root. Typically, this will be your base URL,
      * WITH a trailing slash:
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost/Sabores-Delicias/public';
+    public string $baseURL;
 
+    public function __construct() {
+        parent::__construct();
+        $this->baseURL = 'http://' . $_SERVER['HTTP_HOST'] . '/Sabores-Delicias/public/';
+    }
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.
