@@ -62,8 +62,17 @@ function enlace($url)
         <img src="<?php enlace('/Sabores-Delicias/public/images/logos/undraw_Customer_survey_re_v9cj-removebg-preview.png');?>" alt="Imagen 6">
         <div class="gallery-content">
             <h2 class="gallery-title">Gestionar clientes</h2>
+            <p class="gallery-text">Descripción</p>   
+            <button class="shadow__btn"onclick="window.location.href='<?= base_url('administrador/entorno_gestionar_cliente') ?>';">Entrar</button>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="<?php enlace('/Sabores-Delicias/public/images/logos/undraw_Customer_survey_re_v9cj-removebg-preview.png');?>" alt="Imagen 6">
+        <div class="gallery-content">
+            <h2 class="gallery-title">Gestionar empresa</h2>
             <p class="gallery-text">Descripción</p>
-            <button class="shadow__btn">Entrar</button>
+            <button class="shadow__btn"onclick="window.location.href='<?= base_url('administrador/entorno_gestionar_empresa') ?>';">Entrar</button>
         </div>
     </div>
 </div>

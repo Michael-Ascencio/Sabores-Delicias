@@ -49,8 +49,8 @@ function enlace($url)
         <input class="input" type="password"required name="contrasena"> 
         <span>Contraseña</span>
     </label>
-    <label> <!--Lógica para el área-->
-        <select name="Area_id_area">
+    <label> <span class="formulario1">Área</span><!--Lógica para el área-->
+        <select name="Area_id_area" class="input" >
             <option value="">Seleccione</option>
             <?php foreach ($areas as $area) : ?> 
                 <option value="<?php echo $area->id_area?>">
@@ -63,8 +63,8 @@ function enlace($url)
         <input class="input" type="number"required name="telefono"> 
         <span>Teléfono</span>
     </label>
-    <label> <!--Lógica para la empresa-->
-        <select name="Empresa_nit">
+    <label><span class="formulario1">Empresa</span> <!--Lógica para la empresa-->
+        <select name="Empresa_nit" class="input" >
                 <option value="">Seleccione</option>
                 <?php foreach ($empresas as $empresa) : ?> 
                     <option value="<?php echo $empresa->nit?>">
