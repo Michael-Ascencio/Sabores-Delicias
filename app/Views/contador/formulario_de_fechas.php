@@ -27,7 +27,7 @@ function enlace($url)
         <input type="date" id="fecha_final" name="fecha_final" required>
         <br>
         <div class= "boton_consulta" ><button type="submit">Consultar</button></div>
-        
+        <button type="button" onclick="window.location.href='<?= base_url('logincontador') ?>';">Regresar</button>
     </form>
     <img src="<?php enlace('/Sabores-Delicias/public/images/Fotos/fondocontador.jpg');?>" alt="" class="fondo_contador">
 </div>
